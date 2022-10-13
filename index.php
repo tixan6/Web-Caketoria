@@ -126,19 +126,19 @@
                                         <img class="PhotoForItemsSlider" src="<?php echo $TheBestProduct['photo']?>">
                                         <div class="CenterItemHere">
                                             <h1><?php echo $TheBestProduct['title']?></h1>
-                                            <p><?php echo $TheBestProduct['textMin']?></p>
-                                            
-                                            <div class="butomTtemsHere">
-                                                <a href="#" class="More">Подробнее</a>
-                                                    <div class="btnCartAndPrice">
-                                                        <div class="btn_Cart">
-                                                            <a href="#">В корзину</a>
-                                                        </div>
-                                                        <div style="width:50px ;"></div>
-                                                        <p><?php echo $TheBestProduct['price']?> BYN</p>
-                                                    </div>
-                                            </div>  
+                                            <p><?php echo $TheBestProduct['textMin']?></p>                   
                                         </div>
+                                        
+                                        <div class="butomTtemsHere">
+                                            <a href="#" class="More">Подробнее</a>
+                                                <div class="btnCartAndPrice">
+                                                    <div class="btn_Cart">
+                                                        <a href="#">В корзину</a>
+                                                    </div>
+                                                    <div style="width:50px ;"></div>
+                                                    <p><?php echo $TheBestProduct['price']?> BYN</p>
+                                                </div>                           
+                                        </div> 
                                     </div>
                                 </div> 
                                 <?php } ?>

@@ -54,7 +54,13 @@ li a {
     font-family: 'Lato';
     font-weight: 300;
     font-size: 18px;
+    transition: 1s linear;
 }
+
+li a:hover {
+    color: #fff; /* Цвет текста */
+   }
+
 
 li {
     margin: 34px 25px 0 25px;
@@ -255,6 +261,8 @@ hr
 .ItemsSleder p
 {
     margin: 0;
+    overflow: hidden;
+    max-height: 100px;
     padding: 0;
     font-family: 'Roboto';
     font-style: normal;
@@ -265,12 +273,12 @@ hr
 }
 .butomTtemsHere 
 {
-    height: 100px;
-    position: absolute;
-    bottom: 0;
+    height: 90px;
 }
 .CenterItemHere {
-    padding-left: 10px;    
+    padding-left: 10px;   
+    flex: 1;
+    word-break: break-word;
 }
 .btnCartAndPrice 
 {
@@ -322,6 +330,8 @@ hr
     height: 473px;
     background: #FFFFFF;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
 }
 .ItemsSleder:hover 
 {
