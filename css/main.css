@@ -1,0 +1,352 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic);
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+header 
+{
+    min-height: 50px;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    background: #fff;
+}
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+}
+.container 
+{
+    width: 1246px;
+    margin: 0 auto;
+}
+                /*Верхушка (Логотип)*/
+.LOGO 
+{
+    margin: 25px 0 0 0;
+    font-family: "Bebas Neue";
+    display: flex;
+    align-items: center;
+}
+.LOGO h1 
+{
+    margin: 0;
+    font-size: 40px;
+} 
+.LOGO img
+{
+    margin: 0 0 6px 0;
+    font-size: 40px;
+} 
+                /*Верхушка (Navigation)*/
+.header {height: 90px;}
+.Header_Navigation ul {
+    color: #212121;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    flex-flow: row nowrap;
+    list-style: none;
+}
+li a {
+    text-decoration: none;
+    color: #3C3C3C;
+    font-family: 'Lato';
+    font-weight: 300;
+    font-size: 18px;
+}
+
+li {
+    margin: 34px 25px 0 25px;
+}
+.header_titile 
+{
+    display: flex;
+    justify-content: space-between;
+}
+                /*Верхушка (Кнопки)*/
+.btn_Register_header 
+{
+    text-align: center;
+    width: 143px;
+    height: 40px;
+    background: #2B2B2B;
+    border-radius: 5px;
+}
+.BtnLogOrReg a 
+{
+    text-decoration: none;
+    font-family: "Lato";
+    font-weight: bold;
+    color: #3C3C3C;
+}
+.btn_Register_header a 
+{
+    display: block;
+    padding: 10px;
+    color: white;
+}
+.BtnLogOrReg 
+{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.void {
+    width: 20px;
+}
+                /*Главный экран (Центр)*/
+.main-window {
+    padding-top: 90px;
+    background-image: url('../img/BackGround.png');
+    width: 100%; 
+    height: 650px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;  
+    color: #D2D2D2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.undertxt_of_maintxt 
+{   
+    width: 606px;
+    padding: 29px 0 0 100px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 30px;
+}
+.maintxt 
+{
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 46px;
+    margin: 0;
+}
+.Products
+{
+    color: #E6E6E6;
+    width: 190px;
+    height: 48px;
+    border: solid 1px;
+    border-radius: 5px;
+    display: inline-table;
+    margin-top: 29px;
+}
+.undertxt_of_maintxt 
+{
+    line-height: 30px;
+}
+.Products a 
+{
+    font-family: "Lato";
+    font-size: 18px;
+    display: block;
+    text-decoration: none;
+    color: #E6E6E6;
+    padding: 12px 0 0 0;
+    
+}
+                /*Лучшие (Центр)*/
+.OnlyBest 
+{
+    text-align: center;
+    padding-top: 23px;
+}
+.OnlyBest h1 
+{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 40px;
+    color: #676767;
+    margin: 0;
+    padding-bottom: 26px;
+}
+hr 
+{ 
+    border: none;
+    border: 0.5px solid #CDCDCD;
+    border-radius: 10px;
+    width: 818px;
+}
+.BlocItemsBest 
+{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 54px;
+    padding-bottom: 54px;
+}
+.BlocItemsBest_One {
+    width: 286px;
+}
+.BlocItemsBest_One h3 
+{     
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.02px;
+    color: #7C8185;
+}
+.BlocItemsBest_One p 
+{
+    color: #7C8185;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 30px;
+}
+                    /*Каталог Лушчих*/
+.KatalogTheBest{
+    background-image: url('../img/BackGroundForTheBestCatalog.png');
+    width: 100%;
+    height: 780px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;  
+    
+} 
+.KatalogTheBest hr {
+    text-align: center;
+    width: 816px;
+    height: 0;
+    border-radius: 10px;
+    border: 0.5px solid #CDCDCD;
+}
+.KatalogTheBest p {
+    margin: 0;
+    padding-top: 39px;
+    padding-bottom: 26px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 46px;    
+    color: #B8B8B8;
+}
+.BloclForCentralize {
+    text-align: center;
+}
+
+.PhotoForItemsSlider {
+    border-radius: 10px 10px 0px 0px;
+    width: 293px;
+    height: 196px;
+}
+.ItemsSleder h1
+{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    color: #000000;
+}
+.ItemsSleder p
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 20px;
+    color: #000000;;
+}
+.butomTtemsHere 
+{
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+}
+.CenterItemHere {
+    padding-left: 10px;    
+}
+.btnCartAndPrice 
+{
+    display: flex;
+}
+.btn_Cart 
+{
+    width: 133px;
+    height: 38px;
+    background: #000000;
+    border-radius: 10px;
+}
+.btn_Cart a
+{
+    font-family: 'Open Sans';
+    display: block;
+    text-align: center;
+    padding-top: 8px ;
+    color: #fff;
+    text-decoration: none;
+}
+.btnCartAndPrice p 
+{
+    font-family: 'Open Sans';
+    font-weight: 600;
+}
+.btnCartAndPrice 
+{
+    align-items: center;
+}
+.More 
+{
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    text-decoration: none;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    color: #010101;
+}
+.SliderWithItems 
+{
+    margin-left: 20px;
+}
+.ItemsSleder {
+    transition: all 0.1s linear;
+    width: 293px;
+    height: 473px;
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+.ItemsSleder:hover 
+{
+    transform: scale(1.02);
+}
+.centerItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+                                /*Просто каталог*/
+#mainCatalog 
+{
+    margin: 0;
+    padding-top: 39px;
+    padding-bottom: 26px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 46px;    
+    color: #676767;
+}
+
+#mainCatalog p 
+{
+    margin: 0;
+}
