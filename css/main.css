@@ -54,12 +54,12 @@ li a {
     font-family: 'Lato';
     font-weight: 300;
     font-size: 18px;
-    transition: 1s linear;
+    transition: 0.1s linear;
 }
 
 li a:hover {
-    color: #fff; /* Цвет текста */
-   }
+    color: #000; /* Цвет текста */  
+}
 
 
 li {
@@ -271,13 +271,37 @@ hr
     line-height: 20px;
     color: #000000;;
 }
+.centerItems 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider
+{
+    width: 942px;
+    height: 490px;
+    overflow: hidden;
+}
+.sliderLine
+{
+    position: relative;
+    width: 2826px;
+    height: 490px;
+    display: flex;
+    align-items: center;
+    left:  0;
+    transition: all ease 1s; 
+}
 .butomTtemsHere 
 {
-    padding-left: 10px;
+    padding-left: 7px;
+    padding-right: 7px;
     height: 90px;
 }
 .CenterItemHere {
-    padding-left: 10px;
+    padding-left: 7px;
+    padding-right: 7px;
     flex: 1;
     word-break: break-word;
 }

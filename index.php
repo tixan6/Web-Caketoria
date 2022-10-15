@@ -12,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/SliderStyle.css">
+    
     <link rel="stylesheet" href="fonts/bebasneue/bebasneue.css">
     <link rel="stylesheet" href="fonts/lato/lato.css">
     <link rel="stylesheet" href="fonts/montserrat/montserrat.css">
@@ -105,8 +105,9 @@
     <section>
         <div class="containers">
             <div class="KatalogTheBest">
+
                 <div class="BloclForCentralize" id="PopularProducts">
-                    <p>Популярная у нас продукция</p>
+                    <p>Популярная наша продукция</p>
                     <hr>
                 </div>
 
@@ -157,20 +158,21 @@
     </section>
 
     <section>
-        <div class="container">
-            <div class="mainCatalog">
+        <div class="containers">
+            <div class="Katalog">
+
                 <div class="BloclForCentralize" id="mainCatalog">
                     <p>Каталог</p>
                     <hr>
                 </div>
-                <div class="div">dsfsd</div>
+
             </div>
         </div>
+
     </section>
 
     <section>
         <div class="container">
-
         </div>
     </section>
 
@@ -186,6 +188,7 @@
         </div>
     </footer>
     <script src="js/slider.js"></script>
+    <script src="js/sliderTwo.js"></script>
     <script src="js/SmoothScrolling.js"></script>
 </body>
 </html>
