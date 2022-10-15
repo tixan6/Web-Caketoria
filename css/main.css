@@ -273,10 +273,11 @@ hr
 }
 .butomTtemsHere 
 {
+    padding-left: 10px;
     height: 90px;
 }
 .CenterItemHere {
-    padding-left: 10px;   
+    padding-left: 10px;
     flex: 1;
     word-break: break-word;
 }
@@ -342,7 +343,7 @@ hr
     align-items: center;
     justify-content: center;
 }
-                                /*Просто каталог*/
+                    /*Просто каталог*/
 #mainCatalog 
 {
     margin: 0;
