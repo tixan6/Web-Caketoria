@@ -65,32 +65,51 @@ li a:hover {
 li {
     margin: 34px 25px 0 25px;
 }
+.btnlog:hover
+{
+    color: #000;
+}
+
 .header_titile 
 {
     display: flex;
     justify-content: space-between;
 }
                 /*Верхушка (Кнопки)*/
-.btn_Register_header 
+.btn_Register_header
 {
+    transition: 0.3s;
     text-align: center;
     width: 143px;
     height: 40px;
-    background: #2B2B2B;
-    border-radius: 5px;
+    background: #2B2B2B;   
+    border-radius: 5px; 
+}
+.btn_Register_header:hover
+{
+    transition: 0.3s;
+    background: white;
+    color: #2B2B2B;
+}
+.btn_Register_header a:hover
+{
+    transition: 0.3s;
+    color: #2B2B2B;
 }
 .BtnLogOrReg a 
 {
     text-decoration: none;
     font-family: "Lato";
     font-weight: bold;
-    color: #3C3C3C;
+    color: #4B4B4B;
 }
 .btn_Register_header a 
 {
     display: block;
     padding: 10px;
     color: white;
+    border: 0.5px solid #2B2B2B;
+    border-radius: 5px;
 }
 .BtnLogOrReg 
 {

@@ -1,6 +1,5 @@
 <?php 
     include "datebase.php";
-
     $result = mysqli_query($mysqli, "SELECT * FROM `The_best_product`");
     //$TheBestProduct = mysqli_fetch_assoc($result);
 ?>
@@ -39,10 +38,10 @@
                         </ul>
                     </div>
                     <div class="BtnLogOrReg">
-                        <a href="#">Логин</a>
+                        <a href="#" class="btnlog">Логин</a>
                         <div class="void"></div>
                         <div class="btn_Register_header">
-                            <a href="#">Регистрация</a>
+                            <a href="#" >Регистрация</a>
                         </div>
                     </div>
                 </div>              
