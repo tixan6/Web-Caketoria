@@ -333,7 +333,7 @@ hr
     width: 133px;
     height: 38px;
     background: #000000;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 .btn_Cart a
 {
@@ -366,7 +366,9 @@ hr
 }
 .SliderWithItems 
 {
-    margin-left: 20px;
+    margin-left: 10px;
+    padding-top: 10;
+    padding-bottom: 20px;
 }
 .ItemsSleder {
     transition: all 0.1s linear;
@@ -386,7 +388,7 @@ hr
     align-items: center;
     justify-content: center;
 }
-                    /*Просто каталог*/
+                    /*Каталог*/
 #mainCatalog 
 {
     margin: 0;
@@ -403,4 +405,46 @@ hr
 #mainCatalog p 
 {
     margin: 0;
+}
+.wraper 
+{
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.rowItems 
+{
+    display: flex;
+    justify-content: center;
+}
+
+.wraper .More 
+{
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    text-decoration: none;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    color: #010101;
+}
+.wraper .SliderWithItems 
+{
+    margin-left: 10px;
+    padding: 15px;
+}
+.wraper .ItemsSleder {
+    transition: all 0.1s linear;
+    width: 293px;
+    height: 473px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.wraper .ItemsSleder:hover 
+{
+    transform: scale(1.02);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }

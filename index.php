@@ -157,7 +157,7 @@
     </section>
 
     <section>
-        <div class="containers">
+        <div class="container">
             <div class="Katalog">
 
                 <div class="BloclForCentralize" id="mainCatalog">
@@ -165,6 +165,160 @@
                     <hr>
                 </div>
 
+                <div class="rowItems">
+                    <div class="wraper">    
+
+                        <div class="SliderWithItems">
+                            <div class="ItemsSleder">
+                                <img class="PhotoForItemsSlider" src="./img/Mechanism.png">
+                                <div class="CenterItemHere">
+                                    <h1>ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ</h1>
+                                    <p>ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
+                                    ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
+                                    ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
+                                    ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
+                                    </p>                   
+                                </div>
+                                
+                                <div class="butomTtemsHere">
+                                    <a href="#" class="More">Подробнее</a>
+                                        <div class="btnCartAndPrice">
+                                            <div class="btn_Cart">
+                                                <a href="#">В корзину</a>
+                                            </div>
+                                            <div style="width:50px ;"></div>
+                                            <p>10 BYN</p>
+                                        </div>                           
+                                </div> 
+                            </div>
+                        </div> 
+
+                        <div class="SliderWithItems">
+                            <div class="ItemsSleder">
+                                <img class="PhotoForItemsSlider" src="./img/Mechanism.png">
+                                <div class="CenterItemHere">
+                                    <h1>ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ</h1>
+                                    <p>ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
+                                    ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
+                                    ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
+                                    ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
+                                    </p>                   
+                                </div>
+                                
+                                <div class="butomTtemsHere">
+                                    <a href="#" class="More">Подробнее</a>
+                                        <div class="btnCartAndPrice">
+                                            <div class="btn_Cart">
+                                                <a href="#">В корзину</a>
+                                            </div>
+                                            <div style="width:50px ;"></div>
+                                            <p>10 BYN</p>
+                                        </div>                           
+                                </div> 
+                            </div>
+                        </div> 
+
+                        <div class="SliderWithItems">
+                            <div class="ItemsSleder">
+                                <img class="PhotoForItemsSlider" src="./img/Mechanism.png">
+                                <div class="CenterItemHere">
+                                    <h1>ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ</h1>
+                                    <p>ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
+                                    ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
+                                    ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
+                                    ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
+                                    </p>                   
+                                </div>
+                                
+                                <div class="butomTtemsHere">
+                                    <a href="#" class="More">Подробнее</a>
+                                        <div class="btnCartAndPrice">
+                                            <div class="btn_Cart">
+                                                <a href="#">В корзину</a>
+                                            </div>
+                                            <div style="width:50px ;"></div>
+                                            <p>10 BYN</p>
+                                        </div>                           
+                                </div> 
+                            </div>
+                        </div> 
+
+                        <div class="SliderWithItems">
+                            <div class="ItemsSleder">
+                                <img class="PhotoForItemsSlider" src="./img/Mechanism.png">
+                                <div class="CenterItemHere">
+                                    <h1>ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ</h1>
+                                    <p>ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
+                                    ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
+                                    ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
+                                    ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
+                                    </p>                   
+                                </div>
+                                
+                                <div class="butomTtemsHere">
+                                    <a href="#" class="More">Подробнее</a>
+                                        <div class="btnCartAndPrice">
+                                            <div class="btn_Cart">
+                                                <a href="#">В корзину</a>
+                                            </div>
+                                            <div style="width:50px ;"></div>
+                                            <p>10 BYN</p>
+                                        </div>                           
+                                </div> 
+                            </div>
+                        </div> 
+
+                        <div class="SliderWithItems">
+                            <div class="ItemsSleder">
+                                <img class="PhotoForItemsSlider" src="./img/Mechanism.png">
+                                <div class="CenterItemHere">
+                                    <h1>ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ</h1>
+                                    <p>ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
+                                    ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
+                                    ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
+                                    ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
+                                    </p>                   
+                                </div>
+                                
+                                <div class="butomTtemsHere">
+                                    <a href="#" class="More">Подробнее</a>
+                                        <div class="btnCartAndPrice">
+                                            <div class="btn_Cart">
+                                                <a href="#">В корзину</a>
+                                            </div>
+                                            <div style="width:50px ;"></div>
+                                            <p>10 BYN</p>
+                                        </div>                           
+                                </div> 
+                            </div>
+                        </div> 
+                        <div class="SliderWithItems">
+                            <div class="ItemsSleder">
+                                <img class="PhotoForItemsSlider" src="./img/Mechanism.png">
+                                <div class="CenterItemHere">
+                                    <h1>ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ</h1>
+                                    <p>ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
+                                    ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
+                                    ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
+                                    ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
+                                    </p>                   
+                                </div>
+                                
+                                <div class="butomTtemsHere">
+                                    <a href="#" class="More">Подробнее</a>
+                                        <div class="btnCartAndPrice">
+                                            <div class="btn_Cart">
+                                                <a href="#">В корзину</a>
+                                            </div>
+                                            <div style="width:50px ;"></div>
+                                            <p>10 BYN</p>
+                                        </div>                           
+                                </div> 
+                            </div>
+                        </div> 
+
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -185,8 +339,8 @@
         <div class="container">
 
         </div>
-    </footer>
-    <script src="js/slider.js"></script>
+    </footer> 
+    <script src="js/slider.js"></script>  
     <script src="js/sliderTwo.js"></script>
     <script src="js/SmoothScrolling.js"></script>
 </body>

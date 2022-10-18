@@ -21,5 +21,4 @@
         }
         sliderline.style.left = -offset + 'px';
     });
-
         
