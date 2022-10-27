@@ -155,6 +155,7 @@ li {
 }
 .Products
 {
+    transition: 0.3s;
     color: #E6E6E6;
     width: 190px;
     height: 48px;
@@ -162,6 +163,12 @@ li {
     border-radius: 5px;
     display: inline-table;
     margin-top: 29px;
+}
+.Products:hover
+{ 
+    transition: 0.3s;
+    background: #C04242;
+    
 }
 .undertxt_of_maintxt 
 {
@@ -306,7 +313,7 @@ hr
 {
     position: relative;
     width: 2826px;
-    height: 490px;
+    height: 510px;
     display: flex;
     align-items: center;
     left:  0;
@@ -328,21 +335,56 @@ hr
 {
     display: flex;
 }
+
 .btn_Cart 
 {
+    transition: 0.3s;
     width: 133px;
     height: 38px;
-    background: #000000;
+    background: #000;
     border-radius: 5px;
+    border: 0.5px solid #000000;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+    align-items: center;
+}
+.btn_Cart:hover
+{
+    transition: 0.3s;
+    width: 133px;
+    height: 38px;
+    background: #fff;
+    border: 0.5px solid #000;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+    align-items: center;
+}
+.btn_Cart:hover a 
+{ 
+    transition: 0.3s;
+    font-family: 'Open Sans';
+    display: block;
+    text-align: center;
+    color: #000;
+    text-decoration: none;
 }
 .btn_Cart a
 {
     font-family: 'Open Sans';
     display: block;
     text-align: center;
-    padding-top: 8px ;
     color: #fff;
     text-decoration: none;
+    
+}
+
+.PhotoCart 
+{
+    width: 20px;
+    height: 20px;
 }
 .btnCartAndPrice p 
 {
@@ -355,15 +397,36 @@ hr
 }
 .More 
 {
+    
     display: block;
-    padding-top: 5px;
-    padding-bottom: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 3px;
     text-decoration: none;
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 600;
     color: #010101;
+    position: relative;
+    
 }
+.More:before 
+{
+    content: " ";
+    position:absolute;
+    width: 85px;
+    height: 0.5px;
+    background: #000;
+    left: 0;
+    bottom: 0;
+    transition: .3s;
+    transform: scale(0);
+    transform-origin: left;
+}
+.More:hover:before 
+{
+    transform: scale(1);
+}
+
 .SliderWithItems 
 {
     margin-left: 10px;
@@ -422,7 +485,8 @@ hr
 {
     display: block;
     padding-top: 5px;
-    padding-bottom: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 3px;
     text-decoration: none;
     font-family: 'Open Sans';
     font-style: normal;
@@ -447,4 +511,33 @@ hr
 {
     transform: scale(1.02);
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+                 /*О нас*/
+.CircleBg 
+{
+    background-image: url('../img/BgAbout.png');
+    width: 100%; 
+    height: 650px;
+    background-size: cover;
+    background-repeat: no-repeat;  
+}
+
+#AboutUs 
+{
+    padding-top: 200px;  
+    padding-bottom: 26px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 46px;    
+    color: #676767;
+}
+#AboutUs p 
+{
+    margin: 0;
+}
+.wraper 
+{
+    padding-bottom: 100px;
 }

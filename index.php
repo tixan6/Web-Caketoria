@@ -30,10 +30,10 @@
                     </div>
                     <div class="Header_Navigation">
                         <ul>
-                            <li><a href="#" class="as" >Каталог</a></li>
+                            <li><a href="#mainCatalog" class="as" >Каталог</a></li>
                             <li><a href="#">О нас</a></li>
                             <li><a href="#">Отзывы</a></li>
-                            <li><a href="#PopularProducts">Популярные</a></li>
+                            <li><a href="#KatalogTheBest">Популярные</a></li>
                             <li><a href="#">Контакты</a></li>
                         </ul>
                     </div>
@@ -102,8 +102,8 @@
     </section>
 
     <section>
-        <div class="containers">
-            <div class="KatalogTheBest">
+        <div class="containers"  id="KatalogTheBest">
+            <div class="KatalogTheBest" >
 
                 <div class="BloclForCentralize" id="PopularProducts">
                     <p>Популярная наша продукция</p>
@@ -132,7 +132,7 @@
                                         <div class="butomTtemsHere">
                                             <a href="#" class="More">Подробнее</a>
                                                 <div class="btnCartAndPrice">
-                                                    <div class="btn_Cart">
+                                                    <div class="btn_Cart">                                           
                                                         <a href="#">В корзину</a>
                                                     </div>
                                                     <div style="width:50px ;"></div>
@@ -316,7 +316,6 @@
                                 </div> 
                             </div>
                         </div> 
-
                     </div>
                 </div>
             </div>
@@ -325,7 +324,16 @@
     </section>
 
     <section>
-        <div class="container">
+        <div class="containers">
+            
+            <div class="CircleBg">    
+                <div class="BloclForCentralize" id="AboutUs">
+                    <p>Наша команда</p>
+                    <hr>
+                </div>
+                
+                
+            </div>
         </div>
     </section>
 
