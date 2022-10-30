@@ -517,9 +517,9 @@ hr
 {
     background-image: url('../img/BgAbout.png');
     width: 100%; 
-    height: 650px;
+    height: 100%;
     background-size: cover;
-    background-repeat: no-repeat;  
+    background-repeat: round;
 }
 
 #AboutUs 
@@ -540,4 +540,103 @@ hr
 .wraper 
 {
     padding-bottom: 100px;
+}
+.WeAbout 
+{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 50px;
+    height: 400px;
+}
+.itemsLeft p 
+{
+    width: 340px;
+    height: 375px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;  
+    text-align: initial;
+}
+.itemsLeft h1 
+{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight:bold;
+    font-size: 36px;
+    margin: 0;
+} 
+.itemsLeft
+{
+    text-align: center;
+}
+.itemsRight h1 
+{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight:400;
+    font-size: 26px;
+    margin: 0;
+}
+.itemBest 
+{
+    width: 180px;
+    height: 237px;
+    background-image: url('../img/TheBestEmployees/One.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 0.5px solid #000;
+    margin: 10px;
+}
+.The_best_employees 
+{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 20px;
+}
+.itemsRight 
+{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.Line 
+{
+    width: 100%;
+    height: 0.5px;
+    background: #CDCDCD;
+}
+.itmLft h1
+{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+.itmLft p
+{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    margin: 0;
+    width: 600px;
+    flex-wrap: wrap;
+    font-size: 19px;
+}
+.MainPHm 
+{
+    width: 300px;
+    height: 300px;
+    background-image: url('../img/TheBestEmployees/One.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 0.5px solid #000;
+    margin: 10px;
+}
+.MainHm 
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 30px 0 200px 0;
 }

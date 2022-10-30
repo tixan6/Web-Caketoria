@@ -323,23 +323,58 @@
 
     </section>
 
-    <section>
-        <div class="containers">
-            
+    <section>    
             <div class="CircleBg">    
                 <div class="BloclForCentralize" id="AboutUs">
                     <p>Наша команда</p>
                     <hr>
                 </div>
-                
-                
-            </div>
-        </div>
+                <div class="container">
+                    <div class="WeAbout">
+                        <div class="itemsLeft">
+                            <h1>Мы</h1>
+                            <p>Таким образом новая модель организационной
+                                деятельности способствует подготовки и реализации соответствующий
+                                условий активизации. Идейны
+                                е соображения высшего порядка, а также сложившаяся Таким образом новая модель организационной
+                                деятельности способствует подготовки и реализации соответствующий
+                                условий активизации. Идейны
+                                е соображения высшего порядка, а также сложившаяся 
+                            </p>
+                        </div>
+                        <div class="itemsRight">
+                            <h1>Лучшие сотрудники</h1>
+                            <div class="The_best_employees">
+                                <div class="itemBest"></div>
+                                <div class="itemBest"></div>
+                                <div class="itemBest"></div>
+                            </div>
+                        </div>
+                          
+                    </div>
+                    <div class="Line"></div> 
+                        <div class="MainHm">
+                            <div class="itmLft">
+                                <h1>Генеральный директор</h1>
+                                <p>Таким образом новая модель организационной
+                                    деятельности способствует подготовки и реализации соответствующий
+                                    условий активизации. Деятельности способствует подготовки и реализации соответствующий
+                                    условий активизации.
+                                </p>
+                            </div>
+                        <div class="itmRth">
+                            <div class="MainPHm"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>        
+            
     </section>
 
     <section>
         <div class="container">
-
+        
         </div>
     </section>
 
