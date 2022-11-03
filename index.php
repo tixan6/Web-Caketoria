@@ -30,9 +30,9 @@
                     </div>
                     <div class="Header_Navigation">
                         <ul>
-                            <li><a href="#mainCatalog" class="as" >Каталог</a></li>
-                            <li><a href="#">О нас</a></li>
-                            <li><a href="#">Отзывы</a></li>
+                            <li><a href="#mainCatalog">Каталог</a></li>
+                            <li><a href="#WeAbout">О нас</a></li>
+                            <li><a href="#cooperation">Сотрудничество</a></li>
                             <li><a href="#KatalogTheBest">Популярные</a></li>
                             <li><a href="#">Контакты</a></li>
                         </ul>
@@ -356,7 +356,7 @@
                     <hr>
                 </div>
                 <div class="container">
-                    <div class="WeAbout">
+                    <div class="WeAbout" id="WeAbout">
                         <div class="itemsLeft">
                             <h1>Мы</h1>
                             <p>Таким образом новая модель организационной
@@ -400,13 +400,13 @@
 
     <section>
         <div class="container">
-            <div class="ForPadding_cooperation">
+            <div class="ForPadding_cooperation" id="cooperation">
                 <div class="BloclForCentralize" id="mainCatalog">
                     <p>С кем мы сотрудничаем </p>
                     <hr>
                 </div>
 
-                <div class="cooperation">
+                <div class="cooperation" >
                     <div class="item_cooperation">
                         <img class="cooperation_img" src=".\img\Cooperation\Marriot.png">
                     </div>
@@ -432,6 +432,44 @@
                     </div>
                     <div class="item_cooperation">
                         <img class="cooperation_img" src=".\img\Cooperation\retbul.png">
+                    </div>
+                </div>
+
+                <div class="cooperationBTN">
+                    <a href="#">Сотрудничество</a>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="ForPadding_fast_desc">
+                <div class="MainBlock">
+                    <div class="LeftBlock">
+                        <div class="first">
+                            <h1>59 минут  или тортики бесплатно</h1>
+                            <p>Если мы не успеем доставить любые продукты, кроме сувенирной продукции, 
+                            в течение 59 минут, курьер подарит вам сертификат на большую пиццу.
+                            </p>
+                        </div>
+                        <div class="second">
+                            <h1>1 000,00 РУБ.</h1>
+                            <p>Максимальная сумма при оплате наличными
+                            Изображения продуктов могут отличаться от продуктов в заказе.
+                            </p>
+                        </div>
+                        
+                    </div>
+
+                    <div class="RigthBlock">
+                        <div class="title">
+                            <h1>Зона доставки ограничена</h1>
+                            <div class="map">
+
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
