@@ -316,6 +316,32 @@
                                 </div> 
                             </div>
                         </div> 
+
+                        <div class="SliderWithItems">
+                            <div class="ItemsSleder">
+                                <img class="PhotoForItemsSlider" src="./img/Mechanism.png">
+                                <div class="CenterItemHere">
+                                    <h1>ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ</h1>
+                                    <p>ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
+                                    ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
+                                    ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
+                                    ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
+                                    </p>                   
+                                </div>
+                                
+                                <div class="butomTtemsHere">
+                                    <a href="#" class="More">Подробнее</a>
+                                        <div class="btnCartAndPrice">
+                                            <div class="btn_Cart">
+                                                <a href="#">В корзину</a>
+                                            </div>
+                                            <div style="width:50px ;"></div>
+                                            <p>10 BYN</p>
+                                        </div>                           
+                                </div> 
+                            </div>
+                        </div> 
+
                     </div>
                 </div>
             </div>
@@ -374,13 +400,47 @@
 
     <section>
         <div class="container">
-        
+            <div class="ForPadding_cooperation">
+                <div class="BloclForCentralize" id="mainCatalog">
+                    <p>С кем мы сотрудничаем </p>
+                    <hr>
+                </div>
+
+                <div class="cooperation">
+                    <div class="item_cooperation">
+                        <img class="cooperation_img" src=".\img\Cooperation\Marriot.png">
+                    </div>
+                    <div class="item_cooperation">
+                        <img class="cooperation_img" src=".\img\Cooperation\Росгосстрах.png">
+                    </div>
+                    <div class="item_cooperation">
+                        <img class="cooperation_img" src=".\img\Cooperation\dodo.png">
+                    </div>
+                    <div class="item_cooperation">
+                        <img class="cooperation_img" src=".\img\Cooperation\LaRedoute.png">
+                    </div>
+                    
+
+                    <div class="item_cooperation">
+                        <img class="cooperation_img" src=".\img\Cooperation\зарплатаРу.png">
+                    </div>
+                    <div class="item_cooperation">
+                        <img class="cooperation_img" src=".\img\Cooperation\atb.png">
+                    </div>
+                    <div class="item_cooperation">
+                        <img class="cooperation_img" src=".\img\Cooperation\avitopng.png">
+                    </div>
+                    <div class="item_cooperation">
+                        <img class="cooperation_img" src=".\img\Cooperation\retbul.png">
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-
+                
         </div>
     </footer> 
     <script src="js/slider.js"></script>  

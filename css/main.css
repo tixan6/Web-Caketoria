@@ -640,3 +640,42 @@ hr
     align-items: center;
     padding: 30px 0 200px 0;
 }
+                    /*Сотрудничество*/
+.container .cooperation 
+{
+    margin: auto;
+}
+.cooperation 
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 1105px;
+    height: 285px;
+    padding-top: 50px;
+   
+}
+
+.item_cooperation 
+{
+    height: 95px;
+    width: 236px; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    text-align: center;
+    border-radius: 9px;   
+}
+
+.item_cooperation img
+{
+    margin: 12px 0px;
+}
+.cooperation_img 
+{
+    width: 75%; /* Ширина изображений */
+    height: 75%; /* Высота изображении */
+    object-fit: scale-down /* Вписываем фотографию в область */
+}
+.ForPadding_cooperation 
+{
+    padding-top: 100px;
+}
