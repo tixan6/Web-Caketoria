@@ -478,9 +478,67 @@
 
     <footer>
         <div class="container">
-                
+            <div class="footerMain">
+
+                <div class="TopFoot">
+                    <div class="leftItemsTopFoot">
+                        <div class="LOGO_FOOT">
+                            <h1>Caketoria</h1>
+                        </div>
+                        <div class="firstList">
+                            <p>JOIN CAKETORIA</p>
+                            <ul class="menu">
+                                <li><a href="#">Our Plan</a></li>
+                                <li><a href="#">Employers</a></li>
+                                <li><a href="#">Brokers</a></li>
+                                <li><a href="#">Members</a></li>
+                            </ul>
+                        </div>
+                        <div class="firstList">
+                            <p>COMPANY</p>
+                            <ul class="menu">
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Careers</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="rigtItemsTopFoot">
+                        <div class="subscribe">
+                            <h1>Подпишитесь на нашу рассылку</h1>
+                            <div class="inputEmail">
+                                <input class="inputEmailForMailing" placeholder="Ваш E-mail" type="text">
+                                <div class="btnOk">
+                                    <p>Ок</p>
+                                </div>
+                            </div>
+                            <h1 class="ThisIsForAPadd">Мы в соцсетях:</h1>
+                            <div class="We_are_in_social_networks">
+                                <div class="socialFacebook">
+                                    <img src=".\img\Icons\FaceBook.png">
+                                </div>
+                                <div class="socialVk">
+                                    <img src=".\img\Icons\vk.png">
+                                </div>
+                                <div class="socialOk">
+                                    <img src=".\img\Icons\ok.png">
+                                </div>
+                                <div class="socialInstagram">
+                                    <img src=".\img\Icons\insta.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="BotFoot">
+
+                </div>
+            </div>
         </div>
     </footer> 
+
     <script src="js/slider.js"></script>  
     <script src="js/sliderTwo.js"></script>
     <script src="js/SmoothScrolling.js"></script>
