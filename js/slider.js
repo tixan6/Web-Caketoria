@@ -1,5 +1,5 @@
     let offset = 0; //Смешение от левого края
-    let offsetForMass = 1; //Смешение от левого края
+    let offsetForMass = 1; 
     const sliderline = document.querySelector('.sliderLine');
 
     document.querySelector('.ArrowToTheRigth').addEventListener('click', function(){

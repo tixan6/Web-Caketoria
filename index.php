@@ -31,7 +31,7 @@
                     <div class="Header_Navigation">
                         <ul>
                             <li><a href="#mainCatalog">Каталог</a></li>
-                            <li><a href="#WeAbout">О нас</a></li>
+                            <li><a href="#WeAboutUs">О нас</a></li>
                             <li><a href="#cooperation">Сотрудничество</a></li>
                             <li><a href="#KatalogTheBest">Популярные</a></li>
                             <li><a href="#">Контакты</a></li>
@@ -350,7 +350,7 @@
     </section>
 
     <section>    
-            <div class="CircleBg">    
+            <div class="CircleBg" id="WeAboutUs">    
                 <div class="BloclForCentralize" id="AboutUs">
                     <p>Наша команда</p>
                     <hr>
@@ -467,7 +467,7 @@
                         <div class="title">
                             <h1>Зона доставки ограничена</h1>
                             <div class="map">
-
+                                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Afccfe2967d11fdfac07e7ddab611d1d6276a859358683b732fb7d660bb695c7a&amp;width=345&amp;height=345&amp;lang=ru_RU&amp;scroll=true"></script>
                             </div>
                         </div>
                     </div>
@@ -533,7 +533,29 @@
                 </div>
 
                 <div class="BotFoot">
+                    <div class="line-footer"></div>
+                    
 
+                    <div class="underLine">
+                        <p>
+                         Caketoria  is a limited benefit policy; it is not a substitute for health insurance.
+                         The information provided on this website is illustrative only.
+                         A complete description of benefits, limitations, and exclusions are provided in your certificate of Insurance and applicable Riders. For a summary of limitations and exclusions, see our FAQ. Payout values listed do not guarantee an amount to be paid for listed conditions. Product not available in all states. All coverage is subject to the terms and conditions of the master group policy.
+                        </p> 
+
+                        <p>
+                            Caketoria is underwritten by Greenhouse Life Insurance Company (NAIC 80055). Form No. PFSB11-TX
+                        </p> 
+
+                        <p>Reach us by mail at 2093 Philadelphia Pike #2496, Claymont, DE 19703 and by phone at</p>
+
+                        <div class="button">
+                            <p>© 2021 Caketoria Insurance Inc. <br/>All Rights</p>    
+                            <div class="rright">
+                                <p>Privacy | Terms of Service</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
