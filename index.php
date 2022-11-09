@@ -30,7 +30,7 @@
                     </div>
                     <div class="Header_Navigation">
                         <ul>
-                            <li><a href="#mainCatalog">Каталог</a></li>
+                            <li><a href="#Katalog">Каталог</a></li>
                             <li><a href="#WeAboutUs">О нас</a></li>
                             <li><a href="#cooperation">Сотрудничество</a></li>
                             <li><a href="#KatalogTheBest">Популярные</a></li>
@@ -157,9 +157,9 @@
     </section>
 
     <section>
-        <div class="container">
-            <div class="Katalog">
-
+        <div class="container" id="Katalog">
+            <div class="Katalog" >
+                                
                 <div class="BloclForCentralize" id="mainCatalog">
                     <p>Каталог</p>
                     <hr>
@@ -371,9 +371,36 @@
                         <div class="itemsRight">
                             <h1>Лучшие сотрудники</h1>
                             <div class="The_best_employees">
-                                <div class="itemBest"></div>
-                                <div class="itemBest"></div>
-                                <div class="itemBest"></div>
+                                <div class="itemBest">
+                                    <div class="info">
+                                        <p class="NameAboutOne" id="personName">
+                                            Александр
+                                        </p>
+                                        <p class="NameAboutOne" id="personPost">
+                                            Старший повар
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="itemBest">
+                                    <div class="info">
+                                        <p class="NameAboutOne" id="personName">
+                                            Александр
+                                        </p>
+                                        <p class="NameAboutOne" id="personPost">
+                                            Старший повар
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="itemBest">
+                                    <div class="info">
+                                        <p class="NameAboutOne" id="personName">
+                                            Александр
+                                        </p>
+                                        <p class="NameAboutOne" id="personPost">
+                                            Старший повар
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                           
@@ -389,7 +416,16 @@
                                 </p>
                             </div>
                         <div class="itmRth">
-                            <div class="MainPHm"></div>
+                            <div class="MainPHm">
+                                <div class="infoPHm">
+                                    <p class="NameAboutOne" id="personName">
+                                        Михаил
+                                    </p>
+                                    <p class="NameAboutOne" id="personPost">
+                                        Директор
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     
@@ -564,5 +600,10 @@
     <script src="js/slider.js"></script>  
     <script src="js/sliderTwo.js"></script>
     <script src="js/SmoothScrolling.js"></script>
+
+
+    <script src="js/Show.js"></script>
+    
+    <script src="js/ShowTwo.js"></script>
 </body>
 </html>
