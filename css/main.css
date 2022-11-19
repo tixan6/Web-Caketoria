@@ -450,7 +450,7 @@ hr
 
 .SliderWithItems 
 {
-    margin-left: 10px;
+    margin-left: 19px;
     padding-top: 10;
     padding-bottom: 20px;
 }
@@ -603,14 +603,19 @@ hr
 {
     width: 180px;
     height: 237px;
-    background-image: url('../img/TheBestEmployees/One.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
     border: 0.5px solid #000;
     margin: 10px;
 
     display: flex;
     align-items: flex-end;
+}
+
+.bgEmpl 
+{
+    position: absolute;
+    width: 180px;
+    height: 237px;
+    object-fit: cover;
 }
 
 .info

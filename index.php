@@ -1,9 +1,4 @@
-<?php 
-    include "datebase.php";
-    $result = mysqli_query($mysqli, "SELECT Images.Path_img, Product.Name, Product.Price, Description.Small_desc FROM `Images`, `Product`, `Description` WHERE Product.ID_img = Images.ID AND Product.ID_desc = Description.ID;");
-    //$TheBestProduct = mysqli_fetch_assoc($result);
-?>
-
+<?php include "datebase.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -110,6 +105,8 @@
                     <hr>
                 </div>
 
+            
+
                 <div class="container">
                     <div class="centerItem">
 
@@ -118,28 +115,34 @@
                         </div>
                         <div class="slider">
                             <div class="sliderLine">
-                            <?php while($TheBestProduct = mysqli_fetch_assoc($result)) { ?>
-                                <div class="SliderWithItems">
-                                    <div class="ItemsSleder">
-                                        <img class="PhotoForItemsSlider" src="<?php echo $TheBestProduct['Path_img']?>">
-                                        <div class="CenterItemHere">
-                                            <h1><?php echo $TheBestProduct['Name']?></h1>
-                                            <p><?php echo $TheBestProduct['Small_desc']?></p>                   
+                                <?php
+                                    $products = mysqli_query($mysqli, "SELECT Images.Path_img, Product.Name, Product.Price, Description.Small_desc FROM `Images`, `Product`, `Description` WHERE Product.ID_img = Images.ID AND Product.ID_desc = Description.ID;");
+                                    $products = mysqli_fetch_all($products);
+                                    foreach($products as $prod)
+                                    {
+                                ?>      
+                                    <div class="SliderWithItems">
+                                        <div class="ItemsSleder">
+                                            <img class="PhotoForItemsSlider" src="<?= $prod[0] ?>">
+                                            <div class="CenterItemHere">
+                                                <h1><?= $prod[1] ?></h1>
+                                                <p><?= $prod[3] ?></p>                   
+                                            </div>
+                                            
+                                            <div class="butomTtemsHere">
+                                                <a href="#" class="More">Подробнее</a>
+                                                    <div class="btnCartAndPrice">
+                                                        <div class="btn_Cart">                                           
+                                                            <a href="#">В корзину</a>
+                                                        </div>
+                                                        <div style="width:50px ;"></div>
+                                                        <p><?= $prod[2] ?> BYN</p>
+                                                    </div>                           
+                                            </div> 
                                         </div>
-                                        
-                                        <div class="butomTtemsHere">
-                                            <a href="#" class="More">Подробнее</a>
-                                                <div class="btnCartAndPrice">
-                                                    <div class="btn_Cart">                                           
-                                                        <a href="#">В корзину</a>
-                                                    </div>
-                                                    <div style="width:50px ;"></div>
-                                                    <p><?php echo $TheBestProduct['Price']?> BYN</p>
-                                                </div>                           
-                                        </div> 
-                                    </div>
-                                </div> 
-                                <?php } ?>
+                                    </div> 
+                                    
+                                <? } ?>
                             </div>
                         </div>
                         
@@ -369,36 +372,25 @@
                         <div class="itemsRight">
                             <h1>Лучшие сотрудники</h1>
                             <div class="The_best_employees">
-                                <div class="itemBest">
-                                    <div class="info">
-                                        <p class="NameAboutOne" id="personName">
-                                            Александр
-                                        </p>
-                                        <p class="NameAboutOne" id="personPost">
-                                            Старший повар
-                                        </p>
+                                <?php
+                                    $products = mysqli_query($mysqli, "SELECT TheBestEmployees.FirstName, TheBestEmployees.Post, TheBestEmployees.photo FROM `TheBestEmployees`;");
+                                    $products = mysqli_fetch_all($products);
+                                    foreach($products as $prod)
+                                    {
+                                ?>   
+                                    <div class="itemBest">
+                                    <img class="bgEmpl" src="<?= $prod[2]?>">   
+                                        <div class="info">
+                                            <p class="NameAboutOne" id="personName">
+                                                <?= $prod[0]?>
+                                            </p>
+                                            <p class="NameAboutOne" id="personPost">
+                                            <?= $prod[1]?>
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="itemBest">
-                                    <div class="info">
-                                        <p class="NameAboutOne" id="personName">
-                                            Александр
-                                        </p>
-                                        <p class="NameAboutOne" id="personPost">
-                                            Старший повар
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="itemBest">
-                                    <div class="info">
-                                        <p class="NameAboutOne" id="personName">
-                                            Александр
-                                        </p>
-                                        <p class="NameAboutOne" id="personPost">
-                                            Старший повар
-                                        </p>
-                                    </div>
-                                </div>
+
+                                <? } ?>
                             </div>
                         </div>
                           
@@ -442,30 +434,30 @@
 
                 <div class="cooperation" >
                     <div class="item_cooperation">
-                        <img class="cooperation_img" src=".\img\Cooperation\Marriot.png">
+                        <a href="https://www.marriott.com.ru/hotels/travel/mhpmc-minsk-marriott-hotel/"><img class="cooperation_img" src=".\img\Cooperation\Marriot.png"></a>
                     </div>
                     <div class="item_cooperation">
-                        <img class="cooperation_img" src=".\img\Cooperation\Росгосстрах.png">
+                        <a href="https://www.rgs.ru/"><img class="cooperation_img" src=".\img\Cooperation\Росгосстрах.png"></a>
                     </div>
                     <div class="item_cooperation">
-                        <img class="cooperation_img" src=".\img\Cooperation\dodo.png">
+                        <a href="https://dodopizza.by/gomel"><img class="cooperation_img" src=".\img\Cooperation\dodo.png"></a>
                     </div>
                     <div class="item_cooperation">
-                        <img class="cooperation_img" src=".\img\Cooperation\LaRedoute.png">
+                       <a href="https://www.laredoute.ru/"><img class="cooperation_img" src=".\img\Cooperation\LaRedoute.png"></a> 
                     </div>
                     
 
                     <div class="item_cooperation">
-                        <img class="cooperation_img" src=".\img\Cooperation\зарплатаРу.png">
+                        <a href="https://www.zarplata.ru/"><img class="cooperation_img" src=".\img\Cooperation\зарплатаРу.png"></a> 
                     </div>
                     <div class="item_cooperation">
-                        <img class="cooperation_img" src=".\img\Cooperation\atb.png">
+                        <a href="https://www.atb.su/"><img class="cooperation_img" src=".\img\Cooperation\atb.png"></a> 
                     </div>
                     <div class="item_cooperation">
-                        <img class="cooperation_img" src=".\img\Cooperation\avitopng.png">
+                        <a href="https://www.avito.ru/"><img class="cooperation_img" src=".\img\Cooperation\avitopng.png"></a>
                     </div>
                     <div class="item_cooperation">
-                        <img class="cooperation_img" src=".\img\Cooperation\retbul.png">
+                        <a href="https://www.redbull.com/ru-ru/"><img class="cooperation_img" src=".\img\Cooperation\retbul.png"></a> 
                     </div>
                 </div>
 
@@ -598,10 +590,7 @@
     <script src="js/slider.js"></script>  
     <script src="js/sliderTwo.js"></script>
     <script src="js/SmoothScrolling.js"></script>
-
-
     <script src="js/Show.js"></script>
-    
     <script src="js/ShowTwo.js"></script>
 </body>
 </html>
