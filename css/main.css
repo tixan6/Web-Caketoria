@@ -292,8 +292,9 @@ hr
 
 .PhotoForItemsSlider {
     border-radius: 10px 10px 0px 0px;
+    object-fit: cover;
     width: 293px;
-    height: 196px;
+    height: 190px;
 }
 .ItemsSleder h1
 {

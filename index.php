@@ -1,6 +1,6 @@
 <?php 
     include "datebase.php";
-    $result = mysqli_query($mysqli, "SELECT * FROM `The_best_product`");
+    $result = mysqli_query($mysqli, "SELECT Images.Path_img, Product.Name, Product.Price, Description.Small_desc FROM `Images`, `Product`, `Description` WHERE Product.ID_img = Images.ID AND Product.ID_desc = Description.ID;");
     //$TheBestProduct = mysqli_fetch_assoc($result);
 ?>
 
@@ -116,17 +116,15 @@
                         <div class="ArrowToTheLeft">
                             <img src="./img/ArrowToTheLeft.png">
                         </div>
-
-                        
                         <div class="slider">
                             <div class="sliderLine">
                             <?php while($TheBestProduct = mysqli_fetch_assoc($result)) { ?>
                                 <div class="SliderWithItems">
                                     <div class="ItemsSleder">
-                                        <img class="PhotoForItemsSlider" src="<?php echo $TheBestProduct['photo']?>">
+                                        <img class="PhotoForItemsSlider" src="<?php echo $TheBestProduct['Path_img']?>">
                                         <div class="CenterItemHere">
-                                            <h1><?php echo $TheBestProduct['title']?></h1>
-                                            <p><?php echo $TheBestProduct['textMin']?></p>                   
+                                            <h1><?php echo $TheBestProduct['Name']?></h1>
+                                            <p><?php echo $TheBestProduct['Small_desc']?></p>                   
                                         </div>
                                         
                                         <div class="butomTtemsHere">
@@ -136,7 +134,7 @@
                                                         <a href="#">В корзину</a>
                                                     </div>
                                                     <div style="width:50px ;"></div>
-                                                    <p><?php echo $TheBestProduct['price']?> BYN</p>
+                                                    <p><?php echo $TheBestProduct['Price']?> BYN</p>
                                                 </div>                           
                                         </div> 
                                     </div>
