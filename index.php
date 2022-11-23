@@ -15,8 +15,9 @@
     <title>Caketoria</title>
 </head>
 <body>
-    <header >
+    <header>
         <div class="container">
+        
             <div class="header">
                 <div class="header_titile">
                     <div class="LOGO">
@@ -29,7 +30,7 @@
                             <li><a href="#WeAboutUs">О нас</a></li>
                             <li><a href="#cooperation">Сотрудничество</a></li>
                             <li><a href="#KatalogTheBest">Популярные</a></li>
-                            <li><a href="#">Контакты</a></li>
+                            <li><a href="#" class="open-popup-Contacts">Контакты</a></li>
                         </ul>
                     </div>
                     <div class="BtnLogOrReg">
@@ -58,9 +59,10 @@
                                 </div>        
                     </div>
                 </div>
+                
             </div>
-    </section>
 
+    </section>   
     <section>
         <div class="container">
             <div class="OnlyBest">
@@ -166,185 +168,41 @@
                     <hr>
                 </div>
 
+                
                 <div class="rowItems">
-                    <div class="wraper">    
-
+                    <div class="wraper">  
+                        <?php
+                            $products = mysqli_query($mysqli, "SELECT Images.Path_img, Product.Name, Product.Price, Description.Small_desc FROM `Images`, `Product`, `Description` WHERE Product.ID_img = Images.ID AND Product.ID_desc = Description.ID;");
+                            $products = mysqli_fetch_all($products);
+                            foreach($products as $prod)
+                            {
+                        ?>       
                         <div class="SliderWithItems">
+                            
                             <div class="ItemsSleder">
-                                <img class="PhotoForItemsSlider" src="./img/Mechanism.png">
-                                <div class="CenterItemHere">
-                                    <h1>ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ</h1>
-                                    <p>ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
-                                    ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
-                                    ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
-                                    ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
-                                    </p>                   
-                                </div>
-                                
-                                <div class="butomTtemsHere">
-                                    <a href="#" class="More">Подробнее</a>
-                                        <div class="btnCartAndPrice">
-                                            <div class="btn_Cart">
-                                                <a href="#">В корзину</a>
-                                            </div>
-                                            <div style="width:50px ;"></div>
-                                            <p>10 BYN</p>
-                                        </div>                           
-                                </div> 
+                                        <img class="PhotoForItemsSlider" src="<?= $prod[0] ?>">
+                                        <div class="CenterItemHere">
+                                            <h1><?= $prod[1] ?></h1>
+                                            <p><?= $prod[3] ?></p>                   
+                                        </div>
+                                        
+                                        <div class="butomTtemsHere">
+                                            <a href="#" class="More">Подробнее</a>
+                                                <div class="btnCartAndPrice">
+                                                    <div class="btn_Cart">
+                                                        <a href="#">В корзину</a>
+                                                    </div>
+                                                    <div style="width:50px ;"></div>
+                                                    <p><?= $prod[2] ?> BYN</p>
+                                                </div>                           
+                                        </div> 
+                                    
                             </div>
-                        </div> 
-
-                        <div class="SliderWithItems">
-                            <div class="ItemsSleder">
-                                <img class="PhotoForItemsSlider" src="./img/Mechanism.png">
-                                <div class="CenterItemHere">
-                                    <h1>ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ</h1>
-                                    <p>ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
-                                    ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
-                                    ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
-                                    ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
-                                    </p>                   
-                                </div>
-                                
-                                <div class="butomTtemsHere">
-                                    <a href="#" class="More">Подробнее</a>
-                                        <div class="btnCartAndPrice">
-                                            <div class="btn_Cart">
-                                                <a href="#">В корзину</a>
-                                            </div>
-                                            <div style="width:50px ;"></div>
-                                            <p>10 BYN</p>
-                                        </div>                           
-                                </div> 
-                            </div>
-                        </div> 
-
-                        <div class="SliderWithItems">
-                            <div class="ItemsSleder">
-                                <img class="PhotoForItemsSlider" src="./img/Mechanism.png">
-                                <div class="CenterItemHere">
-                                    <h1>ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ</h1>
-                                    <p>ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
-                                    ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
-                                    ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
-                                    ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
-                                    </p>                   
-                                </div>
-                                
-                                <div class="butomTtemsHere">
-                                    <a href="#" class="More">Подробнее</a>
-                                        <div class="btnCartAndPrice">
-                                            <div class="btn_Cart">
-                                                <a href="#">В корзину</a>
-                                            </div>
-                                            <div style="width:50px ;"></div>
-                                            <p>10 BYN</p>
-                                        </div>                           
-                                </div> 
-                            </div>
-                        </div> 
-
-                        <div class="SliderWithItems">
-                            <div class="ItemsSleder">
-                                <img class="PhotoForItemsSlider" src="./img/Mechanism.png">
-                                <div class="CenterItemHere">
-                                    <h1>ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ</h1>
-                                    <p>ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
-                                    ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
-                                    ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
-                                    ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
-                                    </p>                   
-                                </div>
-                                
-                                <div class="butomTtemsHere">
-                                    <a href="#" class="More">Подробнее</a>
-                                        <div class="btnCartAndPrice">
-                                            <div class="btn_Cart">
-                                                <a href="#">В корзину</a>
-                                            </div>
-                                            <div style="width:50px ;"></div>
-                                            <p>10 BYN</p>
-                                        </div>                           
-                                </div> 
-                            </div>
-                        </div> 
-
-                        <div class="SliderWithItems">
-                            <div class="ItemsSleder">
-                                <img class="PhotoForItemsSlider" src="./img/Mechanism.png">
-                                <div class="CenterItemHere">
-                                    <h1>ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ</h1>
-                                    <p>ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
-                                    ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
-                                    ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
-                                    ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
-                                    </p>                   
-                                </div>
-                                
-                                <div class="butomTtemsHere">
-                                    <a href="#" class="More">Подробнее</a>
-                                        <div class="btnCartAndPrice">
-                                            <div class="btn_Cart">
-                                                <a href="#">В корзину</a>
-                                            </div>
-                                            <div style="width:50px ;"></div>
-                                            <p>10 BYN</p>
-                                        </div>                           
-                                </div> 
-                            </div>
-                        </div> 
-                        <div class="SliderWithItems">
-                            <div class="ItemsSleder">
-                                <img class="PhotoForItemsSlider" src="./img/Mechanism.png">
-                                <div class="CenterItemHere">
-                                    <h1>ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ</h1>
-                                    <p>ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
-                                    ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
-                                    ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
-                                    ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
-                                    </p>                   
-                                </div>
-                                
-                                <div class="butomTtemsHere">
-                                    <a href="#" class="More">Подробнее</a>
-                                        <div class="btnCartAndPrice">
-                                            <div class="btn_Cart">
-                                                <a href="#">В корзину</a>
-                                            </div>
-                                            <div style="width:50px ;"></div>
-                                            <p>10 BYN</p>
-                                        </div>                           
-                                </div> 
-                            </div>
-                        </div> 
-
-                        <div class="SliderWithItems">
-                            <div class="ItemsSleder">
-                                <img class="PhotoForItemsSlider" src="./img/Mechanism.png">
-                                <div class="CenterItemHere">
-                                    <h1>ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ</h1>
-                                    <p>ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
-                                    ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
-                                    ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
-                                    ЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУЙЦУ
-                                    </p>                   
-                                </div>
-                                
-                                <div class="butomTtemsHere">
-                                    <a href="#" class="More">Подробнее</a>
-                                        <div class="btnCartAndPrice">
-                                            <div class="btn_Cart">
-                                                <a href="#">В корзину</a>
-                                            </div>
-                                            <div style="width:50px ;"></div>
-                                            <p>10 BYN</p>
-                                        </div>                           
-                                </div> 
-                            </div>
-                        </div> 
-
+                        </div>
+                        <? } ?>
                     </div>
                 </div>
+
             </div>
         </div>
 
@@ -564,21 +422,19 @@
 
                     <div class="underLine">
                         <p>
-                         Caketoria  is a limited benefit policy; it is not a substitute for health insurance.
-                         The information provided on this website is illustrative only.
-                         A complete description of benefits, limitations, and exclusions are provided in your certificate of Insurance and applicable Riders. For a summary of limitations and exclusions, see our FAQ. Payout values listed do not guarantee an amount to be paid for listed conditions. Product not available in all states. All coverage is subject to the terms and conditions of the master group policy.
+                         Кафетерий - это полис с ограниченными льготами; он не заменяет медицинскую страховку. Информация, представленная на этом веб-сайте, носит исключительно иллюстративный характер. Полное описание льгот, ограничений и исключений приведено в вашем страховом свидетельстве и соответствующих инструкциях. Краткое описание ограничений и исключений смотрите в нашем разделе часто задаваемых вопросов. Перечисленные значения выплат не гарантируют сумму, подлежащую выплате при перечисленных условиях. Продукт доступен не во всех штатах. Все страховые покрытия подпадают под действие положений и условий политики master group.
                         </p> 
 
                         <p>
-                            Caketoria is underwritten by Greenhouse Life Insurance Company (NAIC 80055). Form No. PFSB11-TX
+                        Caketoria is underwritten by Greenhouse Life Insurance Company (NAIC 80055). Form No. PFSB11-TX
                         </p> 
 
                         <p>Reach us by mail at 2093 Philadelphia Pike #2496, Claymont, DE 19703 and by phone at</p>
 
                         <div class="button">
-                            <p>© 2021 Caketoria Insurance Inc. <br/>All Rights</p>    
+                            <p>© 2021 Cafeteria Insurance Inc. <br/>Все права</p>    
                             <div class="rright">
-                                <p>Privacy | Terms of Service</p>
+                                <p>Конфиденциальность | Условия предоставления услуг</p>
                             </div>
                         </div>
                     </div>
@@ -587,10 +443,19 @@
         </div>
     </footer> 
 
+    <div class="popup-bg">
+        <div class="popup-сontacts">
+            <img src="img\window\ClosePopup.png" alt="icon" class="closePopup-Contact">
+            <p>Текст окна</p>
+        </div>
+    </div>
+  
+
     <script src="js/slider.js"></script>  
     <script src="js/sliderTwo.js"></script>
     <script src="js/SmoothScrolling.js"></script>
     <script src="js/Show.js"></script>
     <script src="js/ShowTwo.js"></script>
+    <script src="js/popupContact.js"></script>  
 </body>
 </html>
