@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
-    
+    <link rel="stylesheet" href="css/modalView.css">
+
     <link rel="stylesheet" href="fonts/bebasneue/bebasneue.css">
     <link rel="stylesheet" href="fonts/lato/lato.css">
     <link rel="stylesheet" href="fonts/montserrat/montserrat.css">
@@ -21,9 +22,11 @@
             <div class="header">
                 <div class="header_titile">
                     <div class="LOGO">
-                        <h1>Caketoria</h1>
+                        <a href="">Caketoria</a>
+                        
                         <img src="img/LOGO.svg"/>
-                    </div>
+                    </div> 
+                                  
                     <div class="Header_Navigation">
                         <ul>
                             <li><a href="#Katalog">Каталог</a></li>
@@ -37,7 +40,7 @@
                         <a href="#" class="btnlog">Логин</a>
                         <div class="void"></div>
                         <div class="btn_Register_header">
-                            <a href="#" >Регистрация</a>
+                            <a href="#" class="open-popup-reg" >Регистрация</a>
                         </div>
                     </div>
                 </div>              
@@ -55,7 +58,7 @@
                                 условий активизации. Идейны
                                 е соображения высшего порядка, а также сложившаяся </p>
                                 <div class="Products">
-                                    <a href="#">Продукция</a>
+                                    <a href="#Katalog">Продукция</a>
                                 </div>        
                     </div>
                 </div>
@@ -317,12 +320,7 @@
                     <div class="item_cooperation">
                         <a href="https://www.redbull.com/ru-ru/"><img class="cooperation_img" src=".\img\Cooperation\retbul.png"></a> 
                     </div>
-                </div>
-
-                <div class="cooperationBTN">
-                    <a href="#">Сотрудничество</a>
-                </div>
-                
+                </div>               
             </div>
         </div>
     </section>
@@ -339,7 +337,7 @@
                             </p>
                         </div>
                         <div class="second">
-                            <h1>1 000,00 РУБ.</h1>
+                            <h1>500,00 РУБ.</h1>
                             <p>Максимальная сумма при оплате наличными
                             Изображения продуктов могут отличаться от продуктов в заказе.
                             </p>
@@ -370,21 +368,11 @@
                             <h1>Caketoria</h1>
                         </div>
                         <div class="firstList">
-                            <p>JOIN CAKETORIA</p>
+                            <p>Присоединиться</p>
                             <ul class="menu">
-                                <li><a href="#">Our Plan</a></li>
-                                <li><a href="#">Employers</a></li>
-                                <li><a href="#">Brokers</a></li>
-                                <li><a href="#">Members</a></li>
-                            </ul>
-                        </div>
-                        <div class="firstList">
-                            <p>COMPANY</p>
-                            <ul class="menu">
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Careers</a></li>
-                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">Вакансии</a></li>
+                                <li><a href="#">Члены команды</a></li>
+                                <li><a href="#">Сотрудничать</a></li>
                             </ul>
                         </div>
                     </div>
@@ -443,13 +431,80 @@
         </div>
     </footer> 
 
-    <div class="popup-bg">
+    <div class="popup-bg-contact">
         <div class="popup-сontacts">
             <img src="img\window\ClosePopup.png" alt="icon" class="closePopup-Contact">
-            <p>Текст окна</p>
+            <div class="title-poput">
+                <div class="centerTitlePop">
+                    <h1>Контакты</h1>
+                </div>              
+                <div class="main-title">
+                    <div class="item-popup-left">
+                        <div class="email-popup">
+                            <h2>Почта для связи</h2>
+                            <p>CaketoriaInfopas@yandex.by</p>
+                            <p>Сakebob@bobub.by</p>
+                        </div>
+
+                        <div class="messenger-popup">
+                            <h2>Мессенджеры</h2>
+                            <a href="https://vk.com">VK</a><br>
+                            <a href="https://www.instagram.com">Instagram</a>
+                        </div>
+
+                    </div>
+                    <div class="item-popup-rigth">
+                        <h2>Телефоны</h2>
+                        <div class="colum-phone">
+                            <p>+375 (29) 233-22-33</p>
+                            <p>+375 (29) 121-52-73</p>
+                            <p>+375 (33) 333-22-11</p>   
+                        </div>                         
+                    </div>
+                </div>
+            </div>      
+        </div>
+    </div>
+
+    <div class="popup-bg-reg">
+        <div class="popup-reg">
+            <img src="img\window\ClosePopup.png" alt="icon" class="closePopup-reg">
+            <div class="title-poput">
+                <div class="centerTitlePop">
+                    <h1>Регистрация</h1>
+                </div>              
+                <div class="main-title-reg">
+                    <form>
+                        <div class="fs">
+                            <input type="text" class="FirstNameInput" placeholder="Имя">
+                            <input type="text" class="SurnameNameInput" placeholder="Фамилия">
+                        </div>
+                        <div class="email">
+                            <input type="email" class="email-Input" placeholder="Эл. почта">
+                        </div>
+                        <div class="phone">
+                            <input type="phone" class="phone-input" placeholder="Номер телефона">
+                        </div>
+                        <div class="passwords">
+                            <input type="password" class="password-input" placeholder="Пароль">
+                            <input type="password" class="password-input-repeat" placeholder="Повторите пароль">
+                        </div>
+                        <div class="btnReg">
+                            <div class="btn-log">
+                                <a href="#" class="Login">Войти</a>
+                            </div>
+                            <div class="btn-reg">
+                                <a href="#" class="Registration">Регистрация</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>      
         </div>
     </div>
   
+
+    
 
     <script src="js/slider.js"></script>  
     <script src="js/sliderTwo.js"></script>

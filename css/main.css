@@ -32,17 +32,14 @@ body {
     display: flex;
     align-items: center;
 }
-.LOGO h1 
+.LOGO a
 {
+    text-decoration: none;
     margin: 0;
     font-size: 40px;
+    color: #2B2B2B;
 } 
-.LOGO img
-{
-    margin: 0 0 6px 0;
-    font-size: 40px;
-} 
-                /*Верхушка (Navigation)*/
+             /*Верхушка (Navigation)*/
 .header {height: 90px;}
 .Header_Navigation ul {
     color: #212121;
@@ -52,6 +49,7 @@ body {
     flex-flow: row nowrap;
     list-style: none;
 }
+
 li a {
     text-decoration: none;
     color: #3C3C3C;
@@ -806,24 +804,6 @@ hr
     text-align: center;
 }
 
-.cooperationBTN
-{
-    transition: 0.3s;
-    color: #000;
-    width: 190px;
-    height: 48px;
-    border: solid 1px;
-    border-radius: 5px;
-    display: inline-table;
-    margin-top: 29px;
-}
-.cooperationBTN:hover
-{ 
-    transition: 0.3s;
-    
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    
-}
 
 .cooperationBTN a 
 {
@@ -835,7 +815,6 @@ hr
     padding: 12px 0 0 0;
     
 }
-
 
                     /*Описание*/
 .MainBlock h1 
@@ -1083,6 +1062,7 @@ footer
     width: 100%;
     height: 0.1px;
     border-radius: 10px;
+    margin-top: 15px;
 }
 .underLine p 
 {
@@ -1103,37 +1083,4 @@ footer
 .underLine 
 {
     padding-top: 50px;
-}
-
-                  /*Модальные окна*/
-.popup-bg {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(0,0,0,0.8);
-    display: none;
-}
-.popup-сontacts 
-{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 600px;
-    background: #fff;
-    padding: 20px;
-    transform: translate(-50%, -50%);
-    border-radius: 10px;
-    padding-top: 30px;
-}
-.closePopup-Contact
-{
-    position:absolute;
-    top: 30px;
-    right: 30px;
-    width: 15px;
-    height: 15px;
-    margin: 0;
-    padding: 0;
 }

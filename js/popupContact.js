@@ -20,15 +20,25 @@
       };
 
     document.querySelector(".open-popup-Contacts").addEventListener("click", function () {
-        var btnOn = document.querySelector(".popup-bg");
+        var btnOn = document.querySelector(".popup-bg-contact");
         fadeIn(btnOn, 600, 'flex');
     });
     
     document.querySelector(".closePopup-Contact").addEventListener("click", function () {
-        var btnOff = document.querySelector(".popup-bg");
+        var btnOff = document.querySelector(".popup-bg-contact");
         fadeOut(btnOff, 600);
     });
 
 
+
+    document.querySelector(".open-popup-reg").addEventListener("click", function () {
+      var btnOn = document.querySelector(".popup-bg-reg");
+      fadeIn(btnOn, 600, 'flex');
+    });
+  
+    document.querySelector(".closePopup-reg").addEventListener("click", function () {
+        var btnOff = document.querySelector(".popup-bg-reg");
+        fadeOut(btnOff, 600);
+    });
 
 })();
