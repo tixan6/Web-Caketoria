@@ -474,26 +474,26 @@
                     <h1>Регистрация</h1>
                 </div>              
                 <div class="main-title-reg">
-                    <form>
+                    <form method="post" acti class="register">
                         <div class="fs">
-                            <input type="text" class="FirstNameInput" placeholder="Имя">
-                            <input type="text" class="SurnameNameInput" placeholder="Фамилия">
+                            <input required  type="text" class="FirstNameInput" placeholder="Имя">
+                            <input required  type="text" class="SurnameNameInput" placeholder="Фамилия">
                         </div>
                         <div class="email">
-                            <input type="email" class="email-Input" placeholder="Эл. почта">
+                            <input required  type="email" class="email-Input" placeholder="Эл. почта">
                         </div>
                         <div class="phone">
-                            <input type="phone" class="phone-input" placeholder="Номер телефона">
+                            <input required type="phone" class="phone-input" placeholder="Номер телефона">
                         </div>
                         <div class="passwords">
-                            <input type="password" class="password-input" placeholder="Пароль">
-                            <input type="password" class="password-input-repeat" placeholder="Повторите пароль">
+                            <input required  type="password" class="password-input" placeholder="Пароль">
+                            <input required  type="password" class="password-input-repeat" placeholder="Повторите пароль">
                         </div>
                         <div class="btnReg">
                             <div class="btn-log">
                                 <a href="#" class="Login">Войти</a>
                             </div>
-                            <div class="btn-reg">
+                            <div class="btn-reg" class="qwe">
                                 <a href="#" class="Registration">Регистрация</a>
                             </div>
                         </div>
@@ -506,7 +506,8 @@
 
     
 
-    <script src="js/slider.js"></script>  
+    <script src="js/slider.js"></script>
+    <script src="js/RegexReg.js"></script>  
     <script src="js/sliderTwo.js"></script>
     <script src="js/SmoothScrolling.js"></script>
     <script src="js/Show.js"></script>
