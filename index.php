@@ -465,7 +465,7 @@
             </div>      
         </div>
     </div>
-
+    
     <div class="popup-bg-reg">
         <div class="popup-reg">
             <img src="img\window\ClosePopup.png" alt="icon" class="closePopup-reg">
@@ -474,27 +474,29 @@
                     <h1>Регистрация</h1>
                 </div>              
                 <div class="main-title-reg">
-                    <form method="post" acti class="register">
+                    <form method="post" action="check.php" class="register">
                         <div class="fs">
-                            <input required  type="text" class="FirstNameInput" placeholder="Имя">
-                            <input required  type="text" class="SurnameNameInput" placeholder="Фамилия">
+                            <input type="text" class="FirstNameInput" name="name" placeholder="Имя">
+                            <input type="text" class="SurnameNameInput" name="surname" placeholder="Фамилия">
                         </div>
                         <div class="email">
-                            <input required  type="email" class="email-Input" placeholder="Эл. почта">
+                            <input type="email" class="email-Input" name="email" placeholder="Эл. почта" 
+                            required oninvalid="setCustomValidity('Вводимая строка должна содержать знак \'@\' и точку резделителя домена. ')" 
+                            oninput="setCustomValidity('')" pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$">
                         </div>
                         <div class="phone">
-                            <input required type="phone" class="phone-input" placeholder="Номер телефона">
+                            <input type="phone" class="phone-input" name="phone" 
+                            required oninvalid="setCustomValidity('Номер телефона должен быть с кодом страны и без пробелов: +375112223344 ')" 
+                            oninput="setCustomValidity('')" pattern="^(\+375|80)(29|25|44|33)(\d{3})(\d{2})(\d{2})$" 
+                            placeholder="Номер телефона">
                         </div>
                         <div class="passwords">
-                            <input required  type="password" class="password-input" placeholder="Пароль">
-                            <input required  type="password" class="password-input-repeat" placeholder="Повторите пароль">
+                            <input type="password" class="password-input" name="pass" placeholder="Пароль" >
+                            <input type="password" class="password-input-repeat" placeholder="Повторите пароль">
                         </div>
                         <div class="btnReg">
-                            <div class="btn-log">
-                                <a href="#" class="Login">Войти</a>
-                            </div>
                             <div class="btn-reg" class="qwe">
-                                <a href="#" class="Registration">Регистрация</a>
+                                <button type="submit" class="Registration" >Регистрация</button>
                             </div>
                         </div>
                     </form>
@@ -505,9 +507,7 @@
   
 
     
-
     <script src="js/slider.js"></script>
-    <script src="js/RegexReg.js"></script>  
     <script src="js/sliderTwo.js"></script>
     <script src="js/SmoothScrolling.js"></script>
     <script src="js/Show.js"></script>

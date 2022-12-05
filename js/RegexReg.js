@@ -27,7 +27,7 @@
             if (pass == passRepeat) {
                 if (regPas.test(phone)) {
                     if (regEmail.test(email)) {
-                        //d
+                        location = 'check.php';
                     }
                     else{
                         alert("Почта введена не корректно")
@@ -40,9 +40,6 @@
             else {alert("Пароли не совпадают")}
         } 
         else { alert("Придумайте надежный пароль") }
-
-
-
     }
 
 })();
