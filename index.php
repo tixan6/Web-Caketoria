@@ -476,8 +476,12 @@
                 <div class="main-title-reg">
                     <form method="post" action="check.php" class="register">
                         <div class="fs">
-                            <input type="text" class="FirstNameInput" name="name" placeholder="Имя">
-                            <input type="text" class="SurnameNameInput" name="surname" placeholder="Фамилия">
+                            <input type="text" class="FirstNameInput" name="name" placeholder="Имя"
+                            required oninvalid="setCustomValidity('Введите имя')" 
+                            oninput="setCustomValidity('')">
+                            <input type="text" class="SurnameNameInput" name="surname" placeholder="Фамилия"
+                            required oninvalid="setCustomValidity('Введите фамилию')" 
+                            oninput="setCustomValidity('')">
                         </div>
                         <div class="email">
                             <input type="email" class="email-Input" name="email" placeholder="Эл. почта" 
@@ -492,11 +496,11 @@
                         </div>
                         <div class="passwords">
                             <input type="password" class="password-input" name="pass" placeholder="Пароль" >
-                            <input type="password" class="password-input-repeat" placeholder="Повторите пароль">
+                            <input type="password" class="password-input-repeat" name="passRepeat"  placeholder="Повторите пароль">
                         </div>
                         <div class="btnReg">
                             <div class="btn-reg" class="qwe">
-                                <button type="submit" class="Registration" >Регистрация</button>
+                                <button type="submit" class="Registration">Регистрация</button>
                             </div>
                         </div>
                     </form>

@@ -5,9 +5,18 @@
     $mail = trim($_POST['email']);
     $phone = trim($_POST['phone']);
     $pass = trim($_POST['pass']);
+    $pass = trim($_POST['pass']);
+    $passRepeat = trim($_POST['passRepeat']);
 
 
-    
+    if ($pass != $passRepeat) 
+    {
+            echo '<script>
+        $(function(){
+        $('.hide').trigger('click');
+        }); 
+        </script>';
+    }
 
     $pass = md5($pass."lkafdh23423423"); 
 
