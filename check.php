@@ -4,19 +4,8 @@
     $surname = trim($_POST['surname']); 
     $mail = trim($_POST['email']);
     $phone = trim($_POST['phone']);
-    $pass = trim($_POST['pass']);
-    $pass = trim($_POST['pass']);
-    $passRepeat = trim($_POST['passRepeat']);
 
-
-    if ($pass != $passRepeat) 
-    {
-            echo '<script>
-        $(function(){
-        $('.hide').trigger('click');
-        }); 
-        </script>';
-    }
+    $pass = trim($_POST['pass']);
 
     $pass = md5($pass."lkafdh23423423"); 
 
@@ -24,6 +13,5 @@
     VALUES ('$name', '$surname', '$mail', '$pass', '$phone')");
     $mysqli->close();
     header('Location: /');
-    echo $name;
-    exit();
+    exit();  
 ?>

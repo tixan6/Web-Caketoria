@@ -273,7 +273,11 @@
 }
 .btnReg 
 {
-    padding-top: 30px;
+    padding-top: 50px;
+}
+.btn-reg 
+{
+    text-align: center;
 }
 .Registration 
 {
@@ -296,5 +300,85 @@
     box-shadow: 0 0 0 4px #cbd6ee;
 }
 
-
                         /*Вход*/
+.popup-bg-log {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    display: none;
+}
+.popup-log 
+{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: 350px;
+    background: #fff;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding-top: 30px;
+    height: 360px;
+}
+.closePopup-log
+{
+    position:absolute;
+    top: 30px;
+    right: 30px;
+    width: 15px;
+    height: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+
+.numberPhoneLog 
+{
+    width: 70%;
+    height: 40px;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.25);
+    outline: none;
+    border: none;
+    color: #686868;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+.numberPhoneLog::placeholder {
+    color: #686868;
+    opacity: 0.8;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight:500;
+    font-size: 12px;
+    padding-left: 10px;
+}
+
+.passLog 
+{
+    width: 70%;
+    height: 40px;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.25);
+    outline: none;
+    border: none;
+    color: #686868;
+    padding-left: 10px;
+}
+
+.passLog::placeholder {
+    color: #686868;
+    opacity: 0.8;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight:500;
+    font-size: 12px;
+    padding-left: 5px;
+}
+.itemCenterLog 
+{
+    text-align: center;
+}

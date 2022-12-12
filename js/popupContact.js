@@ -41,4 +41,17 @@
         fadeOut(btnOff, 600);
     });
 
+
+
+    document.querySelector(".btnlog").addEventListener("click", function () {
+      var btnOn = document.querySelector(".popup-bg-log");
+      fadeIn(btnOn, 600, 'flex');
+    });
+  
+    document.querySelector(".closePopup-log").addEventListener("click", function () {
+        var btnOff = document.querySelector(".popup-bg-log");
+        fadeOut(btnOff, 600);
+    });
+    
+
 })();

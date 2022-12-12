@@ -37,7 +37,7 @@
                         </ul>
                     </div>
                     <div class="BtnLogOrReg">
-                        <a href="#" class="btnlog">Логин</a>
+                            <a href="#" class="btnlog">Логин</a>           
                         <div class="void"></div>
                         <div class="btn_Register_header">
                             <a href="#" class="open-popup-reg" >Регистрация</a>
@@ -465,6 +465,7 @@
             </div>      
         </div>
     </div>
+
     
     <div class="popup-bg-reg">
         <div class="popup-reg">
@@ -472,7 +473,7 @@
             <div class="title-poput">
                 <div class="centerTitlePop">
                     <h1>Регистрация</h1>
-                </div>              
+                </div>         
                 <div class="main-title-reg">
                     <form method="post" action="check.php" class="register">
                         <div class="fs">
@@ -495,8 +496,10 @@
                             placeholder="Номер телефона">
                         </div>
                         <div class="passwords">
-                            <input type="password" class="password-input" name="pass" placeholder="Пароль" >
-                            <input type="password" class="password-input-repeat" name="passRepeat"  placeholder="Повторите пароль">
+                            <input type="password" class="password-input" name="pass" placeholder="Пароль" 
+                            pattern="^[a-z0-9_-]{6,16}$" oninvalid="setCustomValidity('Пароль должен быть минимум из 6 символов')"
+                            required>
+                            
                         </div>
                         <div class="btnReg">
                             <div class="btn-reg" class="qwe">
@@ -508,8 +511,28 @@
             </div>      
         </div>
     </div>
-  
 
+    <div class="popup-bg-log">
+        <div class="popup-log">
+            <img src="img\window\ClosePopup.png" alt="icon" class="closePopup-log">
+            <div class="title-poput">
+                <div class="centerTitlePop">
+                    <h1>Вход</h1>
+                </div>         
+                <div class="main-title-log">
+                    <div class="log">
+                        <form>
+                            <div class="itemCenterLog">
+                                <input type="text" class="numberPhoneLog" name="name" placeholder="Номер телефона"></br>
+                                <input type="text" class="passLog" name="surname" placeholder="Пароль">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>      
+        </div>
+    </div>
+                             
     
     <script src="js/slider.js"></script>
     <script src="js/sliderTwo.js"></script>
