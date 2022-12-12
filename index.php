@@ -523,9 +523,24 @@
                     <div class="log">
                         <form>
                             <div class="itemCenterLog">
-                                <input type="text" class="numberPhoneLog" name="name" placeholder="Номер телефона"></br>
-                                <input type="text" class="passLog" name="surname" placeholder="Пароль">
+                                <div class="items">
+                                    <input type="text" class="numberPhoneLog" name="name" placeholder="Номер телефона"></br>
+                                    <input type="text" class="passLog" name="surname" placeholder="Пароль">
+                                </div>
+                                <div class="underInput">
+                                    <div class="lble">
+                                        <input id="Remember" type="checkbox">
+                                        <p>Запомнить пароль</p>
+                                    </div>
+                                    
+                                    <p class="Forgot">Забыли пароль?</p>
+                                </div>
+
+                                <div class="btnForLog">
+                                    <button type="submit" class="loginForm">Войти</button>
+                                </div>
                             </div>
+                            
                         </form>
                     </div>
                 </div>

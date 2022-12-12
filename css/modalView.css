@@ -285,14 +285,16 @@
   appearance: none;
   border: 0;
   border-radius: 5px;
-  background: #1F1F1F;
-  color: #fff;
+  background: #ffff;
+  color: #4F4F4F;
+  border: 1px solid #4F4F4F;
   padding: 12px 20px;
   font-size: 16px;
 }
 .Registration:hover {
     transition: 0.3s;
-    background: #F95C5C;
+    background: #000000;
+    color: #fafafa;
   }
   
 .Registration:focus {
@@ -355,7 +357,7 @@
     font-style: normal;
     font-weight:500;
     font-size: 12px;
-    padding-left: 10px;
+    padding-left: 5px;
 }
 
 .passLog 
@@ -381,4 +383,63 @@
 .itemCenterLog 
 {
     text-align: center;
+}
+.Forgot  {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight:500;
+    font-size: 10px;
+    text-decoration: underline;
+    color: #1F1F1F;
+}
+.underInput 
+{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 5px;
+}
+.underInput p 
+{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight:500;
+    font-size: 10px;
+}
+.lble {
+    display: flex;
+}
+.btnForLog 
+{
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.loginForm 
+{
+  transition: 0.3s;
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background: #ffff;
+  color: #4F4F4F;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: 1px solid #4F4F4F;
+  width: 40%;
+}
+.loginForm:hover {
+    transition: 0.3s;
+    background: #000000;
+    color: #fafafa;
+  }
+  
+.loginForm:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px #000000;
+}
+
+.btnForLog {
+    text-align: center;
+    padding-top: 10px;
 }
