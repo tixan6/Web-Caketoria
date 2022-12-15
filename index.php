@@ -1,4 +1,6 @@
-<?php include "datebase.php"; ?>
+<?php include "php/datebase.php"; ?>
+<?php include "ajax/getInfoFromBd.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +18,9 @@
     <title>Caketoria</title>
 </head>
 <body>
+    <?php
+        if (empty($_COOKIE['user'])):
+    ?>
     <header>
         <div class="container">
         
@@ -108,7 +113,9 @@
                 <div class="BloclForCentralize" id="PopularProducts">
                     <p>Популярная наша продукция</p>
                     <hr>
+
                 </div>
+                
 
             
 
@@ -121,27 +128,28 @@
                         <div class="slider">
                             <div class="sliderLine">
                                 <?php
-                                    $products = mysqli_query($mysqli, "SELECT Images.Path_img, Product.Name, Product.Price, Description.Small_desc FROM `Images`, `Product`, `Description` WHERE Product.ID_img = Images.ID AND Product.ID_desc = Description.ID;");
+                                    $products = mysqli_query($mysqli, "SELECT Product.ID, Images.Path_img, Product.Name, Product.Price, Description.Small_desc FROM `Images`, `Product`, `Description` WHERE Product.ID_img = Images.ID AND Product.ID_desc = Description.ID;");
                                     $products = mysqli_fetch_all($products);
+                            
                                     foreach($products as $prod)
                                     {
                                 ?>      
                                     <div class="SliderWithItems">
                                         <div class="ItemsSleder">
-                                            <img class="PhotoForItemsSlider" src="<?= $prod[0] ?>">
+                                            <img class="PhotoForItemsSlider" src="<?= $prod[1] ?>">
                                             <div class="CenterItemHere">
-                                                <h1><?= $prod[1] ?></h1>
-                                                <p><?= $prod[3] ?></p>                   
+                                                <h1><?= $prod[2]?></h1>
+                                                <p><?= $prod[4]?></p>                   
                                             </div>
                                             
                                             <div class="butomTtemsHere">
-                                                <a href="#" class="More">Подробнее</a>
+                                                <a href="#" class="More" id="<?php echo($prod[0])?>">Подробнее</a>
                                                     <div class="btnCartAndPrice">
                                                         <div class="btn_Cart">                                           
                                                             <a href="#">В корзину</a>
                                                         </div>
                                                         <div style="width:50px ;"></div>
-                                                        <p><?= $prod[2] ?> BYN</p>
+                                                        <p><?= $prod[3]?> BYN</p>
                                                     </div>                           
                                             </div> 
                                         </div>
@@ -170,8 +178,7 @@
                     <p>Каталог</p>
                     <hr>
                 </div>
-
-                
+    
                 <div class="rowItems">
                     <div class="wraper">  
                         <?php
@@ -183,23 +190,22 @@
                         <div class="SliderWithItems">
                             
                             <div class="ItemsSleder">
-                                        <img class="PhotoForItemsSlider" src="<?= $prod[0] ?>">
-                                        <div class="CenterItemHere">
-                                            <h1><?= $prod[1] ?></h1>
-                                            <p><?= $prod[3] ?></p>                   
-                                        </div>
-                                        
-                                        <div class="butomTtemsHere">
-                                            <a href="#" class="More">Подробнее</a>
-                                                <div class="btnCartAndPrice">
-                                                    <div class="btn_Cart">
-                                                        <a href="#">В корзину</a>
-                                                    </div>
-                                                    <div style="width:50px ;"></div>
-                                                    <p><?= $prod[2] ?> BYN</p>
-                                                </div>                           
-                                        </div> 
+                                    <img class="PhotoForItemsSlider" src="<?= $prod[0]?>">
+                                    <div class="CenterItemHere">
+                                        <h1><?= $prod[1]?></h1>
+                                        <p><?= $prod[3]?></p>
+                                    </div>
                                     
+                                    <div class="butomTtemsHere">
+                                        <a href="#" class="More">Подробнее</a>
+                                            <div class="btnCartAndPrice">
+                                                <div class="btn_Cart">
+                                                    <a href="#">В корзину</a>
+                                                </div>
+                                                <div style="width:50px ;"></div>
+                                                <p><?= $prod[2]?> BYN</p>
+                                            </div>                           
+                                    </div>                                 
                             </div>
                         </div>
                         <? } ?>
@@ -278,11 +284,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    
+                    </div>         
                 </div>
-            </div>        
-            
+            </div>              
     </section>
 
     <section>
@@ -456,9 +460,9 @@
                     <div class="item-popup-rigth">
                         <h2>Телефоны</h2>
                         <div class="colum-phone">
-                            <p>+375 (29) 233-22-33</p>
-                            <p>+375 (29) 121-52-73</p>
-                            <p>+375 (33) 333-22-11</p>   
+                            <p>+375 (29) 233-22-33 <span class="life">(Life)</span></p>
+                            <p>+375 (29) 121-52-73 <span class="MTC">(MTC)</span></p>
+                            <p>+375 (33) 333-22-11 <span class="A1">(A1)</span></p>   
                         </div>                         
                     </div>
                 </div>
@@ -475,7 +479,7 @@
                     <h1>Регистрация</h1>
                 </div>         
                 <div class="main-title-reg">
-                    <form method="post" action="check.php" class="register">
+                    <form method="post" action="php/check.php" class="register">
                         <div class="fs">
                             <input type="text" class="FirstNameInput" name="name" placeholder="Имя"
                             required oninvalid="setCustomValidity('Введите имя')" 
@@ -497,7 +501,7 @@
                         </div>
                         <div class="passwords">
                             <input type="password" class="password-input" name="pass" placeholder="Пароль" 
-                            pattern="^[a-z0-9_-]{6,16}$" oninvalid="setCustomValidity('Пароль должен быть минимум из 6 символов')"
+                            pattern="[A-Za-z0-9]{6,}" oninvalid="setCustomValidity('Пароль должен быть минимум из 6 символов')"
                             required>
                             
                         </div>
@@ -521,39 +525,61 @@
                 </div>         
                 <div class="main-title-log">
                     <div class="log">
-                        <form>
+                        <form method="post" action="php/login.php">
                             <div class="itemCenterLog">
                                 <div class="items">
-                                    <input type="text" class="numberPhoneLog" name="name" placeholder="Номер телефона"></br>
-                                    <input type="text" class="passLog" name="surname" placeholder="Пароль">
+                                    <input type="text" class="numberPhoneLog" name="LoginPhone" placeholder="Номер телефона"></br>
+                                    <input type="text" class="passLog" name="LoginPass" placeholder="Пароль">
                                 </div>
                                 <div class="underInput">
                                     <div class="lble">
-                                        <input id="Remember" type="checkbox">
+                                        <input id="Remember" type="checkbox" checked>
                                         <p>Запомнить пароль</p>
-                                    </div>
-                                    
+                                    </div>                             
                                     <p class="Forgot">Забыли пароль?</p>
                                 </div>
-
                                 <div class="btnForLog">
                                     <button type="submit" class="loginForm">Войти</button>
                                 </div>
-                            </div>
-                            
+                            </div>          
                         </form>
                     </div>
                 </div>
             </div>      
         </div>
     </div>
-                             
-    
+
+    <div class="popup-bg-info">
+        <div class="popup-info">
+            <img src="img\window\ClosePopup.png" alt="icon" class="closePopup-info">
+            <div class="title-poput">
+                <div class="centerTitlePop">
+                    <h1>Подробнее</h1>
+                </div>         
+                <div class="main-title-log">
+                    <div class="log">
+                        
+                    </div>
+                </div>
+            </div>      
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="js/remember.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/sliderTwo.js"></script>
     <script src="js/SmoothScrolling.js"></script>
     <script src="js/Show.js"></script>
     <script src="js/ShowTwo.js"></script>
     <script src="js/popupContact.js"></script>  
+    <?php else: ?>
+        
+        <?php
+            header('Location: loginIndex.php');
+        ?>
+        
+        <h1>Вы вошли</h1>
+    <?php endif; ?>
 </body>
 </html>

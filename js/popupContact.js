@@ -54,4 +54,38 @@
     });
     
 
+
+    $(".More").on("click", function() {
+
+      var btnOn = document.querySelector(".popup-bg-info");
+      fadeIn(btnOn, 600, 'flex');
+      var id = $(this).prop('id');
+
+      $.ajax({
+          url: '../ajax/getInfoFromBd.php',
+          type: 'POST',
+          cache: false,
+          data: {'id': id},
+          dataType: 'html',
+          beforeSend: function() 
+          {
+              $(".More").prop("disabled", true);
+          },
+          success: function(data) {
+              alert(data);
+              $(".More").prop("disabled", false);
+          }
+      })
+
+      
+      
+    })
+
+    
+    $(".closePopup-info").on("click", function() {
+      var btnOff = document.querySelector(".popup-bg-info");
+      fadeIn(btnOff, 600, 'flex');
+    })
+
+
 })();
