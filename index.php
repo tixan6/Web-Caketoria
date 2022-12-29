@@ -7,20 +7,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/modalView.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/modalView.css">
 
-    <link rel="stylesheet" href="fonts/bebasneue/bebasneue.css">
-    <link rel="stylesheet" href="fonts/lato/lato.css">
-    <link rel="stylesheet" href="fonts/montserrat/montserrat.css">
-    <link rel="stylesheet" href="fonts/OpenSans/opensans.css">
+    <link rel="stylesheet" href="/fonts/bebasneue/bebasneue.css">
+    <link rel="stylesheet" href="/fonts/lato/lato.css">
+    <link rel="stylesheet" href="/fonts/montserrat/montserrat.css">
+    <link rel="stylesheet" href="/fonts/OpenSans/opensans.css">
     
     <title>Caketoria</title>
 </head>
 <body>
-    <?php
-        if (empty($_COOKIE['user'])):
-    ?>
     <header>
         <div class="container">
         
@@ -41,6 +38,9 @@
                             <li><a href="#" class="open-popup-Contacts">Контакты</a></li>
                         </ul>
                     </div>
+                    <?php
+                        if (empty($_COOKIE['user'])):
+                    ?>
                     <div class="BtnLogOrReg">
                             <a href="#" class="btnlog">Логин</a>           
                         <div class="void"></div>
@@ -48,6 +48,12 @@
                             <a href="#" class="open-popup-reg" >Регистрация</a>
                         </div>
                     </div>
+                    <?php else: ?>
+                        <div class="BtnLogOrReg">
+                            <a href="#" class="btnlog">Вы вошли</a>           
+                        <div class="void"></div>                 
+                    <?php endif; ?>
+                    
                 </div>              
             </div>
         </div>
@@ -128,7 +134,7 @@
                         <div class="slider">
                             <div class="sliderLine">
                                 <?php
-                                    $products = mysqli_query($mysqli, "SELECT Product.ID, Images.Path_img, Product.Name, Product.Price, Description.Small_desc FROM `Images`, `Product`, `Description` WHERE Product.ID_img = Images.ID AND Product.ID_desc = Description.ID;");
+                                    $products = mysqli_query($mysqli, "SELECT * FROM `Product` LEFT JOIN `Popular_product` ON Product.ID = Popular_product.ID_regularProduct WHERE Product.ID = Popular_product.ID_regularProduct;");
                                     $products = mysqli_fetch_all($products);
                             
                                     foreach($products as $prod)
@@ -136,10 +142,10 @@
                                 ?>      
                                     <div class="SliderWithItems">
                                         <div class="ItemsSleder">
-                                            <img class="PhotoForItemsSlider" src="<?= $prod[1] ?>">
+                                            <img class="PhotoForItemsSlider" src="<?= $prod[0] ?>">
                                             <div class="CenterItemHere">
-                                                <h1><?= $prod[2]?></h1>
-                                                <p><?= $prod[4]?></p>                   
+                                                <h1><?= $prod[1]?></h1>
+                                                <p><?= $prod[2]?></p>                   
                                             </div>
                                             
                                             <div class="butomTtemsHere">
@@ -149,7 +155,7 @@
                                                             <a href="#">В корзину</a>
                                                         </div>
                                                         <div style="width:50px ;"></div>
-                                                        <p><?= $prod[3]?> BYN</p>
+                                                        <p><?= $prod[2]?> BYN</p>
                                                     </div>                           
                                             </div> 
                                         </div>
@@ -500,10 +506,9 @@
                             placeholder="Номер телефона">
                         </div>
                         <div class="passwords">
-                            <input type="password" class="password-input" name="pass" placeholder="Пароль" 
-                            pattern="[A-Za-z0-9]{6,}" oninvalid="setCustomValidity('Пароль должен быть минимум из 6 символов')"
-                            required>
-                            
+                            <input  type="password" class="password-input" name="pass" 
+                            required pattern="/^(?=.*\d)\w{3,20}$/m" oninvalid="setCustomValidity('Пароль от 3 до 20 символов. Должен содержать латиницу + цифры (минимум 1 цифру)')"
+                            oninput="setCustomValidity('')" placeholder="Пароль" >
                         </div>
                         <div class="btnReg">
                             <div class="btn-reg" class="qwe">
@@ -554,11 +559,13 @@
             <img src="img\window\ClosePopup.png" alt="icon" class="closePopup-info">
             <div class="title-poput">
                 <div class="centerTitlePop">
-                    <h1>Подробнее</h1>
+                    <h1>Подробнее о товаре</h1>
                 </div>         
                 <div class="main-title-log">
                     <div class="log">
-                        
+                        <div class="infoAboutDesc">
+                            <p id="a1"></p>
+                        </div>    
                     </div>
                 </div>
             </div>      
@@ -566,20 +573,12 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="js/remember.js"></script>
-    <script src="js/slider.js"></script>
-    <script src="js/sliderTwo.js"></script>
-    <script src="js/SmoothScrolling.js"></script>
-    <script src="js/Show.js"></script>
-    <script src="js/ShowTwo.js"></script>
-    <script src="js/popupContact.js"></script>  
-    <?php else: ?>
-        
-        <?php
-            header('Location: loginIndex.php');
-        ?>
-        
-        <h1>Вы вошли</h1>
-    <?php endif; ?>
+    <script src="/js/remember.js"></script>
+    <script src="/js/slider.js"></script>
+    <script src="/js/sliderTwo.js"></script>
+    <script src="/js/SmoothScrolling.js"></script>
+    <script src="/js/Show.js"></script>
+    <script src="/js/ShowTwo.js"></script>
+    <script src="/js/popupContact.js"></script>  
 </body>
 </html>

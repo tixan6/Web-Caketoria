@@ -462,13 +462,13 @@
     position: absolute;
     top: 55%;
     left: 50%;
-    width: 600px;
+    width: 400px;
     background: #fff;
     padding: 20px;
     transform: translate(-50%, -50%);
     border-radius: 10px;
     padding-top: 30px;
-    height: 500px;
+    height: 535px;
 }
 .closePopup-info
 {
@@ -479,4 +479,22 @@
     height: 15px;
     margin: 0;
     padding: 0;
+}
+.infoAboutDesc 
+{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    width:380px; /* ширина нашего блока */
+    height:400px; /* высота нашего блока */
+    background: #fff; /* цвет фона, белый */
+    border: 1px solid #C1C1C1; /* размер и цвет границы блока */
+    overflow: scroll;
+    overflow-wrap: break-word;
+    overflow-x: hidden;
+    margin: 10px;
+}
+.infoAboutDesc::-webkit-scrollbar {
+    width: 0;
 }
