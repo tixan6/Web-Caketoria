@@ -60,7 +60,6 @@
     $(".More").on("click", function() {
       var btnOn = document.querySelector(".popup-bg-info");
       fadeIn(btnOn, 600, 'flex');
-
       var id = $(this).prop('id');
       $.ajax({
           url: '../ajax/getInfoFromBd.php',
@@ -85,5 +84,12 @@
       fadeOut(btnOff, 600, 'flex');
     })
 
+
+    var qwe = document.querySelectorAll(".btn_Cart");
+    qwe.forEach(more => {
+      more.addEventListener("click", function() {
+        //Авторизован ли пользователь когда нажимает на кнопку!!!
+      })
+    });
 
 })();

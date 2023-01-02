@@ -134,7 +134,7 @@
                         <div class="slider">
                             <div class="sliderLine">
                                 <?php
-                                    $products = mysqli_query($mysqli, "SELECT * FROM `Product` LEFT JOIN `Popular_product` ON Product.ID = Popular_product.ID_regularProduct WHERE Product.ID = Popular_product.ID_regularProduct;");
+                                    $products = mysqli_query($mysqli, "SELECT p.ID, p.Name, p.Price, ima.Path_img, dsc.Small_desc from Product p join Popular_product pop on p.ID = pop.ID_regularProduct join Description dsc on p.ID_desc = dsc.ID join Images ima on p.ID_img = ima.ID WHERE p.ID = pop.ID_regularProduct;");
                                     $products = mysqli_fetch_all($products);
                             
                                     foreach($products as $prod)
@@ -142,10 +142,10 @@
                                 ?>      
                                     <div class="SliderWithItems">
                                         <div class="ItemsSleder">
-                                            <img class="PhotoForItemsSlider" src="<?= $prod[0] ?>">
+                                            <img class="PhotoForItemsSlider" src="<?= $prod[3] ?>">
                                             <div class="CenterItemHere">
                                                 <h1><?= $prod[1]?></h1>
-                                                <p><?= $prod[2]?></p>                   
+                                                <p><?= $prod[4]?></p>                   
                                             </div>
                                             
                                             <div class="butomTtemsHere">
@@ -188,7 +188,7 @@
                 <div class="rowItems">
                     <div class="wraper">  
                         <?php
-                            $products = mysqli_query($mysqli, "SELECT Images.Path_img, Product.Name, Product.Price, Description.Small_desc FROM `Images`, `Product`, `Description` WHERE Product.ID_img = Images.ID AND Product.ID_desc = Description.ID;");
+                            $products = mysqli_query($mysqli, "SELECT Product.ID, Images.Path_img, Product.Name, Product.Price, Description.Small_desc FROM `Images`, `Product`, `Description` WHERE Product.ID_img = Images.ID AND Product.ID_desc = Description.ID;");
                             $products = mysqli_fetch_all($products);
                             foreach($products as $prod)
                             {
@@ -196,20 +196,20 @@
                         <div class="SliderWithItems">
                             
                             <div class="ItemsSleder">
-                                    <img class="PhotoForItemsSlider" src="<?= $prod[0]?>">
+                                    <img class="PhotoForItemsSlider" src="<?= $prod[1]?>">
                                     <div class="CenterItemHere">
-                                        <h1><?= $prod[1]?></h1>
-                                        <p><?= $prod[3]?></p>
+                                        <h1><?= $prod[2]?></h1>
+                                        <p><?= $prod[4]?></p>
                                     </div>
                                     
                                     <div class="butomTtemsHere">
-                                        <a href="#" class="More">Подробнее</a>
+                                        <a href="#" class="More" id="<?php echo($prod[0])?>">Подробнее</a>
                                             <div class="btnCartAndPrice">
                                                 <div class="btn_Cart">
                                                     <a href="#">В корзину</a>
                                                 </div>
                                                 <div style="width:50px ;"></div>
-                                                <p><?= $prod[2]?> BYN</p>
+                                                <p><?= $prod[3]?> BYN</p>
                                             </div>                           
                                     </div>                                 
                             </div>
