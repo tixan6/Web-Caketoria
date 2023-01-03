@@ -397,18 +397,27 @@
                             </div>
                             <h1 class="ThisIsForAPadd">Мы в соцсетях:</h1>
                             <div class="We_are_in_social_networks">
-                                <div class="socialFacebook">
-                                    <img src=".\img\Icons\FaceBook.png">
-                                </div>
-                                <div class="socialVk">
-                                    <img src=".\img\Icons\vk.png">
-                                </div>
-                                <div class="socialOk">
-                                    <img src=".\img\Icons\ok.png">
-                                </div>
-                                <div class="socialInstagram">
-                                    <img src=".\img\Icons\insta.png">
-                                </div>
+
+                                <a href="https://www.facebook.com/">
+                                    <div id="socialAll" class="socialFacebook">
+                                        <img src=".\img\Icons\FaceBook.png">
+                                    </div>
+                                </a>
+                                <a href="https://vk.com/im?sel=180625941">
+                                    <div id="socialAll" class="socialVk">
+                                        <img src=".\img\Icons\vk.png">
+                                    </div>
+                                </a>
+                                <a href="https://ok.ru/">
+                                    <div id="socialAll" class="socialOk">
+                                        <img src=".\img\Icons\ok.png">
+                                    </div>
+                                </a>
+                                <a href="https://www.instagram.com/">
+                                    <div id="socialAll" class="socialInstagram">
+                                        <img src=".\img\Icons\insta.png">
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -420,7 +429,7 @@
 
                     <div class="underLine">
                         <p>
-                         Кафетерий - это полис с ограниченными льготами; он не заменяет медицинскую страховку. Информация, представленная на этом веб-сайте, носит исключительно иллюстративный характер. Полное описание льгот, ограничений и исключений приведено в вашем страховом свидетельстве и соответствующих инструкциях. Краткое описание ограничений и исключений смотрите в нашем разделе часто задаваемых вопросов. Перечисленные значения выплат не гарантируют сумму, подлежащую выплате при перечисленных условиях. Продукт доступен не во всех штатах. Все страховые покрытия подпадают под действие положений и условий политики master group.
+                         Caketoria - это полис с ограниченными льготами; он не заменяет медицинскую страховку. Информация, представленная на этом веб-сайте, носит исключительно иллюстративный характер. Полное описание льгот, ограничений и исключений приведено в вашем страховом свидетельстве и соответствующих инструкциях. Краткое описание ограничений и исключений смотрите в нашем разделе часто задаваемых вопросов. Перечисленные значения выплат не гарантируют сумму, подлежащую выплате при перечисленных условиях. Продукт доступен не во всех штатах. Все страховые покрытия подпадают под действие положений и условий политики master group.
                         </p> 
 
                         <p>
@@ -583,6 +592,17 @@
         </div>
     </div>
 
+    <div class="popup-bg-Mailing">
+        <div class="popup-Mailing">
+            <div class="title-poput">   
+                <div class="messageForSig">
+                    <h1>Спасибо, вы узнаете о скидках и новых тортах первыми</h1>
+                </div>    
+            </div>      
+        </div>
+    </div>
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="/js/remember.js"></script>
     <script src="/js/slider.js"></script>
@@ -591,5 +611,6 @@
     <script src="/js/Show.js"></script>
     <script src="/js/ShowTwo.js"></script>
     <script src="/js/popupContact.js"></script>  
+    <script src="/js/spam.js"></script>
 </body>
 </html>

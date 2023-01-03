@@ -901,6 +901,7 @@ footer
 }
 .menu li a 
 {
+    transition: 0.5s;
     text-decoration: none;
     color: #d1d1d1;
     font-family: 'Open Sans';
@@ -908,6 +909,12 @@ footer
     font-weight:lighter;
     transition: 0.1s linear;
     font-size: 17px; 
+}
+
+.menu li a:hover
+{
+    transition: 0.5s;
+    color: #e9e9e9;
 }
 .leftItemsTopFoot ul {
     list-style: none;
@@ -977,6 +984,7 @@ footer
 
 .btnOk 
 {
+    transition: 0.3s;
     background: #3F3F3F;
     border-radius: 2px;
     width: 44px;
@@ -984,6 +992,19 @@ footer
     text-align: center;
     margin-left: 20px;
 }
+
+.btnOk:hover
+{
+    transition: 0.3s;
+    background: #fe4141;
+    border-radius: 2px;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    margin-left: 20px;
+    color: rgb(255, 255, 255);
+}
+
 .btnOk p 
 {
     font-family: 'Montserrat';
@@ -992,6 +1013,16 @@ footer
     font-size: 13px;
     color: rgb(189, 189, 189);
 }
+
+.btnOk:hover p 
+{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight:700;
+    font-size: 13px;
+    color: rgb(255, 255, 255);
+}
+
 .inputEmail 
 {
     display: flex;
@@ -1047,6 +1078,15 @@ footer
     height: 44px;
     text-align: center;
     margin-left: 10px;
+}
+#socialAll 
+{
+    transition: 0.3s;
+}
+#socialAll:hover
+{
+    transition: 0.3s;
+    transform: scale(1.1);
 }
 .socialInstagram img 
 {
