@@ -498,3 +498,68 @@
 .infoAboutDesc::-webkit-scrollbar {
     width: 0;
 }
+
+                        /*Просьба*/
+.popup-bg-plsReg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    display: none;
+}
+.popup-plsReg 
+{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: 500px;
+    background: #fff;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding-top: 30px;
+    height: 200px;
+}
+.closePopup-plsReg
+{
+    position:absolute;
+    top: 30px;
+    right: 30px;
+    width: 15px;
+    height: 15px;
+    margin: 0;
+    padding: 0;
+}
+.messageForSig {
+    text-align: center;
+    padding-top: 40px;
+}
+.messageForSig a 
+{
+    text-decoration: none;
+    color: #343434;
+    font-weight:400;
+}
+.LogIn_message a:hover {
+    transition: 0.5s;
+    color: #00f666;
+    font-weight:400;
+}
+.Registration_message a:hover {
+    transition: 0.5s;
+    color: #f13636;
+    font-weight:400;
+}
+
+.LogIn_message a {
+    transition: 0.5s;
+    color: #343434;
+    font-weight:400;
+}
+.Registration_message a {
+    transition: 0.5s;
+    color: #343434;
+    font-weight:400;
+}

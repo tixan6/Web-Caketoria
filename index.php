@@ -41,7 +41,7 @@
                     <?php
                         if (empty($_COOKIE['user'])):
                     ?>
-                    <div class="BtnLogOrReg">
+                    <div id="HaveOrNoHave" class="BtnLogOrReg">
                             <a href="#" class="btnlog">Логин</a>           
                         <div class="void"></div>
                         <div class="btn_Register_header">
@@ -568,6 +568,17 @@
                         </div>    
                     </div>
                 </div>
+            </div>      
+        </div>
+    </div>
+
+    <div class="popup-bg-plsReg">
+        <div class="popup-plsReg">
+            <img src="img\window\ClosePopup.png" alt="icon" class="closePopup-plsReg">
+            <div class="title-poput">   
+                <div class="messageForSig">
+                    <h1>Пожалуйста <span class="LogIn_message"><a href="#">войдите</a></span> или <span class="Registration_message"><a href="#">зарегистрируйте</a></span> аккаунт</h1>
+                </div>    
             </div>      
         </div>
     </div>

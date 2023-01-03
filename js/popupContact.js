@@ -85,11 +85,52 @@
     })
 
 
+    
+    
+
+
     var qwe = document.querySelectorAll(".btn_Cart");
     qwe.forEach(more => {
       more.addEventListener("click", function() {
-        //Авторизован ли пользователь когда нажимает на кнопку!!!
+        var element = document.getElementById('HaveOrNoHave');
+        if(element)
+        {
+          var btnOn = document.querySelector(".popup-bg-plsReg");
+          fadeIn(btnOn, 600, 'flex');
+        } 
+        else 
+        {
+          //Открытие Cart
+          alert('я присутствую');
+
+
+        }
       })
     });
+
+    $(".closePopup-plsReg").on("click", function() {
+      var btnOff = document.querySelector(".popup-bg-plsReg");
+      fadeOut(btnOff, 600, 'flex');
+    })
+
+    
+
+
+    $(".LogIn_message").on("click", function() {
+      var btnOff = document.querySelector(".popup-bg-plsReg");
+      fadeOut(btnOff, 600, 'flex');
+
+      var btnOn = document.querySelector(".popup-bg-log");
+      fadeIn(btnOn, 600, 'flex');
+    })
+
+    $(".Registration_message").on("click", function () {
+      var btnOff = document.querySelector(".popup-bg-plsReg");
+      fadeOut(btnOff, 600, 'flex');
+
+      var btnOn = document.querySelector(".popup-bg-reg");
+      fadeIn(btnOn, 600, 'flex');
+
+    })
 
 })();
