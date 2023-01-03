@@ -507,7 +507,7 @@
                         </div>
                         <div class="passwords">
                             <input  type="password" class="password-input" name="pass" 
-                            required pattern="/^(?=.*\d)\w{3,20}$/m" oninvalid="setCustomValidity('Пароль от 3 до 20 символов. Должен содержать латиницу + цифры (минимум 1 цифру)')"
+                            required pattern="^(?=.*\d)\w{3,20}$" oninvalid="setCustomValidity('Пароль от 3 до 20 символов. Должен содержать латиницу + цифры (минимум 1 цифру)')"
                             oninput="setCustomValidity('')" placeholder="Пароль" >
                         </div>
                         <div class="btnReg">
