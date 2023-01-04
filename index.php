@@ -380,9 +380,9 @@
                         <div class="firstList">
                             <p>Присоединиться</p>
                             <ul class="menu">
-                                <li><a href="#">Вакансии</a></li>
+                                <li><a id="vacancy" href="#">Вакансии</a></li>
                                 <li><a href="#">Члены команды</a></li>
-                                <li><a href="#">Сотрудничать</a></li>
+                                <li><a id="collaborate" href="">Сотрудничать</a></li>
                             </ul>
                         </div>
                     </div>
@@ -603,6 +603,25 @@
     </div>
 
 
+    <div class="popup-bg-vacancy">
+        <div class="popup-vacancy">
+        <img src="img\window\ClosePopup.png" alt="icon" class="closePopup-vacancy">
+            <div class="centerTitlePop">
+                <h1>Вакансии</h1>
+            </div>
+            <div class="title-vacancy">
+                <div class="centerEmpty">
+                    <div class="empty"><p>Пусто</p></div>
+                </div>
+                <div class="titleScroll">
+                    <div class="scrollItems">
+                    
+                    </div>
+                </div>          
+            </div>
+        </div>
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="/js/remember.js"></script>
     <script src="/js/slider.js"></script>
@@ -612,5 +631,6 @@
     <script src="/js/ShowTwo.js"></script>
     <script src="/js/popupContact.js"></script>  
     <script src="/js/spam.js"></script>
+    <script src="/js/vacancy.js"></script>
 </body>
 </html>

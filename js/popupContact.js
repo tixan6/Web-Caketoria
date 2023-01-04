@@ -133,4 +133,21 @@
 
     })
 
+
+
+
+
+    $("#vacancy").on("click", function () 
+    {
+      var btnOn = document.querySelector(".popup-bg-vacancy");
+      fadeIn(btnOn, 600, 'flex');
+    });
+
+    $(".closePopup-vacancy").on("click", function () 
+    {
+      var btnOff = document.querySelector(".popup-bg-vacancy");
+      fadeOut(btnOff, 600, 'flex');
+    });
+
+
 })();
