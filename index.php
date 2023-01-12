@@ -610,14 +610,28 @@
                 <h1>Вакансии</h1>
             </div>
             <div class="title-vacancy">
-                <div class="centerEmpty">
-                    <div class="empty"><p>Пусто</p></div>
-                </div>
-                <div class="titleScroll">
-                    <div class="scrollItems">
-                    
+                <?php 
+                    $inform = mysqli_query($mysqli, "SELECT Vacancy.vacancy, Vacancy.post, Vacancy.desc_vacancy FROM `Vacancy`;"); 
+
+                    $inform = mysqli_fetch_all($inform);
+                ?> 
+                <?php if(empty($inform)): ?>
+                    <div class="centerEmpty">
+                        <div class="empty"><p>Пусто</p></div>
                     </div>
-                </div>          
+                <?php else: ?>
+                <div class="titleScroll">
+                    
+                    <div class="scrollItems">
+                        <?php foreach($inform as $item): ?>
+                            <div class="vacancyItems">
+                                <p><?php echo $item[0] ?></p>
+                            </div>
+                            
+                        <?php endforeach; ?>
+                    </div>
+                </div>    
+                <?php endif; ?>      
             </div>
         </div>
     </div>
@@ -631,6 +645,8 @@
     <script src="/js/ShowTwo.js"></script>
     <script src="/js/popupContact.js"></script>  
     <script src="/js/spam.js"></script>
-    <script src="/js/vacancy.js"></script>
+    
+    <!--<script src="/js/vacancy.js"></script>-->
+    
 </body>
 </html>

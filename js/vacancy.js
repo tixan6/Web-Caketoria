@@ -11,7 +11,7 @@ $("#vacancy").on("click", function()
         type: 'POST',
         cache: false,
         data: {'info': info},
-        dataType: 'html',
+        dataType: 'text',
         beforeSend: function() 
         {
             $("#vacancy").prop("disabled", true);
@@ -19,16 +19,22 @@ $("#vacancy").on("click", function()
         success: function(data) {
         if (data != false) 
         {
+            alert(data);
+        
+        
+            
             var articleDiv = document.querySelector("div.scrollItems");
             var elem = document.createElement("div");
-            elem.classList.add("vacancyItems");
+            var p = document.createElement('p');
+            elem.appendChild(p);
+            elem.classList.add("vacancyItems");    
             articleDiv.appendChild(elem);
 
             
-            data.forEach(element => {
-                var elemText = document.createTextNode(element[0]);
-                elem.appendChild(elemText);
-            });
+                var elemText = document.createTextNode(data);
+                p.appendChild(elemText);
+            
+            
         }
 
         

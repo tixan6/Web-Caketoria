@@ -685,6 +685,11 @@
     border: solid 0.1px rgb(201, 201, 201);
     margin: 10px;
 }
+.vacancyItems p
+{
+    margin: 5px;
+    font-size: 20px;
+}
 .nameItemsV h1 
 {
     font-size: 15px;

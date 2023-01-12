@@ -6,11 +6,10 @@ $mysqli = mysqli_connect("localhost", "root", "root", "CakeToria") or die("Ош�
 $inform = mysqli_query($mysqli, "SELECT Vacancy.vacancy, Vacancy.post, Vacancy.desc_vacancy FROM `Vacancy`;"); 
 
 $inform = mysqli_fetch_all($inform);
-foreach($inform as $prod)
+//$inform = mysqli_fetch_row($inform);
+foreach ($inform as $key) 
 {
-    echo($prod[0]);
+    print_r($key[0]);
 }
-
-
 
 ?>
