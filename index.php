@@ -636,6 +636,36 @@
         </div>
     </div>
 
+
+    <div class="popup-bg-infoForVacancy">
+        <div class="popup-infoForVacancy">
+            <img src="img\window\ClosePopup.png" alt="icon" class="closePopup-infoForVacancy">
+            <div class="title-poput">
+                <div class="centerTitlePop">
+                    <h1>Подробнее о вакансии</h1>  
+                </div> 
+                
+                <div class="info-forVacancy">
+                    <div class="header-info-vacancy">
+                        <h1 class="title-for-info-vacancy">Вакансия</h1>
+                    </div>
+
+                    <div class="middle-info-vacancy">
+                        <h1 class="title-for-info-vacancy">Должность</h1>
+                    </div>
+                    
+                    <div class="footer-desc-info-vacancy">
+                        <h1 class="title-for-info-vacancy">Описание</h1>
+                    </div>
+
+                    <div class="footer-btn-info-vacancy">
+                    <button type="submit" class="loginForm">Откликнуться</button>
+                    </div>
+                </div>
+            </div>      
+        </div>
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="/js/remember.js"></script>
     <script src="/js/slider.js"></script>
@@ -646,7 +676,7 @@
     <script src="/js/popupContact.js"></script>  
     <script src="/js/spam.js"></script>
     
-    <!--<script src="/js/vacancy.js"></script>-->
-    
+    <script src="/js/vacancy.js"></script>
+
 </body>
 </html>

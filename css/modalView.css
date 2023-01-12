@@ -36,7 +36,7 @@
     font-family: 'Montserrat';
     font-style:normal;
     font-weight:300;
-    font-size: 30px;
+    font-size: 25px;
     color: #474747;
 }
 
@@ -651,7 +651,7 @@
 }
 .scrollItems 
 {
-    height: 245px;
+    height: 280px;
     border: solid 0.1px rgb(115, 115, 115); /* Параметры рамки */
     font-family: 'Roboto';
     font-style: normal;
@@ -684,10 +684,11 @@
     height: 15%;
     border: solid 0.1px rgb(201, 201, 201);
     margin: 10px;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 .vacancyItems p
 {
-    margin: 5px;
+    margin: 6px;
     font-size: 20px;
 }
 .nameItemsV h1 
@@ -697,4 +698,49 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
+}
+                    /*Инфа об вакансии*/
+.popup-bg-infoForVacancy {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    display: none;
+}
+.popup-infoForVacancy 
+{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: 500px;
+    background: #fff;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding-top: 30px;
+    height: 400px;
+}
+.closePopup-infoForVacancy
+{
+    position:absolute;
+    top: 30px;
+    right: 30px;
+    width: 15px;
+    height: 15px;
+    margin: 0;
+    padding: 0;
+}
+.info-forVacancy 
+{
+    text-align: center;
+}
+.title-for-info-vacancy 
+{
+    color: #d03535;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight:500;
+    font-size: 30px;
 }

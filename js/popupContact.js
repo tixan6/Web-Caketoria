@@ -150,4 +150,19 @@
     });
 
 
+
+    
+    $(".vacancyItems").on("click", function () 
+    {
+      var btnOn = document.querySelector(".popup-bg-infoForVacancy");
+      fadeIn(btnOn, 600, 'flex');
+    });
+
+    $(".closePopup-infoForVacancy").on("click", function () 
+    {
+      var btnOff = document.querySelector(".popup-bg-infoForVacancy");
+      fadeOut(btnOff, 600, 'flex');
+    });
+
+
 })();
