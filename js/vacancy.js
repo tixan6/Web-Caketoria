@@ -7,23 +7,29 @@
 $(".vacancyItems").on("click", function() 
 {
     var vacancy = $(this).text().trim();
-    alert(vacancy);
     $.ajax(
     {
         url: '../ajax/vacancy.php',
-        type: 'POST',
+        type: 'GET',
         cache: false,
         data: {'vacancy': vacancy},
-        dataType: 'text',
+        dataType:'html',
         beforeSend: function() 
         {
             $("#vacancy").prop("disabled", true);
         },
+
         success: function(data) {
-            alert(data);
+            result = $.parseJSON(data);
+            
+            document.querySelector(".vacancy-vacancy").innerHTML = result[0];
+            document.querySelector(".vacancy-post").innerHTML = result[1];
+            document.querySelector(".scrollAbountVacancy").innerHTML = result[2];
         $("#vacancy").prop("disabled", false);
         }
     });
 });    
+
+
 
 })();

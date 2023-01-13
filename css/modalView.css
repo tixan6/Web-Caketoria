@@ -652,7 +652,7 @@
 .scrollItems 
 {
     height: 280px;
-    border: solid 0.1px rgb(115, 115, 115); /* Параметры рамки */
+    border: solid 0.1px rgb(115, 115, 115); 
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 300;
@@ -663,7 +663,10 @@
     overflow-wrap: break-word;
     overflow-x: hidden;
     margin: 10px;
-    
+    width: 490px; 
+}
+.scrollItems::-webkit-scrollbar {
+    width: 0;
 }
 .vacancyItems 
 {
@@ -699,6 +702,7 @@
     font-style: normal;
     font-weight: 400;
 }
+
                     /*Инфа об вакансии*/
 .popup-bg-infoForVacancy {
     position: fixed;
@@ -720,7 +724,7 @@
     transform: translate(-50%, -50%);
     border-radius: 10px;
     padding-top: 30px;
-    height: 400px;
+    height: 500px;
 }
 .closePopup-infoForVacancy
 {
@@ -736,11 +740,75 @@
 {
     text-align: center;
 }
-.title-for-info-vacancy 
+.titleItems {
+    display: flex;
+    justify-content: space-evenly;
+}
+#about-vacancy
 {
-    color: #d03535;
+    color: #1f1f1f;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight:500;
-    font-size: 30px;
+    font-size: 18px;
+}
+.scrollAbountVacancy 
+{
+    width:500px; 
+    height:200px; 
+    background: #fff; 
+    border: 1px solid #C1C1C1; 
+    overflow: scroll;
+    overflow-wrap: break-word;
+    overflow-x: hidden;
+
+    text-align: initial;
+}
+.footer-btn-info-vacancy 
+{
+    padding-top: 10px;
+}
+.scrollAbountVacancy::-webkit-scrollbar {
+    width: 0;
+}
+                    /*Откликнуться BTN*/
+.popup-bg-respond-btn {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    display: none;
+}
+.popup-respond-btn
+{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: 400px;
+    background: #fff;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding-top: 30px;
+    height: 200px;
+}
+.closePopup-respond-btn
+{
+    position:absolute;
+    top: 30px;
+    right: 30px;
+    width: 15px;
+    height: 15px;
+    margin: 0;
+    padding: 0;
+}
+.phoneNumberForRespond h2 
+{
+    color: #3a3a3a;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight:500;
+    font-size: 18px;
 }

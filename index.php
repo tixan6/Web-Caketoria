@@ -242,7 +242,7 @@
                                 е соображения высшего порядка, а также сложившаяся 
                             </p>
                         </div>
-                        <div class="itemsRight">
+                        <div class="itemsRight" id="theBestEmp">
                             <h1>Лучшие сотрудники</h1>
                             <div class="The_best_employees">
                                 <?php
@@ -381,7 +381,7 @@
                             <p>Присоединиться</p>
                             <ul class="menu">
                                 <li><a id="vacancy" href="#">Вакансии</a></li>
-                                <li><a href="#">Члены команды</a></li>
+                                <li><a href="#theBestEmp">Члены команды</a></li>
                                 <li><a id="collaborate" href="">Сотрудничать</a></li>
                             </ul>
                         </div>
@@ -646,22 +646,43 @@
                 </div> 
                 
                 <div class="info-forVacancy">
-                    <div class="header-info-vacancy">
-                        <h1 class="title-for-info-vacancy">Вакансия</h1>
-                    </div>
+                    <div class="titleItems">
+                        <div class="header-info-vacancy">
+                            <h1 class="title-for-info-vacancy">Вакансия</h1>
+                            <h2 class="vacancy-vacancy" id="about-vacancy"></h2>
+                        </div>
 
-                    <div class="middle-info-vacancy">
-                        <h1 class="title-for-info-vacancy">Должность</h1>
+                        <div class="middle-info-vacancy">
+                            <h1 class="title-for-info-vacancy">Должность</h1>
+                            <h2 class="vacancy-post" id="about-vacancy"></h2>
+                        </div>
                     </div>
+                    
                     
                     <div class="footer-desc-info-vacancy">
                         <h1 class="title-for-info-vacancy">Описание</h1>
+                        <div class="scrollAbountVacancy"></div>
                     </div>
 
                     <div class="footer-btn-info-vacancy">
-                    <button type="submit" class="loginForm">Откликнуться</button>
+                        <button type="submit" id="btn-respond" class="loginForm">Откликнуться</button>
                     </div>
                 </div>
+            </div>      
+        </div>
+    </div>
+
+
+    <div class="popup-bg-respond-btn">
+        <div class="popup-respond-btn">
+            <img src="img\window\ClosePopup.png" alt="icon" class="closePopup-respond-btn">
+            <div class="title-poput">   
+                <div class="messageForSig">
+                    <h1>Все вопросы по номеру</h1>
+                    <div class="phoneNumberForRespond">
+                        <h2>+375 (29) 222-32-23</h2>
+                    </div>
+                </div>    
             </div>      
         </div>
     </div>
@@ -675,7 +696,6 @@
     <script src="/js/ShowTwo.js"></script>
     <script src="/js/popupContact.js"></script>  
     <script src="/js/spam.js"></script>
-    
     <script src="/js/vacancy.js"></script>
 
 </body>

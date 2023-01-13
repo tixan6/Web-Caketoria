@@ -54,8 +54,6 @@
         var btnOff = document.querySelector(".popup-bg-log");
         fadeOut(btnOff, 600);
     });
-    
-   
 
     $(".More").on("click", function() {
       var btnOn = document.querySelector(".popup-bg-info");
@@ -83,10 +81,6 @@
       var btnOff = document.querySelector(".popup-bg-info");
       fadeOut(btnOff, 600, 'flex');
     })
-
-
-    
-    
 
 
     var qwe = document.querySelectorAll(".btn_Cart");
@@ -163,6 +157,20 @@
       var btnOff = document.querySelector(".popup-bg-infoForVacancy");
       fadeOut(btnOff, 600, 'flex');
     });
+
+
+
+    $("#btn-respond").on("click", function () {
+      var btnOn = document.querySelector(".popup-bg-respond-btn");
+      fadeIn(btnOn, 600, 'flex');
+    });
+    
+    $(".closePopup-respond-btn").on("click", function () 
+    {
+      var btnOff = document.querySelector(".popup-bg-respond-btn");
+      fadeOut(btnOff, 600, 'flex');
+    });
+
 
 
 })();
