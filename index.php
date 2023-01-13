@@ -382,7 +382,7 @@
                             <ul class="menu">
                                 <li><a id="vacancy" href="#">Вакансии</a></li>
                                 <li><a href="#theBestEmp">Члены команды</a></li>
-                                <li><a id="collaborate" href="">Сотрудничать</a></li>
+                                <li><a id="collaborate" href="#">Сотрудничать</a></li>
                             </ul>
                         </div>
                     </div>
@@ -681,6 +681,20 @@
                     <h1>Все вопросы по номеру</h1>
                     <div class="phoneNumberForRespond">
                         <h2>+375 (29) 222-32-23</h2>
+                    </div>
+                </div>    
+            </div>      
+        </div>
+    </div>
+
+    <div class="popup-bg-collaborations">
+        <div class="popup-collaborations">
+            <img src="img\window\ClosePopup.png" alt="icon" class="closePopup-collaborations">
+            <div class="title-poput">   
+                <div class="messageForSig">
+                    <h1>Пишите нам на наш почтовый ящик с вашими предложениями </h1>
+                    <div class="phoneNumberForRespond">
+                        <h2>CaketoriaCoop@gmail.com</h2>
                     </div>
                 </div>    
             </div>      

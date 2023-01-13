@@ -173,4 +173,17 @@
 
 
 
+    $("#collaborate").on("click", function () {
+      var btnOn = document.querySelector(".popup-bg-collaborations");
+      fadeIn(btnOn, 600, 'flex');
+    });
+    
+    $(".closePopup-collaborations").on("click", function () 
+    {
+      var btnOff = document.querySelector(".popup-bg-collaborations");
+      fadeOut(btnOff, 600, 'flex');
+    });
+
+
+
 })();

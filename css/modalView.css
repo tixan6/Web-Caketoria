@@ -812,3 +812,36 @@
     font-weight:500;
     font-size: 18px;
 }
+                        /*Сотрудничать href*/
+.popup-bg-collaborations {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    display: none;
+}
+.popup-collaborations
+{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: 400px;
+    background: #fff;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding-top: 30px;
+    height: 200px;
+}
+.closePopup-collaborations
+{
+    position:absolute;
+    top: 30px;
+    right: 30px;
+    width: 15px;
+    height: 15px;
+    margin: 0;
+    padding: 0;
+}
