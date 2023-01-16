@@ -50,7 +50,11 @@
                     </div>
                     <?php else: ?>
                         <div class="BtnLogOrReg">
-                            <a href="#" class="btnlog">Вы вошли</a>           
+
+
+
+
+                            <a href="#" id="inNet" class="btnlog"></a>           
                         <div class="void"></div>                 
                     <?php endif; ?>
                     
@@ -539,24 +543,22 @@
                 </div>         
                 <div class="main-title-log">
                     <div class="log">
-                        <form method="post" action="php/login.php">
-                            <div class="itemCenterLog">
-                                <div class="items">
-                                    <input type="text" class="numberPhoneLog" name="LoginPhone" placeholder="Номер телефона"></br>
-                                    <input type="text" class="passLog" name="LoginPass" placeholder="Пароль">
-                                </div>
-                                <div class="underInput">
-                                    <div class="lble">
-                                        <input id="Remember" type="checkbox" checked>
-                                        <p>Запомнить пароль</p>
-                                    </div>                             
-                                    <p class="Forgot">Забыли пароль?</p>
-                                </div>
-                                <div class="btnForLog">
-                                    <button type="submit" class="loginForm">Войти</button>
-                                </div>
-                            </div>          
-                        </form>
+                        <div class="itemCenterLog">
+                            <div class="items">
+                                <input type="text" class="numberPhoneLog" name="LoginPhone" placeholder="Номер телефона"></br>
+                                <input type="text" class="passLog" name="LoginPass" placeholder="Пароль">
+                            </div>
+                            <div class="underInput">
+                                <div class="lble">
+                                    <input id="Remember" type="checkbox" checked>
+                                    <p>Запомнить пароль</p>
+                                </div>                             
+                                <p class="Forgot">Забыли пароль?</p>
+                            </div>
+                            <div class="btnForLog">
+                                <a href="#" class="loginForm">Войти</a>
+                            </div>
+                        </div>          
                     </div>
                 </div>
             </div>      
@@ -711,6 +713,7 @@
     <script src="/js/popupContact.js"></script>  
     <script src="/js/spam.js"></script>
     <script src="/js/vacancy.js"></script>
+    <script src="/js/login.js"></script>
 
 </body>
 </html>

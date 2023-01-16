@@ -185,5 +185,31 @@
     });
 
 
+    $(".loginForm").on("click", function() 
+    {
+      var phone = document.querySelector(".numberPhoneLog").value;
+      var pass = document.querySelector(".passLog").value;
+      $.ajax(
+      {
+        url: '../php/login.php',
+        type: 'POST',
+        cache: false,
+        data: {'phone': phone, 'pass': pass},
+        dataType: 'html',
+        beforeSend: function() 
+        {
+            $(".More").prop("disabled", true);
+        },
+        success: function(data) 
+        {
+          $(".More").prop("disabled", false);
+            location.reload();          
+        }
+      }
+      );  
 
+
+    });
 })();
+
+
