@@ -1124,3 +1124,47 @@ footer
 {
     padding-top: 50px;
 }
+
+
+
+
+.loginMenu > ul 
+{
+    position: absolute;
+    display: none;   
+    
+}
+.loginMenu:hover > ul
+{
+    display: block; 
+}
+.menuItems 
+{
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    background: rgb(247, 247, 247);
+    border-radius: 10px;
+    height: 150px;
+    min-width: 120px;
+    border: 0.3px solid #4d4d4d;
+    list-style: none;
+    padding-left: 0;
+}
+
+.menuItems li
+{
+    text-align: center;
+    margin: 0;
+    padding: 15px;
+}
+
+
+.menuItems li > a
+{
+    font-family: 'Montserrat';
+    font-style:normal;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+
+

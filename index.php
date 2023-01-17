@@ -47,17 +47,35 @@
                         <div class="btn_Register_header">
                             <a href="#" class="open-popup-reg" >Регистрация</a>
                         </div>
+
+
+
+
+
+
                     </div>
                     <?php else: ?>
                         <div class="BtnLogOrReg">
 
 
-
-
-                            <a href="#" id="inNet" class="btnlog"></a>           
-                        <div class="void"></div>                 
+                    
+                            
+                            <ul class="loginMenu">
+                                
+                                <a href="#" id="inNet" class="btnlog"></a> 
+                                <ul class="menuItems">
+                                    <li><a href="">Корзина</a></li>
+                                    <li><a href="">Настройкий</a></li>
+                                    <li><a href="" class="ExitFromAccount">Выход</a></li>
+                                </ul>  
+                            </ul>
+                        
+                        <div class="void"></div>
                     <?php endif; ?>
                     
+
+
+
                 </div>              
             </div>
         </div>
@@ -77,9 +95,7 @@
                                 </div>        
                     </div>
                 </div>
-                
             </div>
-
     </section>   
     <section>
         <div class="container">

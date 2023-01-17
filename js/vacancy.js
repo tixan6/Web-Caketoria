@@ -1,9 +1,5 @@
 (function () 
 {
- 
-
-
-
 $(".vacancyItems").on("click", function() 
 {
     var vacancy = $(this).text().trim();
@@ -29,7 +25,4 @@ $(".vacancyItems").on("click", function()
         }
     });
 });    
-
-
-
 })();
