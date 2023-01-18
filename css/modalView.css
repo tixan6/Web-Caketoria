@@ -441,6 +441,39 @@
     box-shadow: 0 0 0 4px #000000;
 }
 
+.loginFormForRes 
+{
+  transition: 0.3s;
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background: #ffff;
+  color: #4F4F4F;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: 1px solid #4F4F4F;
+  width: 40%;
+  text-decoration: none;
+}
+.loginFormForRes:hover {
+    transition: 0.3s;
+    background: #000000;
+    color: #fafafa;
+    text-decoration: none;
+  }
+  
+.loginFormForRes:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px #000000;
+}
+
+
+
+
+
+
+
+
 .btnForLog {
     text-align: center;
     padding-top: 10px;
@@ -846,4 +879,81 @@
     height: 15px;
     margin: 0;
     padding: 0;
+}
+                /*Настройки*/
+.popup-bg-options {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    display: none;
+}
+.popup-options
+{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: 400px;
+    background: #fff;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding-top: 30px;
+    height: 400px;
+}
+.closePopup-options
+{
+    position:absolute;
+    top: 30px;
+    right: 30px;
+    width: 15px;
+    height: 15px;
+    margin: 0;
+    padding: 0;
+}
+                /*Анимация для входа в аккаунт*/
+
+.popup-bg-animLogin {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    display: none;
+}
+.popup-animLogin
+{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: 200px;
+    background: #fff;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding-top: 30px;
+    height: 200px;
+}
+.ANIM 
+{
+    opacity: 0;
+    width: 70px;
+    height: 70px;
+    animation: aniANIM 2.5s forwards;
+
+}
+@keyframes aniANIM {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+.UARL 
+{
+    font-family: 'Montserrat';
+    font-style:normal;
+    font-weight:300;
+    font-size: 20px;
+    color: #474747;
 }

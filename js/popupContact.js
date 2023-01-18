@@ -46,8 +46,17 @@
 
 
     document.querySelector(".btnlog").addEventListener("click", function () {
-      var btnOn = document.querySelector(".popup-bg-log");
-      fadeIn(btnOn, 600, 'flex');
+      if (document.getElementById("BtnLogOrRegCheck") !== null) 
+      {
+        alert("Открыть настройки");
+      }
+      else {
+        var btnOn = document.querySelector(".popup-bg-log");
+        fadeIn(btnOn, 600, 'flex');
+      };
+
+
+      
     });
   
     document.querySelector(".closePopup-log").addEventListener("click", function () {
@@ -198,24 +207,74 @@
         dataType: 'html',
         beforeSend: function() 
         {
-            $(".More").prop("disabled", true);
+            $(".loginForm").prop("disabled", true);
         },
         success: function(data) 
         {
-          $(".More").prop("disabled", false);
-            location.reload();          
+          $(".loginForm").prop("disabled", false);
+          if (data != 200) 
+          {
+            var log = new Promise((resolve, reject) => {
+                resolve(setTimeout(window.location.reload.bind(window.location), 1500));
+            });
+
+              log.then((successMessage) => {
+                logIn();
+              });
+          }
+          else 
+          {
+            OutIn();
+          }
+                    
         }
       }
       );  
-
-
     });
+
+    function logIn() 
+    {
+      $(".UARL").text("Вы вошли");
+      $(".ANIM").attr("src","/img/Anim/Checkmark.png");
+      var btnOn = document.querySelector(".popup-bg-animLogin");
+      fadeIn(btnOn, 600, 'flex');
+    }
+    function OutIn() 
+    {
+      $(".UARL").text("Неправильный логин или пароль");
+      $(".ANIM").attr("src","/img/Anim/Closemark.png");
+      var btnOn = document.querySelector(".popup-bg-animLogin");
+      fadeIn(btnOn, 600, 'flex');
+      setTimeout(function() 
+      {
+        var btnOff = document.querySelector(".popup-bg-animLogin");
+        fadeOut(btnOff, 600, 'flex');
+      }, 3000);
+    }
 
 
     $(".ExitFromAccount").on("click", function()
     {
       document.cookie = "user=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     });
+
+
+
+
+    $(".options").on("click", function() 
+    {
+      var btnOn = document.querySelector(".popup-bg-options");
+      fadeIn(btnOn, 600, 'flex');
+    });
+    
+    $(".closePopup-options").on("click", function () 
+    {
+      var btnOff = document.querySelector(".popup-bg-options");
+      fadeOut(btnOff, 600, 'flex');
+    });
+
+
+
 
 })();
 

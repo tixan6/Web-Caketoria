@@ -1131,23 +1131,29 @@ footer
 .loginMenu > ul 
 {
     position: absolute;
-    display: none;   
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s ease-out;
     
 }
 .loginMenu:hover > ul
 {
-    display: block; 
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.2s ease-in;
 }
 .menuItems 
 {
+
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     background: rgb(247, 247, 247);
     border-radius: 10px;
-    height: 150px;
-    min-width: 120px;
+    height: 160px;
+    min-width: 140px;
     border: 0.3px solid #4d4d4d;
     list-style: none;
     padding-left: 0;
+    
 }
 
 .menuItems li

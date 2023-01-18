@@ -8,10 +8,10 @@ $pass = md5($pass."lkafdh23423423");
 $result = $mysqli->query("SELECT * FROM `users` WHERE `phone` = '$phone' AND `password` = '$pass'");
 
 $user = $result->fetch_assoc();
-if (empty($result)) 
+if (empty($user)) 
 {
-    echo "Не одного не найдено";
-    exit();
+    echo 200;
+    exit;
 }
 echo $phone;
 setcookie("user", $user['phone'], time()+36000, "/");

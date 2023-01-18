@@ -55,27 +55,19 @@
 
                     </div>
                     <?php else: ?>
-                        <div class="BtnLogOrReg">
-
-
-                    
-                            
+                        <div class="BtnLogOrReg" id="BtnLogOrRegCheck">
                             <ul class="loginMenu">
                                 
                                 <a href="#" id="inNet" class="btnlog"></a> 
                                 <ul class="menuItems">
-                                    <li><a href="">Корзина</a></li>
-                                    <li><a href="">Настройкий</a></li>
+                                    <li><a href="#">Корзина</a></li>
+                                    <li><a href="#" class="options">Настройкий</a></li>
                                     <li><a href="" class="ExitFromAccount">Выход</a></li>
                                 </ul>  
                             </ul>
                         
                         <div class="void"></div>
                     <?php endif; ?>
-                    
-
-
-
                 </div>              
             </div>
         </div>
@@ -562,7 +554,7 @@
                         <div class="itemCenterLog">
                             <div class="items">
                                 <input type="text" class="numberPhoneLog" name="LoginPhone" placeholder="Номер телефона"></br>
-                                <input type="text" class="passLog" name="LoginPass" placeholder="Пароль">
+                                <input type="password" class="passLog" name="LoginPass" placeholder="Пароль">
                             </div>
                             <div class="underInput">
                                 <div class="lble">
@@ -683,7 +675,7 @@
                     </div>
 
                     <div class="footer-btn-info-vacancy">
-                        <button type="submit" id="btn-respond" class="loginForm">Откликнуться</button>
+                        <button id="btn-respond" class="loginFormForRes">Откликнуться</button>
                     </div>
                 </div>
             </div>      
@@ -713,6 +705,37 @@
                     <h1>Пишите нам на наш почтовый ящик с вашими предложениями </h1>
                     <div class="phoneNumberForRespond">
                         <h2>CaketoriaCoop@gmail.com</h2>
+                    </div>
+                </div>    
+            </div>      
+        </div>
+    </div>
+
+    
+    <div class="popup-bg-options">
+        <div class="popup-options">
+            <img src="img\window\ClosePopup.png" alt="icon" class="closePopup-options">
+            <div class="title-poput">   
+                <div class="messageForSig">
+                    <h1>Настройки</h1>
+                    <div class="phoneNumberForRespond">
+                        <h2>Текст</h2>
+                    </div>
+                </div>    
+            </div>      
+        </div>
+    </div>
+
+
+
+
+    <div class="popup-bg-animLogin">
+        <div class="popup-animLogin">
+            <div class="title-poput">  
+                <div class="messageForSig">
+                    <h3 class="UARL"></h3> 
+                    <div class="phoneNumberForRespond">
+                        <img class="ANIM" src=""></img>
                     </div>
                 </div>    
             </div>      
