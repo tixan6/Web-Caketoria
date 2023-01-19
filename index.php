@@ -717,10 +717,42 @@
             <img src="img\window\ClosePopup.png" alt="icon" class="closePopup-options">
             <div class="title-poput">   
                 <div class="messageForSig">
-                    <h1>Настройки</h1>
-                    <div class="phoneNumberForRespond">
-                        <h2>Текст</h2>
+                    <div class="setCetner">
+                        <h1>Настройки</h1>
+                        <img src="./img/Mechanism.png"></img>
                     </div>
+                    
+
+                     
+                    <div class="allItems">
+                        <div class="togetherItems">
+                            <div class="change changeName">
+                                <p class="titleSet">ФИО</p>
+                                <p id="infoSet" class="nameText"></p>
+                                <a href="#" class="change-btn">Изменить</a>
+                            </div>
+
+                            <div class="change changePass">
+                                <p class="titleSet">Пароль</p>
+                                <a href="#"  class="change-btn">Именить пароль</a>
+                            </div>
+                        </div>
+
+                        <div class="togetherItems">
+                            <div class="change changePhone">
+                                <p class="titleSet">Номер телефона</p>
+                                <p id="infoSet"></p>
+                                <a href="#" class="change-btn">Изменить</a>
+                            </div>
+
+                            <div class="change changeEmail">
+                                <p class="titleSet">Почта</p>
+                                <p id="infoSet"></p>
+                                <a href="#" class="change-btn">Изменить</a>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>    
             </div>      
         </div>
