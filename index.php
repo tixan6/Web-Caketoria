@@ -532,7 +532,7 @@
                             oninput="setCustomValidity('')" placeholder="Пароль" >
                         </div>
                         <div class="btnReg">
-                            <div class="btn-reg" class="qwe">
+                            <div class="btn-reg" >
                                 <button type="submit" class="Registration">Регистрация</button>
                             </div>
                         </div>
@@ -729,26 +729,26 @@
                             <div class="change changeName">
                                 <p class="titleSet">ФИО</p>
                                 <p id="infoSet" class="nameText"></p>
-                                <a href="#" class="change-btn">Изменить</a>
+                                <a href="#" id="changeNameBtn" class="change-btn">Изменить</a>
                             </div>
 
-                            <div class="change changePass">
+                            <div class="change changePassTitle">
                                 <p class="titleSet">Пароль</p>
-                                <a href="#"  class="change-btn">Именить пароль</a>
+                                <a href="#" id="changePassBtn" class="change-btn">Именить пароль</a>
                             </div>
                         </div>
 
                         <div class="togetherItems">
                             <div class="change changePhone">
                                 <p class="titleSet">Номер телефона</p>
-                                <p id="infoSet"></p>
-                                <a href="#" class="change-btn">Изменить</a>
+                                <p id="infoSet" class="NumPhone"></p>
+                                <a href="#" id="changePhoneBtn" class="change-btn">Изменить</a>
                             </div>
 
                             <div class="change changeEmail">
                                 <p class="titleSet">Почта</p>
-                                <p id="infoSet"></p>
-                                <a href="#" class="change-btn">Изменить</a>
+                                <p id="infoSet" class="Email-set"></p>
+                                <a href="#" id="changeEmailBtn" class="change-btn">Изменить</a>
                             </div>
                         </div>
                     </div>
@@ -757,9 +757,6 @@
             </div>      
         </div>
     </div>
-
-
-
 
     <div class="popup-bg-animLogin">
         <div class="popup-animLogin">
@@ -767,12 +764,100 @@
                 <div class="messageForSig">
                     <h3 class="UARL"></h3> 
                     <div class="phoneNumberForRespond">
-                        <img class="ANIM" src=""></img>
+                        <img class="ANIM"></img>
                     </div>
                 </div>    
             </div>      
         </div>
     </div>
+
+    <div class="popup-bg-changePass">
+        <div class="popup-changePass">
+            <img src="img\window\ClosePopup.png" alt="icon" class="closePopup-changePass">
+            <div class="title-poput">  
+                <div class="messageForSig">
+                    <h3 class="UARL">Изменение пароля</h3> 
+                    <div class="phoneNumberForRespond">
+                        <div class="BlockForPassInput">
+                            <input type="text" class="changePass" id="old-password" type="password" placeholder="Старый пароль">
+                            <input type="text" class="changePass" id="new-password" type="password" placeholder="Новый пароль">
+                        </div>
+
+                        <div class="changeBNTspace">
+                            <button id="change-password" class="ChangeBtnOption">Изменить</button>
+                        </div>                        
+                    </div>
+                </div>    
+            </div>      
+        </div>
+    </div>
+
+
+    <div class="popup-bg-changeName">
+        <div class="popup-changeName">
+            <img src="img\window\ClosePopup.png" alt="icon" class="closePopup-changeName">
+            <div class="title-poput">  
+                <div class="messageForSig">
+                    <h3 class="UARL">Изменение ФИО</h3> 
+                    <div class="BlockForPassInput">
+                        <input type="text" class="changePass" type="password" placeholder="Новое имя">
+                        <input type="text" class="changePass" type="password" placeholder="Новая фамилмя">
+                    </div>
+
+                    <div class="changeBNTspace">
+                        <button id="btn-respond" class="ChangeBtnOption">Изменить</button>
+                    </div>      
+                </div>    
+            </div>      
+        </div>
+    </div>
+
+
+    <div class="popup-bg-changePhone">
+        <div class="popup-changePhone">
+            <img src="img\window\ClosePopup.png" alt="icon" class="closePopup-changePhone">
+            <div class="title-poput">  
+                <div class="messageForSig">
+                    <h3 class="UARL">Изменение номера телефона</h3> 
+                    <div class="BlockForPassInput">
+                        <input type="text" class="changePass" type="password" placeholder="Новый номер телефона">
+                    </div>
+
+                    <div class="changeBNTspace">
+                        <button id="btn-respond" class="ChangeBtnOption">Изменить</button>
+                    </div> 
+                </div>    
+            </div>      
+        </div>
+    </div>
+
+
+    <div class="popup-bg-changeEmail">
+        <div class="popup-changeEmail">
+            <img src="img\window\ClosePopup.png" alt="icon" class="closePopup-changeEmail">
+            <div class="title-poput">  
+                <div class="messageForSig">
+                    <h3 class="UARL">Изменение почты</h3> 
+                    <div class="BlockForPassInput">
+                        <input type="text" class="changePass" type="password" placeholder="Новая почта">
+                    </div>
+
+                    <div class="changeBNTspace">
+                        <button id="btn-respond" class="ChangeBtnOption">Изменить</button>
+                    </div>
+                </div>    
+            </div>      
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="/js/remember.js"></script>
@@ -785,6 +870,7 @@
     <script src="/js/spam.js"></script>
     <script src="/js/vacancy.js"></script>
     <script src="/js/login.js"></script>
+    <script src="/js/options.js"></script>
 
 </body>
 </html>

@@ -994,22 +994,21 @@
     font-size: 15px;
     padding: 0px;
     margin: 0px;
-}
-.change-btn 
-{
     text-decoration: none;
-    color: #4d4d4d;
+    color: #4e4e4e;
     font-size: 15px;
     transition: 0.2s ease;
 }
+
 .change-btn:hover 
 {
-    color: #0b0b0b;
+    color: #c55c5c;
     font-size: 16px;
     transition: 0.2s ease;
 }
 .togetherItems 
 {
+    margin-top: 25px;
     display: flex;
     justify-content: space-evenly;
 }
@@ -1026,4 +1025,203 @@
 {
     padding: 0px;
     margin: 0px;
+    font-family: 'Lato';
+    font-weight: 300;
+    font-size: 16px;
+}
+            /*Изменение данных*/
+.popup-bg-changePass {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    display: none;
+}
+.popup-changePass
+{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: 400px;
+    background: #fff;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding-top: 30px;
+    height: 200px;
+}
+.closePopup-changePass
+{
+    position:absolute;
+    top: 30px;
+    right: 30px;
+    width: 15px;
+    height: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.popup-bg-changeName {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    display: none;
+}
+.popup-changeName
+{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: 400px;
+    background: #fff;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding-top: 30px;
+    height: 200px;
+}
+.closePopup-changeName
+{
+    position:absolute;
+    top: 30px;
+    right: 30px;
+    width: 15px;
+    height: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.popup-bg-changePhone {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    display: none;
+}
+.popup-changePhone
+{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: 400px;
+    background: #fff;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding-top: 30px;
+    height: 200px;
+}
+.closePopup-changePhone
+{
+    position:absolute;
+    top: 30px;
+    right: 30px;
+    width: 15px;
+    height: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+.popup-bg-changeEmail {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    display: none;
+}
+.popup-changeEmail
+{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: 400px;
+    background: #fff;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding-top: 30px;
+    height: 200px;
+}
+.closePopup-changeEmail
+{
+    position:absolute;
+    top: 30px;
+    right: 30px;
+    width: 15px;
+    height: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+
+
+.changePass 
+{
+    width: 40%;
+    height: 40px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.25);
+    outline: none;
+    border: none;
+    color: #686868;
+    padding-left: 10px;
+}
+
+.changePass::placeholder {
+    color: #686868;
+    opacity: 0.8;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight:500;
+    font-size: 12px;
+    padding-left: 5px;
+}
+.changeBNTspace 
+{
+    margin-top: 15px;
+}
+
+
+
+.ChangeBtnOption 
+{
+  transition: 0.3s;
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background: #ffff;
+  color: #4F4F4F;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: 1px solid #4F4F4F;
+  width: 40%;
+  text-decoration: none;
+}
+.ChangeBtnOption:hover {
+    transition: 0.3s;
+    background: #000000;
+    color: #fafafa;
+    text-decoration: none;
+  }
+  
+.ChangeBtnOption:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px #000000;
 }

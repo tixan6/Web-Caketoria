@@ -275,6 +275,63 @@
 
 
 
+//Измена пароля
+    $("#changePassBtn").on("click", function () {
+      var btnOn = document.querySelector(".popup-bg-changePass");
+      fadeIn(btnOn, 600, 'flex');
+    });
+    
+    $(".closePopup-changePass").on("click", function () 
+    {
+      var btnOff = document.querySelector(".popup-bg-changePass");
+      fadeOut(btnOff, 600, 'flex');
+    });
+
+
+//Измена имени
+
+    $("#changeNameBtn").on("click", function () {
+      var btnOn = document.querySelector(".popup-bg-changeName");
+      fadeIn(btnOn, 600, 'flex');
+    });
+    
+    $(".closePopup-changeName").on("click", function () 
+    {
+      var btnOff = document.querySelector(".popup-bg-changeName");
+      fadeOut(btnOff, 600, 'flex');
+    });
+
+
+
+//Измена номера телефона
+    $("#changePhoneBtn").on("click", function () {
+      var btnOn = document.querySelector(".popup-bg-changePhone");
+      fadeIn(btnOn, 600, 'flex');
+    });
+    
+    $(".closePopup-changePhone").on("click", function () 
+    {
+      var btnOff = document.querySelector(".popup-bg-changePhone");
+      fadeOut(btnOff, 600, 'flex');
+    });
+
+
+
+//Измена почты
+    $("#changeEmailBtn").on("click", function () {
+      var btnOn = document.querySelector(".popup-bg-changeEmail");
+      fadeIn(btnOn, 600, 'flex');
+    });
+    
+    $(".closePopup-changeEmail").on("click", function () 
+    {
+      var btnOff = document.querySelector(".popup-bg-changeEmail");
+      fadeOut(btnOff, 600, 'flex');
+    });
+
+
+
+
 
 })();
 
