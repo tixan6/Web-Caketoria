@@ -1,19 +1,18 @@
 <?php   
-// $old_pass = $_POST['old_pass'];
-// $new_pass = $_POST['new_pass'];
-//$old_pass = md5($_POST['old_pass']);
-
 $old_pass = md5($_POST['old_pass']."lkafdh23423423");
 $new_pass = md5($_POST['new_pass']."lkafdh23423423");
-
-
-
-echo $new_pass;
-$query = "UPDATE users SET users.password='$new_pass' WHERE users.password='$old_pass';";
-
+$phone1 = $_POST['phone1'];
 $mysqli = mysqli_connect("localhost", "root", "root", "CakeToria") or die("Ошибка" . mysqli_error($mysqli));
-$products = mysqli_query($mysqli, $query);
-//echo $products;
 
+
+$query = "UPDATE users SET users.password='$new_pass' WHERE users.password='$old_pass';";
+$products = mysqli_query($mysqli, $query);
+
+
+$querytwo = "SELECT users.id FROM users WHERE users.password = '$new_pass';";
+$result = mysqli_query($mysqli, $querytwo);
+
+$row_cnt = mysqli_num_rows($result);
+echo $row_cnt;
 
 ?>

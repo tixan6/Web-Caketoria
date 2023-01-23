@@ -779,8 +779,8 @@
                     <h3 class="UARL">Изменение пароля</h3> 
                     <div class="phoneNumberForRespond">
                         <div class="BlockForPassInput">
-                            <input type="text" class="changePass" id="old-password" type="password" placeholder="Старый пароль">
-                            <input type="text" class="changePass" id="new-password" type="password" placeholder="Новый пароль">
+                            <input type="text" class="changePass" type="password" id="old-password" type="password" placeholder="Старый пароль">
+                            <input type="text" class="changePass" type="password" id="new-password" type="password" placeholder="Новый пароль">
                         </div>
 
                         <div class="changeBNTspace">
@@ -800,12 +800,12 @@
                 <div class="messageForSig">
                     <h3 class="UARL">Изменение ФИО</h3> 
                     <div class="BlockForPassInput">
-                        <input type="text" class="changePass" type="password" placeholder="Новое имя">
-                        <input type="text" class="changePass" type="password" placeholder="Новая фамилмя">
+                        <input type="text" id="change-name" class="changePass" placeholder="Новое имя">
+                        <input type="text" id="change-surname" class=" changePass" placeholder="Новая фамилмя">
                     </div>
 
                     <div class="changeBNTspace">
-                        <button id="btn-respond" class="ChangeBtnOption">Изменить</button>
+                        <button id="change-fio" class="ChangeBtnOption">Изменить</button>
                     </div>      
                 </div>    
             </div>      
@@ -820,11 +820,11 @@
                 <div class="messageForSig">
                     <h3 class="UARL">Изменение номера телефона</h3> 
                     <div class="BlockForPassInput">
-                        <input type="text" class="changePass" type="password" placeholder="Новый номер телефона">
+                        <input type="text" id="change-number" class="changePass" placeholder="Новый номер телефона">
                     </div>
 
                     <div class="changeBNTspace">
-                        <button id="btn-respond" class="ChangeBtnOption">Изменить</button>
+                        <button id="change-phone" class="ChangeBtnOption">Изменить</button>
                     </div> 
                 </div>    
             </div>      
@@ -853,9 +853,18 @@
 
 
 
-
-
-
+    <div class="popup-bg-checkChange">
+        <div class="popup-checkChange">
+            <div class="title-poput">  
+                <div class="messageForSig">
+                    <h3 class="UARL-change"></h3> 
+                    <div class="phoneNumberForRespond">
+                        <img class="ANIM"></img>
+                    </div>
+                </div>    
+            </div>      
+        </div>
+    </div>
 
 
 
