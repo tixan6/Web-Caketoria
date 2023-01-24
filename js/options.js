@@ -210,7 +210,64 @@ $("#change-phone").on("click", function()
     
 });
 
+$("#change-emailBtn").on("click", function() 
+{
 
+    var emailAddr = document.getElementById("change-email").value;
+    let resultPattern = emailAddr.match(/^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/);
+    if(resultPattern != null) 
+    {
+        $.ajax({
+            url: '../ajax/changeEmail.php',
+            type: 'POST',
+            cache: false,
+            data: {'emailAddr': emailAddr, 'phone3': phone},
+            dataType: 'html',
+            beforeSend: function() 
+            {
+                $("#change-email").prop("disabled", true);
+            },
+            success: function(data) {
+                if(data > 0) 
+                {
+                    //document.querySelector(".popup-checkChange").style.height = 250 + "px";
+                    $(".popup-bg-checkChange").fadeIn(500);
+                    document.querySelector(".UARL-change").innerHTML = "Вы успешно изменили адресс почты";
+                    $(".ANIM").attr("src","/img/Anim/Checkmark.png");
+                    
+                    setTimeout(function() {
+                        $(".popup-bg-checkChange").fadeOut(500);
+                    }, 2000);
+
+                }
+                else 
+                {
+                    $(".popup-bg-checkChange").fadeIn(500);
+                    document.querySelector(".UARL-change").innerHTML = "Повторите попытку позже";
+                    $(".ANIM").attr("src","/img/Anim/Closemark.png");
+                    
+                    setTimeout(function() {
+                        $(".popup-bg-checkChange").fadeOut(500);     
+                    }, 2000);
+                    
+                }
+
+            $("#change-email").prop("disabled", false);
+            }
+        })
+    }
+    else 
+    {
+        $(".popup-bg-checkChange").fadeIn(500);
+        document.querySelector(".UARL-change").innerHTML = "Адресс введен некорректно";
+        $(".ANIM").attr("src","/img/Anim/Closemark.png");
+        
+        setTimeout(function() {
+            $(".popup-bg-checkChange").fadeOut(500);
+        }, 2000);
+    }
+    
+});
 
 
 

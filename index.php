@@ -839,11 +839,10 @@
                 <div class="messageForSig">
                     <h3 class="UARL">Изменение почты</h3> 
                     <div class="BlockForPassInput">
-                        <input type="text" class="changePass" type="password" placeholder="Новая почта">
+                        <input type="text" id="change-email" class="changePass" placeholder="Новая почта">
                     </div>
-
                     <div class="changeBNTspace">
-                        <button id="btn-respond" class="ChangeBtnOption">Изменить</button>
+                        <button id="change-emailBtn" class="ChangeBtnOption">Изменить</button>
                     </div>
                 </div>    
             </div>      
