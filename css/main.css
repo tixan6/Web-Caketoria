@@ -460,10 +460,12 @@ hr
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    
 }
 .ItemsSleder:hover 
 {
     transform: scale(1.02);
+    
 }
 .centerItem {
     display: flex;

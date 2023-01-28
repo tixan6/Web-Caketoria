@@ -1272,3 +1272,155 @@
 
 
 
+
+
+
+.popup-bg-Cart {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    display: none;
+}
+.popup-Cart
+{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: 1000px;
+    background: #fff;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding-top: 30px;
+    height: 500px;
+}
+.closePopup-Cart
+{
+    position:absolute;
+    top: 30px;
+    right: 30px;
+    width: 15px;
+    height: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+
+.scrollbasket 
+{
+    text-align: -webkit-center;
+
+    height: 370px;
+    border: solid 0.1px rgb(115, 115, 115);
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    background: #fff;
+    border: 1px solid #C1C1C1;
+    overflow: scroll;
+    overflow-wrap: break-word;
+    overflow-x: hidden;
+    margin: 10px;
+    width: 970px;
+
+}
+
+.scrollbasket::-webkit-scrollbar {
+    width: 0;
+}
+
+.cartTovar 
+{
+    display: flex;
+    justify-content: initial;
+    width: 85%;
+    height: 60px;
+    border: 1px solid #8e8e8e;
+    border-radius: 8px;
+    margin: 15px;
+    align-items: center;
+    transition: all 0.2s linear;
+}
+.cartTovar:hover 
+{
+    transform: scale(1.02);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.20), 0 8px 8px rgba(0,0,0,0.18);
+}
+
+.cartTovar h1 
+{
+    font-family: 'Montserrat';
+    font-style:normal;
+    font-weight:300;
+    font-size: 20px;
+    color: #474747;
+    margin: 0;
+    padding: 0;
+}
+
+.cartTovar a
+{
+    font-family: 'Montserrat';
+    font-style:normal;
+    font-weight:300;
+    font-size: 20px;
+    color: #474747;
+    margin: 0;
+    padding: 0;
+}
+
+.img_tovar
+{
+    width: 7%;
+}
+.title_tovar {
+    width: 40%;
+}
+.price_tovar 
+{
+    width: 17%;
+}
+.img_tovar img 
+{
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+}
+#itemTovar 
+{
+    margin-left: 20px;
+}
+.btn-tovar 
+{
+    width: 36%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.buy_tovar a  {
+    transition: all 0.5s;
+    color: #474747;
+}
+
+.buy_tovar a:hover  {
+    transition: all 0.5s;
+    color: #3fee53;
+}
+
+.remove_tovar a  {
+    transition: all 0.5s;
+    color: #474747;
+}
+
+.remove_tovar a:hover  {
+    transition: all 0.5s;
+    color: #f44f39;
+}
+
+
+
+
+

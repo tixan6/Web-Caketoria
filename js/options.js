@@ -2,13 +2,11 @@
 {
     var phn = GetPhone();
     var phone = phn();
-    phone = '+' + phone; 
+     
+
+    
 $(".options").on("click", function() 
 {
-//    var phn = GetPhone();
-//    var phone = phn();
-//    phone = '+' + phone; 
-
     $.ajax({
         url: '../ajax/options.php',
         type: 'POST',

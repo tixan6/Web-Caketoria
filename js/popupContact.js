@@ -48,7 +48,8 @@
     document.querySelector(".btnlog").addEventListener("click", function () {
       if (document.getElementById("BtnLogOrRegCheck") !== null) 
       {
-        alert("Открыть настройки");
+        var btnOn = document.querySelector(".popup-bg-options");
+        fadeIn(btnOn, 600, 'flex');
       }
       else {
         var btnOn = document.querySelector(".popup-bg-log");
@@ -94,7 +95,7 @@
 
     var qwe = document.querySelectorAll(".btn_Cart");
     qwe.forEach(more => {
-      more.addEventListener("click", function() {
+      more.addEventListener("click", (e) => {
         var element = document.getElementById('HaveOrNoHave');
         if(element)
         {
@@ -103,13 +104,40 @@
         } 
         else 
         {
-          //Открытие Cart
-          alert('я присутствую');
-          
+          const cart = more.closest('.SliderWithItems');
 
+          //Данные карточки через объект
+          const productInf = {
+            id: cart.querySelector('.More').getAttribute('id'),
+            imgSrc: cart.querySelector('.PhotoForItemsSlider').getAttribute('src'),
+            title: cart.querySelector('.itemTitileProd').innerHTML,
+            desc: cart.querySelector('.itemDescProd').innerHTML,
+            price_currency: cart.querySelector('.itemPriceProd').innerHTML,
+          }
+
+          document.cookie = "cook_name" + productInf.id + "=" + JSON.stringify(productInf) + "; expires=" + (new Date(Date.now() + 7 * 86400000).toGMTString());
+          addCart();
         }
       })
     });
+
+
+    function addCart() 
+    {
+      $(".UARL").text("Товар добавлен в корзину");
+      $(".ANIM").attr("src","/img/Anim/Checkmark.png");
+      var btnOn = document.querySelector(".popup-bg-animLogin");
+      fadeIn(btnOn, 600, 'flex');    
+
+
+      setTimeout(function() 
+      {
+        var btnOff = document.querySelector(".popup-bg-animLogin");
+        fadeOut(btnOff, 600, 'flex');
+      }, 1500);
+    }
+
+
 
     $(".closePopup-plsReg").on("click", function() {
       var btnOff = document.querySelector(".popup-bg-plsReg");
@@ -254,6 +282,8 @@
 
     $(".ExitFromAccount").on("click", function()
     {
+
+
       document.cookie = "user=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     });
 
@@ -330,7 +360,91 @@
 
 
 
+    //Корзина
+    $(".cartBasket").on("click", function () {
+      
+      
+      let regexp = /cook_name\d+/ig;
+      let result;
+      
 
+      while (result = regexp.exec(document.cookie)) {
+        var qwe = JSON.parse($.cookie(result[0]));
+         const cartHTMLitem = `
+          <div class="cartTovar" id="cartTovar${qwe.id}" style="opacity: 1;">
+                <div class="img_tovar">
+                    <img class="_img" id="_imgs" src="${qwe.imgSrc}"></img>
+                </div>
+                <div class="title_tovar" id="itemTovar">
+                    <h1 class="_title">${qwe.title}</h1>
+                </div>
+                <div class="price_tovar" id="itemTovar">
+                    <h1 class="_price">${qwe.price_currency}</h1>
+                </div>
+                <div class="btn-tovar">
+                    <div class="buy_tovar" id="itemTovar">
+                        <a href="#" onclick="
+                    
+                        alert('Спасибо вам наберут');
+                        
+                        
+                        ">Купить</a>
+                    </div>
+
+                    <div class="remove_tovar" id="${qwe.id}">
+                        <a href="#" onclick="
+                          
+                        var qwe = document.getElementById('cartTovar${qwe.id}');
+                        
+                        
+
+                        let op = 1;
+                        while(op > 0) 
+                        {
+                          qwe.style.opacity = op;
+                          op -= 0.1;
+        
+                          if(op < 1) 
+                          {
+                            
+                            $.removeCookie('cook_name' + ${qwe.id});
+                            
+                            //$('#cartTovar${qwe.id}').remove(); 
+                          }
+                        }
+                          
+                       
+                        " >Удалить</a>
+                    </div>
+                </div>        
+            </div>
+          `;      
+          document.querySelector(".scrollbasket").insertAdjacentHTML('beforeend',cartHTMLitem);
+        
+      }
+       
+        
+
+          var btnOn = document.querySelector(".popup-bg-Cart");
+          fadeIn(btnOn, 600, 'flex');
+    });
+
+
+    
+    $(".closePopup-Cart").on("click", function () 
+    {
+     
+      document.querySelectorAll(".cartTovar").forEach(element => {
+        element.remove();
+      });
+      var btnOff = document.querySelector(".popup-bg-Cart");
+      fadeOut(btnOff, 600, 'flex');
+
+    });
+
+
+
+    
 
 })();
 

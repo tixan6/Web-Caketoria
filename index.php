@@ -60,7 +60,7 @@
                                 
                                 <a href="#" id="inNet" class="btnlog"></a> 
                                 <ul class="menuItems">
-                                    <li><a href="#">Корзина</a></li>
+                                    <li><a href="#" class="cartBasket">Корзина</a></li>
                                     <li><a href="#" class="options">Настройкий</a></li>
                                     <li><a href="" class="ExitFromAccount">Выход</a></li>
                                 </ul>  
@@ -156,8 +156,8 @@
                                         <div class="ItemsSleder">
                                             <img class="PhotoForItemsSlider" src="<?= $prod[3] ?>">
                                             <div class="CenterItemHere">
-                                                <h1><?= $prod[1]?></h1>
-                                                <p><?= $prod[4]?></p>                   
+                                                <h1 class="itemTitileProd"><?= $prod[1]?></h1>
+                                                <p class="itemDescProd"><?= $prod[4]?></p>                   
                                             </div>
                                             
                                             <div class="butomTtemsHere">
@@ -167,8 +167,8 @@
                                                             <a href="#">В корзину</a>
                                                         </div>
                                                         <div style="width:50px ;"></div>
-                                                        <p><?= $prod[2]?> BYN</p>
-                                                    </div>                           
+                                                        <p class="itemPriceProd"><?= $prod[2]?> BYN</p>
+                                                    </div> 
                                             </div> 
                                         </div>
                                     </div> 
@@ -210,8 +210,8 @@
                             <div class="ItemsSleder">
                                     <img class="PhotoForItemsSlider" src="<?= $prod[1]?>">
                                     <div class="CenterItemHere">
-                                        <h1><?= $prod[2]?></h1>
-                                        <p><?= $prod[4]?></p>
+                                        <h1 class="itemTitileProd"><?= $prod[2]?></h1>
+                                        <p class="itemDescProd"><?= $prod[4]?></p>
                                     </div>
                                     
                                     <div class="butomTtemsHere">
@@ -221,7 +221,7 @@
                                                     <a href="#">В корзину</a>
                                                 </div>
                                                 <div style="width:50px ;"></div>
-                                                <p><?= $prod[3]?> BYN</p>
+                                                <p class="itemPriceProd"><?= $prod[3]?> BYN</p>
                                             </div>                           
                                     </div>                                 
                             </div>
@@ -758,6 +758,9 @@
         </div>
     </div>
 
+
+    
+
     <div class="popup-bg-animLogin">
         <div class="popup-animLogin">
             <div class="title-poput">  
@@ -770,6 +773,9 @@
             </div>      
         </div>
     </div>
+
+
+
 
     <div class="popup-bg-changePass">
         <div class="popup-changePass">
@@ -867,7 +873,43 @@
 
 
 
+
+
+
+
+
+
+
+
+    <div class="popup-bg-Cart">
+        <div class="popup-Cart">
+            <img src="img\window\ClosePopup.png" alt="icon" class="closePopup-Cart">
+            <div class="title-poput">   
+                <div class="messageForSig">
+                    <h1>Корзина</h1>
+                    <div class="phoneNumberForRespond">
+                        <div class="scrollbasket">
+
+
+                        </div>
+                    </div>
+                </div>    
+            </div>      
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+     
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="/js/jquery.cookie.js"></script>
     <script src="/js/remember.js"></script>
     <script src="/js/slider.js"></script>
     <script src="/js/sliderTwo.js"></script>
