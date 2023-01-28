@@ -1421,6 +1421,12 @@
 }
 
 
-
-
-
+.theCartOfClear h1
+{
+    margin: 150px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    color: #666666;
+    font-weight:500;
+    font-size: 20px;
+}

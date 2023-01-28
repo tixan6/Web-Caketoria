@@ -358,70 +358,103 @@
       fadeOut(btnOff, 600, 'flex');
     });
 
-
-
+    let counterClicks = 0;
     //Корзина
     $(".cartBasket").on("click", function () {
       
       
+      counterClicks++;
+
+      if (counterClicks > 1) 
+      {
+       
+        return 0;
+      }
+
+      $(".cartBasket").prop("disabled", true);
       let regexp = /cook_name\d+/ig;
       let result;
+   
+
+          while (result = regexp.exec(document.cookie)) {
+            var qwe = JSON.parse($.cookie(result[0]));
+             const cartHTMLitem = `
+              <div class="cartTovar" id="cartTovar${qwe.id}" style="opacity: 1;">
+                    <div class="img_tovar">
+                        <img class="_img" id="_imgs" src="${qwe.imgSrc}"></img>
+                    </div>
+                    <div class="title_tovar" id="itemTovar">
+                        <h1 class="_title">${qwe.title}</h1>
+                    </div>
+                    <div class="price_tovar" id="itemTovar">
+                        <h1 class="_price">${qwe.price_currency}</h1>
+                    </div>
+                    <div class="btn-tovar">
+                        <div class="buy_tovar" id="itemTovar">
+                            <a href="#" onclick="
+                        
+                            alert('Спасибо вам наберут');
+                            
+                            
+                            ">Купить</a>
+                        </div>
+    
+                        <div class="remove_tovar" id="${qwe.id}">
+                            <a href="#" onclick="
+                              
+                            var qwe = document.getElementById('cartTovar${qwe.id}');
+                            
+                            
+    
+                            let op = 1;
+                            while(op > 0) 
+                            {
+                              qwe.style.opacity = op;
+                              op -= 0.1;
+            
+                              if(op < 1) 
+                              {
+                                
+                                $.removeCookie('cook_name' + ${qwe.id});
+                                
+                                //$('#cartTovar${qwe.id}').remove(); 
+                              }
+                            }
+                              
+                           
+                            " >Удалить</a>
+                        </div>
+                    </div>        
+                </div>
+              `;      
+              document.querySelector(".scrollbasket").insertAdjacentHTML('beforeend',cartHTMLitem);
+            
+          }
       
+   
 
-      while (result = regexp.exec(document.cookie)) {
-        var qwe = JSON.parse($.cookie(result[0]));
-         const cartHTMLitem = `
-          <div class="cartTovar" id="cartTovar${qwe.id}" style="opacity: 1;">
-                <div class="img_tovar">
-                    <img class="_img" id="_imgs" src="${qwe.imgSrc}"></img>
-                </div>
-                <div class="title_tovar" id="itemTovar">
-                    <h1 class="_title">${qwe.title}</h1>
-                </div>
-                <div class="price_tovar" id="itemTovar">
-                    <h1 class="_price">${qwe.price_currency}</h1>
-                </div>
-                <div class="btn-tovar">
-                    <div class="buy_tovar" id="itemTovar">
-                        <a href="#" onclick="
-                    
-                        alert('Спасибо вам наберут');
-                        
-                        
-                        ">Купить</a>
-                    </div>
+          if(document.querySelector(".cartTovar") == null) 
+          {
 
-                    <div class="remove_tovar" id="${qwe.id}">
-                        <a href="#" onclick="
-                          
-                        var qwe = document.getElementById('cartTovar${qwe.id}');
-                        
-                        
+            const cartHTMLitem = `
+            
 
-                        let op = 1;
-                        while(op > 0) 
-                        {
-                          qwe.style.opacity = op;
-                          op -= 0.1;
-        
-                          if(op < 1) 
-                          {
-                            
-                            $.removeCookie('cook_name' + ${qwe.id});
-                            
-                            //$('#cartTovar${qwe.id}').remove(); 
-                          }
-                        }
-                          
-                       
-                        " >Удалить</a>
-                    </div>
-                </div>        
+            <div class="theCartOfClear">
+                <h1>Корзина пуста</h1>
             </div>
-          `;      
-          document.querySelector(".scrollbasket").insertAdjacentHTML('beforeend',cartHTMLitem);
+
+
+
+            `;      
+              document.querySelector(".scrollbasket").insertAdjacentHTML('beforeend',cartHTMLitem);
+
+          }
+          else 
+          {
+              $(".theCartOfClear").remove(); 
+          }
         
-      }
+          
        
         
 
@@ -433,7 +466,8 @@
     
     $(".closePopup-Cart").on("click", function () 
     {
-     
+      counterClicks = 0;
+      $(".theCartOfClear").remove(); 
       document.querySelectorAll(".cartTovar").forEach(element => {
         element.remove();
       });
