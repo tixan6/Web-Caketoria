@@ -1171,3 +1171,162 @@ footer
     font-weight: 500;
     font-size: 15px;
 }
+
+
+
+                            /*comment */
+.comment 
+{
+    text-align: center;
+}
+.comment h1
+{
+    font-family: 'Montserrat';
+    font-style:normal;
+    font-weight: 500;
+    font-size: 30px;
+    color: rgb(87, 87, 87);
+}
+.comm 
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.spaceAddComments 
+{
+
+}
+
+textarea 
+{
+    width: 550px;
+    height: 300px;
+    
+    color: #5c5c5c;
+    resize:none;
+    background-color: white;
+    cursor: auto;
+    overflow-wrap: break-word;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(169, 169, 169);
+    
+
+    outline:none;
+    font-size: 20px;
+    font-family: 'Montserrat';
+    font-style:normal;
+    font-weight: 500;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+textarea::-webkit-scrollbar {
+    width: 0;
+}
+.BtnComm 
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0px 0px 0px
+}
+#allBtnComm 
+{
+    text-decoration: none;
+}
+
+.btnSend 
+{
+    transition: all 0.4s ease;
+    background: rgb(26, 26, 26);
+    width: 100px;
+    height: 34px;
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-color: rgb(22, 22, 22);
+    border-width: 1px;
+    border-style: solid;
+
+}
+
+.btnSend a
+{
+    transition: all 0.4s ease;
+    color: #ffffff;
+    font-family: 'Montserrat';
+    font-style:normal;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+
+
+
+.btnSend:hover
+{
+    transition: all 0.4s ease;
+    background: rgb(255, 255, 255);
+    color: rgb(22, 22, 22);
+
+}
+.btnSend a:hover
+{
+    transition: all 0.4s ease;
+    color: rgb(22, 22, 22); 
+}
+
+.allBtnComm 
+{
+    color: rgb(22, 22, 22);
+}
+.btnRemove a
+{
+    transition: all 0.4s ease;
+    color: #292929;
+    font-family: 'Montserrat';
+    font-style:normal;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.btnRemove:hover a
+{
+    transition: all 0.4s ease;
+    color: #d34747;
+}
+
+.warning 
+{
+    width: 500px;
+}
+
+.warning h1
+{
+    color: rgb(56 56 56);
+    transition: all 0.4s ease;
+    font-family: 'Montserrat';
+    font-style:normal;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.warning p
+{
+    color: rgb(60, 60, 60);
+    transition: all 0.4s ease;
+    font-family: 'Montserrat';
+    font-style:normal;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.warning p span
+{
+    font-style: oblique;
+}
+

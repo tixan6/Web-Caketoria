@@ -380,6 +380,96 @@
         </div>
     </section>
 
+
+    <section class="secComm">
+        <div class="container">
+            <div class="comment">
+                <h1>Отзывы</h1>
+                <div class="line-footer"></div>
+            </div>
+            
+            <div class="ForPadding_fast_desc">
+            <div class="comm">
+
+                <div class="spaceAddComments">
+                    <textarea class="text-comment"  placeholder="Введите свой отзыв" minlength="10" maxlength="1000"></textarea>
+
+                    <div class="BtnComm">
+                        <div class="btnSend">
+                            <a id="allBtnComm" class="send-message" href="#">Отправить</a>
+                        </div>
+
+                        <div class="btnRemove">
+                            <a id="allBtnComm" class="clearText" href="#">Очистить</a>
+                        </div>
+                        
+                    </div>
+                    <div class="warning">
+                        <h1>! Обратите внимание !</h1>
+                        <p>При использовании <span>нецензурных</span> выражений, комментарии будут удалены администрацией!</p>
+                    </div>
+                </div>
+
+                
+
+                <div class="spaceShowComments">
+                    <div class="scrollComment">
+
+                    <div class="userComm">
+                        <div class="NameUser-data">
+                            <div class="bg-name">
+                                <h4 id="itemComm">Александр</h4>
+                            </div>     
+                        </div>
+                        <div class="userBg">
+                            <p class="text-comment">Повседневная практика показывает.</p>
+                        </div>
+                        <div class="timeComm">
+                            <p id="itemComm">15:43</p>
+                            <p id="itemComm">23.03.2023</p>
+                        </div>
+                    </div>
+
+                    <div class="userComm">
+                        <div class="NameUser-data">
+                            <div class="bg-name">
+                                <h4 id="itemComm">Углубинищенский</h4>
+                            </div>     
+                        </div>
+                        <div class="userBg">
+                            <p class="text-comment">Повседневная практика показывает, что новая модель организационной деятельности обеспечивает широкому кругу (специалистов) участие в формировании модели развития. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий играет важную роль.</p>
+                        </div>
+                        <div class="timeComm">
+                            <p id="itemComm">15:43</p>
+                            <p id="itemComm">23.03.2023</p>
+                        </div>
+                    </div>
+
+
+                    <div class="userComm">
+                        <div class="NameUser-data">
+                            <div class="bg-name">
+                                <h4 id="itemComm">Ян</h4>
+                            </div>     
+                        </div>
+                        <div class="userBg">
+                            <p class="text-comment">ных плановых заданий играет важную роль.</p>
+                        </div>
+                        <div class="timeComm">
+                            <p id="itemComm">15:43</p>
+                            <p id="itemComm">23.03.2023</p>
+                        </div>
+                    </div>
+
+                    </div>
+                </div>
+
+            </div>
+                
+            </div>
+        </div>
+    </section>
+
     <footer>
         <div class="container">
             <div class="footerMain">
@@ -922,6 +1012,7 @@
     <script src="/js/vacancy.js"></script>
     <script src="/js/login.js"></script>
     <script src="/js/options.js"></script>
+    <script src="/js/comment.js"></script>
 
 </body>
 </html>
