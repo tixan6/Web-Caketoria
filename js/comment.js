@@ -3,6 +3,9 @@
 
 $(".send-message").on("click", () => 
 {
+  var now = new Date().toLocaleString();
+  alert(now);
+
     let msg = $(".text-comment").val();
 
     let phn = GetPhone();
