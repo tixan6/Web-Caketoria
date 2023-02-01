@@ -1,0 +1,25 @@
+.main {
+
+}
+
+.container{
+  width: 1246px;
+  margin: 0 auto;
+}
+
+.register {
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: 100px;
+}
+
+.register p {
+  margin: 0px;
+}
+
+.register input{
+  width: 200px;
+  height: 20px;
+  margin: 5px 0px;
+}
