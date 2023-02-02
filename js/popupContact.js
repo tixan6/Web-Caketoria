@@ -442,13 +442,17 @@
                 dataType: 'html',
                 beforeSend: function() 
                 {
-                    $(".send-message").prop("disabled", true);
+                    $(".buy").prop("disabled", true);
                 },
                 success: function(data) {
-                  alert(data);
-                  $(".send-message").prop("disabled", false);
+                  var btnOff = document.querySelector(".popup-bg-Cart");
+                  fadeOut(btnOff, 600, 'flex');
+                  _successBuy();
+                  $(".buy").prop("disabled", false);
                 }
-              })   
+              })  
+              
+              
           });
 
 
@@ -553,6 +557,22 @@ $(".send-message").on("click", () =>
 
 $(".clearText").on("click", () => {$(".text-comment").val("");});
 
+function _successBuy() 
+{
+  $('.popup-animLogin')
+            .css('width', '330px')
+            .css('height', '230px');
+  $(".UARL").text("Вы успешно совершили заказ, ожидайте звонка от оператора для подтверждения заказа");
+  $(".ANIM").attr("src","/img/Anim/Checkmark.png");
+  var btnOn = document.querySelector(".popup-bg-animLogin");
+  fadeIn(btnOn, 600, 'flex');
+
+  setTimeout(function() 
+  {
+    var btnOff = document.querySelector(".popup-bg-animLogin");
+    fadeOut(btnOff, 600, 'flex');
+  }, 6000);
+}
 
 
 function _success() 

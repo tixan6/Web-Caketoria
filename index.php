@@ -826,8 +826,6 @@
             </div>      
         </div>
     </div>
-
-
     
 
     <div class="popup-bg-animLogin">
@@ -842,8 +840,6 @@
             </div>      
         </div>
     </div>
-
-
 
 
     <div class="popup-bg-changePass">

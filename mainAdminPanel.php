@@ -22,24 +22,24 @@
 
 
                 <?php
-                    $userOrder = mysqli_query($mysqli, "SELECT users.name, users.phone, Product.Name, Product.Price, Images.Path_img FROM orders JOIN users ON orders.idUser = users.id JOIN Product ON orders.idProduct = Product.ID JOIN Images ON Product.ID_img = Images.ID;");
+                    $userOrder = mysqli_query($mysqli, "SELECT orders.id, users.name, users.phone, Product.Name, Product.Price, Images.Path_img FROM orders JOIN users ON orders.idUser = users.id JOIN Product ON orders.idProduct = Product.ID JOIN Images ON Product.ID_img = Images.ID;");
                     $userOrders = mysqli_fetch_all($userOrder);
                     foreach($userOrders as $_userOrder)
                     {
                 ?>
                 
 
-                <div class="orderPeople">
-                    <img src="\img\Cake\Белочка.jpg">
+                <div class="orderPeople" id="productId<?=$_userOrder[0]?>">
+                    <img src="<?=$_userOrder[5]?>">
 
                     <div class="infAboutOrder">
                         <div class="nameBlock" id="blickItems">
                             <p>Имя заказчика: </p>
-                            <h2><?=$_userOrder[0]?></h2>
+                            <h2><?=$_userOrder[1]?></h2>
                         </div>
                         <div class="phoneBlock" id="blickItems">
                             <p>Номер телефона заказчика: </p>
-                            <h2><?=$_userOrder[1]?></h2>
+                            <h2><?=$_userOrder[2]?></h2>
                         </div>            
                     </div>
                     
@@ -47,25 +47,26 @@
             
                         <div class="nameBlock" id="blickItems">
                             <p>Имя тортика:</p>
-                            <h2><?=$_userOrder[2]?></h2>
+                            <h2><?=$_userOrder[3]?></h2>
                         </div>
 
                         <div class="phoneBlock" id="blickItems">
                             <p class="price">Цена: </p>
-                            <h2><?=$_userOrder[3]?> BYN</h2>   
+                            <h2><?=$_userOrder[4]?> BYN</h2>   
                         </div>       
                           
                     </div>
                     
                     <div class="btnToAccept">
-                        <div class="accept">
+                        <div class="accept" id="<?=$_userOrder[0]?>">
                             <img src="img\Anim\Checkmark.png">
                         </div>
-                        <div class="refuse">
+                        <div class="refuse" id="<?=$_userOrder[0]?>">
                             <img src="img\Anim\Closemark.png">
                         </div>
                     </div>
                 </div>
+
 
                 <? } ?>
                 
@@ -75,7 +76,11 @@
         </div>
     </div>
 </section>
-
+<section>
+    <div class="container">
+        вава
+    </div>
+</section>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>

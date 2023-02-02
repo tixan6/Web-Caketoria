@@ -44,6 +44,7 @@ h1
 }
 .orderPeople 
 {
+    opacity: 100%;
     transition: all 0.3s ease;
     display: flex;
     justify-content: space-between;
