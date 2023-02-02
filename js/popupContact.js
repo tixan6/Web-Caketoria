@@ -47,9 +47,8 @@
 
     document.querySelector(".btnlog").addEventListener("click", function () {
       if (document.getElementById("BtnLogOrRegCheck") !== null) 
-      {
-        var btnOn = document.querySelector(".popup-bg-options");
-        fadeIn(btnOn, 600, 'flex');
+      {        
+        return 0;
       }
       else {
         var btnOn = document.querySelector(".popup-bg-log");
@@ -477,8 +476,87 @@
     });
 
 
-
     
+
+$(".send-message").on("click", () => 
+{
+ 
+  if (document.getElementById("BtnLogOrRegCheck") !== null) 
+  {
+    
+    let msg = $(".text-comment").val();
+    if (msg.length > 10) 
+    {
+      var now = $.datepicker.formatDate('dd.mm.yy', new Date());
+      let phn = GetPhone();
+      let phone = phn();
+    
+
+      $.ajax({
+          url: '../ajax/comment.php',
+          type: 'POST',
+          cache: false,
+          data: {'msg': msg, 'phone': phone, 'now': now,},
+          dataType: 'html',
+          beforeSend: function() 
+          {
+              $(".send-message").prop("disabled", true);
+          },
+          success: function(data) {
+            $(".send-message").prop("disabled", false);
+          }
+    })
+    
+    _success();
+
+    }
+    else 
+    {
+      alert("Комментарий должен содержать больше 10 символов");
+    }
+    
+  }
+  else {
+    _OutIn() 
+  };
+
+
+
+
+})
+
+
+
+$(".clearText").on("click", () => {$(".text-comment").val("");});
+
+
+
+function _success() 
+{
+  $(".UARL").text("Вы оставили комментарий");
+  $(".ANIM").attr("src","/img/Anim/Checkmark.png");
+  var btnOn = document.querySelector(".popup-bg-animLogin");
+  fadeIn(btnOn, 600, 'flex');
+
+  setTimeout(function() 
+  {
+    var btnOff = document.querySelector(".popup-bg-animLogin");
+    fadeOut(btnOff, 600, 'flex');
+  }, 2000);
+}
+
+function _OutIn() 
+{
+  $(".UARL").text("Войдите или зарегистрируйте аккаунт");
+  $(".ANIM").attr("src","/img/Anim/Closemark.png");
+  var btnOn = document.querySelector(".popup-bg-animLogin");
+  fadeIn(btnOn, 600, 'flex');
+  setTimeout(function() 
+  {
+    var btnOff = document.querySelector(".popup-bg-animLogin");
+    fadeOut(btnOff, 600, 'flex');
+  }, 2000);
+}
 
 })();
 

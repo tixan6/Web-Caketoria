@@ -1,5 +1,7 @@
 .main {
-
+  display: flex;
+  justify-content: center;
+  padding-top: 300px;
 }
 
 .container{
@@ -22,4 +24,22 @@
   width: 200px;
   height: 20px;
   margin: 5px 0px;
+}
+.Btnsubmit-admin 
+{
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-size: 20px;
+  color: rgb(58, 58, 58);
+}
+.Btnsubmit-admin:hover
+{
+  transition: all 0.3s ease;
+  color: rgb(247, 123, 123);
+}
+.centerError {
+  text-align: center;
+  padding-bottom: 10px;
+  color: rgb(241, 54, 54);
+  visibility: hidden;
 }

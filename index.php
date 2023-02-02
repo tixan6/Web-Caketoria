@@ -395,8 +395,8 @@
                     <textarea class="text-comment"  placeholder="Введите свой отзыв" minlength="10" maxlength="1000"></textarea>
 
                     <div class="BtnComm">
-                        <div class="btnSend">
-                            <a id="allBtnComm" class="send-message" href="#">Отправить</a>
+                        <div class="btnSend send-message">
+                            <a id="allBtnComm"  href="#">Отправить</a>
                         </div>
 
                         <div class="btnRemove">
@@ -415,51 +415,30 @@
                 <div class="spaceShowComments">
                     <div class="scrollComment">
 
-                    <div class="userComm">
-                        <div class="NameUser-data">
-                            <div class="bg-name">
-                                <h4 id="itemComm">Александр</h4>
-                            </div>     
-                        </div>
-                        <div class="userBg">
-                            <p class="text-comment">Повседневная практика показывает.</p>
-                        </div>
-                        <div class="timeComm">
-                            <p id="itemComm">15:43</p>
-                            <p id="itemComm">23.03.2023</p>
-                        </div>
-                    </div>
 
-                    <div class="userComm">
-                        <div class="NameUser-data">
-                            <div class="bg-name">
-                                <h4 id="itemComm">Углубинищенский</h4>
-                            </div>     
-                        </div>
-                        <div class="userBg">
-                            <p class="text-comment">Повседневная практика показывает, что новая модель организационной деятельности обеспечивает широкому кругу (специалистов) участие в формировании модели развития. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий играет важную роль.</p>
-                        </div>
-                        <div class="timeComm">
-                            <p id="itemComm">15:43</p>
-                            <p id="itemComm">23.03.2023</p>
-                        </div>
-                    </div>
+                    <?php
+                        $userComment = mysqli_query($mysqli, "SELECT Comments.id_comment, users.name, Comments.data, Comments.message FROM Comments RIGHT JOIN users ON users.id = Comments.id_UserName WHERE Comments.id_comment IS NOT NULL;");
+                        $userComment = mysqli_fetch_all($userComment);
+                        foreach($userComment as $_user)
+                        {
+                    ?> 
 
+                        <div class="userComm" id="userId<?= $_user[0]?>">
+                            <div class="NameUser-data">
+                                <div class="bg-name">
+                                    <h4 id="itemComm"><?= $_user[1]?></h4>
+                                </div>     
+                            </div>
+                            <div class="userBg">
+                                <p class="text-comment"><?= $_user[3]?></p>
+                            </div>
+                            <div class="timeComm">
+                
+                                <p id="itemComm"><?= $_user[2]?></p>
+                            </div>
+                        </div>
 
-                    <div class="userComm">
-                        <div class="NameUser-data">
-                            <div class="bg-name">
-                                <h4 id="itemComm">Ян</h4>
-                            </div>     
-                        </div>
-                        <div class="userBg">
-                            <p class="text-comment">ных плановых заданий играет важную роль.</p>
-                        </div>
-                        <div class="timeComm">
-                            <p id="itemComm">15:43</p>
-                            <p id="itemComm">23.03.2023</p>
-                        </div>
-                    </div>
+                    <? } ?>
 
                     </div>
                 </div>
@@ -972,8 +951,6 @@
                     <div class="phoneNumberForRespond">
                         <div class="scrollbasket">
 
-                            
-
                         </div>
                     </div>
                 </div>    
@@ -996,7 +973,8 @@
     <script src="/js/vacancy.js"></script>
     <script src="/js/login.js"></script>
     <script src="/js/options.js"></script>
-    <script src="/js/comment.js"></script>
+    <script src="/js/moment-with-locales.min.js"></script>
+    <script src="/js/jquery-ui.js"></script>
 
 </body>
 </html>

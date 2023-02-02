@@ -12,18 +12,25 @@
 <body>
   <div class="main">
     <div class="container">
-      <form action="#" method="POST" class="register">
+      <div action="#" class="register">
+        <div class="centerError">
+          <p>Неправильный логин или пароль</p>
+        </div>
         <p>Введите логин</p>
-        <input type="text" placeholder="Имя" required="" oninvalid="setCustomValidity('Введите имя')"
-          oninput="setCustomValidity('')">
-        <input type="text" <input type="password" class="password-input" name="pass" required=""
+
+        <input type="text" placeholder="Логин" required="" oninvalid="setCustomValidity('Введите имя')"
+          oninput="setCustomValidity('')" class="login-panel">
+
+        <input type="password" class="password-input" name="pass" required=""
           pattern="^(?=.*\d)\w{3,20}$"
           oninvalid="setCustomValidity('Пароль от 3 до 20 символов. Должен содержать латиницу + цифры (минимум 1 цифру)')"
           oninput="setCustomValidity('')" placeholder="Пароль"><br>
-        <button type="submit">Войти</button>
-      </form>
+        <a href="#"  class="Btnsubmit-admin">Войти</a>
+    </div>
     </div>
   </div>
-</body>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="/js/adminLog.js"></script>
+</body>
 </html>
