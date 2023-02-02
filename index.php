@@ -950,6 +950,11 @@
                     <h1>Корзина</h1>
                     <div class="phoneNumberForRespond">
                         <div class="scrollbasket">
+                            
+
+
+
+
 
                         </div>
                     </div>
@@ -957,7 +962,6 @@
             </div>      
         </div>
     </div>
-
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>

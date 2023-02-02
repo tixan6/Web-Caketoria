@@ -3,7 +3,6 @@
 
     $(".Btnsubmit-admin").on("click", function() 
     {
-        alert("Вы нажали");
         var log = document.querySelector(".login-panel").value;
         var pass = document.querySelector(".password-input").value;
     

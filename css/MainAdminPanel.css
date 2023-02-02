@@ -9,3 +9,106 @@
     margin: 0 auto;
 }
 
+.menu 
+{
+    text-align: -webkit-center;
+
+    height: 370px;
+    border: solid 0.1px rgb(115, 115, 115);
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    background: #fff;
+    border: 1px solid #C1C1C1;
+    overflow: scroll;
+    overflow-wrap: break-word;
+    overflow-x: hidden;
+    margin: 10px;
+
+}
+
+.menu::-webkit-scrollbar {
+    width: 0;
+}
+.centerTitle-orders 
+{
+    text-align: center;
+}
+h1 
+{
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 30px;
+    color: rgb(41, 41, 41);
+}
+.orderPeople 
+{
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    height: 100px;
+    
+    border: solid 1px #b7b7b7;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.orderPeople:hover
+{
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.21), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+
+
+.orderPeople img
+{
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+}
+h2 
+{
+    align-self: center;
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    color: rgb(41, 41, 41);
+}
+#blickItems {
+    display: flex;
+}
+.btnToAccept
+{
+    display: flex;
+    align-self: center;
+}
+
+
+.btnToAccept img 
+{
+    transition: all 0.3s ease;
+    width: 70px;
+    height: 70px;
+}
+
+.accept:hover img
+{
+    transition: all 0.3s ease;
+    width: 80px;
+    height: 80px;
+}
+
+
+.refuse:hover img
+{
+    transition: all 0.3s ease;
+    width: 80px;
+    height: 80px;
+}
+.price
+{
+    padding-left: 5px;
+}

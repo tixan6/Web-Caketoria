@@ -390,12 +390,7 @@
                     </div>
                     <div class="btn-tovar">
                         <div class="buy_tovar" id="itemTovar">
-                            <a href="#" onclick="
-                        
-                            alert('Спасибо вам наберут');
-                            
-                            
-                            ">Купить</a>
+                            <a href="#" id="${qwe.id}" class="buy">Купить</a>
                         </div>
     
                         <div class="remove_tovar" id="${qwe.id}">
@@ -418,9 +413,7 @@
                                 
                                 //$('#cartTovar${qwe.id}').remove(); 
                               }
-                            }
-                              
-                           
+                            }                 
                             " >Удалить</a>
                         </div>
                     </div>        
@@ -430,7 +423,35 @@
             
           }
       
-   
+
+
+
+
+          $(".buy").on("click", function() 
+          {
+            var id = $(this).prop('id');
+            let phn = GetPhone();
+            let phone = phn();
+    
+    
+              $.ajax({
+                url: '../ajax/addOrder.php',
+                type: 'POST',
+                cache: false,
+                data: {'phone': phone, 'id': id},
+                dataType: 'html',
+                beforeSend: function() 
+                {
+                    $(".send-message").prop("disabled", true);
+                },
+                success: function(data) {
+                  alert(data);
+                  $(".send-message").prop("disabled", false);
+                }
+              })   
+          });
+
+
 
           if(document.querySelector(".cartTovar") == null) 
           {
@@ -460,6 +481,9 @@
           var btnOn = document.querySelector(".popup-bg-Cart");
           fadeIn(btnOn, 600, 'flex');
     });
+
+
+
 
 
     
