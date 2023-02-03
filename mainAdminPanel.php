@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/fonts/lato/lato.css">
     <link rel="stylesheet" href="/fonts/montserrat/montserrat.css">
     <link rel="stylesheet" href="/fonts/OpenSans/opensans.css">
+    <link rel="stylesheet" href="/css/modalView.css">
     <title>Администрация</title>
 </head>
 <body>
@@ -76,9 +77,93 @@
         </div>
     </div>
 </section>
+
+
 <section>
     <div class="container">
-        вава
+        <div class="all">
+            <div class="leftSide">
+                <h1>Отзывы</h1>
+                    <div class="scrollComment">
+                        <?php
+                            $userComment = mysqli_query($mysqli, "SELECT Comments.id_comment, users.name, Comments.data, Comments.message FROM Comments RIGHT JOIN users ON users.id = Comments.id_UserName WHERE Comments.id_comment IS NOT NULL;");
+                            $userComment = mysqli_fetch_all($userComment);
+                            foreach($userComment as $_user)
+                            {
+                        ?> 
+                            <div class="userComm" id="usg<?= $_user[0]?>">
+                                <div class="NameUser-data">
+                                    <div class="bg-name">
+                                        <h4 id="itemComm"><?= $_user[1]?></h4>
+                                    </div>     
+                                </div>
+                                <div class="userBg">
+                                    <p class="text-comment"><?= $_user[3]?></p>
+                                </div>
+                                <div class="timeComm">
+
+                                    <p id="itemComm"><?= $_user[2]?></p>
+                                    <a href="" id="<?= $_user[0]?>" class="removeAMessage">Удалить комментарий</a>
+                                </div>
+                            </div>
+                        <? } ?>
+                </div>
+            </div>
+
+            <!-- <div class="RigthSide">
+                <h1>Добавить тортик</h1>
+                <div class="addCake">
+                    .addPhoto
+
+
+                </div>
+            </div> -->
+            
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<section>
+    <div class="container">
+
+    <h1>Отзывы</h1>
+
+
+        <div class="scrollComment">
+            <?php
+                $userComment = mysqli_query($mysqli, "SELECT Comments.id_comment, users.name, Comments.data, Comments.message FROM Comments RIGHT JOIN users ON users.id = Comments.id_UserName WHERE Comments.id_comment IS NOT NULL;");
+                $userComment = mysqli_fetch_all($userComment);
+                foreach($userComment as $_user)
+                {
+            ?> 
+
+                <div class="userComm" id="usg<?= $_user[0]?>">
+                    <div class="NameUser-data">
+                        <div class="bg-name">
+                            <h4 id="itemComm"><?= $_user[1]?></h4>
+                        </div>     
+                    </div>
+                    <div class="userBg">
+                        <p class="text-comment"><?= $_user[3]?></p>
+                    </div>
+                    <div class="timeComm">
+
+                        <p id="itemComm"><?= $_user[2]?></p>
+                        <a href="" id="<?= $_user[0]?>" class="removeAMessage">Удалить комментарий</a>
+                    </div>
+                </div>
+
+            <? } ?>
+
+        </div>
+
+
+
     </div>
 </section>
 

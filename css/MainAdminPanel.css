@@ -113,3 +113,13 @@ h2
 {
     padding-left: 5px;
 }
+.timeComm a
+{
+    color: rgb(253, 0, 0);
+    text-decoration: none;
+}
+.all 
+{
+    display: flex;
+    
+}

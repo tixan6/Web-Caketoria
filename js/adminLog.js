@@ -63,12 +63,26 @@
     });
 
 
+    $(".removeAMessage").on("click", function() 
+    {
+        
+        let msg = $(this).prop('id');
+        var node = document.getElementById('usg' + msg);
+        node.parentNode.removeChild(node);
+        $.ajax({
 
-
-
-
-
-
-
-    
+            url: '../ajax/removeMessage.php',
+            type: 'POST',
+            cache: false,
+            data: {'id': msg},
+            dataType: 'html',
+            beforeSend: function() 
+            {
+                $(".removeAMessage").prop("disabled", true);
+            },
+            success: function(data) {
+                $(".removeAMessage").prop("disabled", false);
+            }
+        });
+    });
 })();
