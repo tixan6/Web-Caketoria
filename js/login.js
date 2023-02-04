@@ -29,7 +29,6 @@
 
 function GetPhone() 
 {
-    //closure - замыкание
     return function GetPhoneNumber() 
     {
         var result = document.getElementById("inNet");

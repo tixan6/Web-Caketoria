@@ -15,6 +15,12 @@
 </head>
 <body>
     
+
+<?php
+      if (empty($_COOKIE['admin'])):
+?>
+<h1>У вас нет права доступа!!!</h1>
+<?php else: ?>
 <section>
     <div class="container">
         <div class="centerTitle-orders">
@@ -23,7 +29,7 @@
 
 
                 <?php
-                    $userOrder = mysqli_query($mysqli, "SELECT orders.id, users.name, users.phone, Product.Name, Product.Price, Images.Path_img FROM orders JOIN users ON orders.idUser = users.id JOIN Product ON orders.idProduct = Product.ID JOIN Images ON Product.ID_img = Images.ID;");
+                    $userOrder = mysqli_query($mysqli, "SELECT orders.id, users.name, users.phone, Product.Name, Product.Price, Images.Path_img FROM orders JOIN users ON orders.idUser = users.id JOIN Product ON orders.idProduct = Product.ID JOIN Images ON Product.ID_img = Images.ID ORDER BY orders.id DESC;");
                     $userOrders = mysqli_fetch_all($userOrder);
                     foreach($userOrders as $_userOrder)
                     {
@@ -86,7 +92,7 @@
                 <h1>Отзывы</h1>
                     <div class="scrollComment">
                         <?php
-                            $userComment = mysqli_query($mysqli, "SELECT Comments.id_comment, users.name, Comments.data, Comments.message FROM Comments RIGHT JOIN users ON users.id = Comments.id_UserName WHERE Comments.id_comment IS NOT NULL;");
+                            $userComment = mysqli_query($mysqli, "SELECT Comments.id_comment, users.name, Comments.data, Comments.message FROM Comments RIGHT JOIN users ON users.id = Comments.id_UserName WHERE Comments.id_comment IS NOT NULL ORDER BY Comments.id_comment DESC;");
                             $userComment = mysqli_fetch_all($userComment);
                             foreach($userComment as $_user)
                             {
@@ -125,50 +131,8 @@
 
 
 
-
-
-
-<section>
-    <div class="container">
-
-    <h1>Отзывы</h1>
-
-
-        <div class="scrollComment">
-            <?php
-                $userComment = mysqli_query($mysqli, "SELECT Comments.id_comment, users.name, Comments.data, Comments.message FROM Comments RIGHT JOIN users ON users.id = Comments.id_UserName WHERE Comments.id_comment IS NOT NULL;");
-                $userComment = mysqli_fetch_all($userComment);
-                foreach($userComment as $_user)
-                {
-            ?> 
-
-                <div class="userComm" id="usg<?= $_user[0]?>">
-                    <div class="NameUser-data">
-                        <div class="bg-name">
-                            <h4 id="itemComm"><?= $_user[1]?></h4>
-                        </div>     
-                    </div>
-                    <div class="userBg">
-                        <p class="text-comment"><?= $_user[3]?></p>
-                    </div>
-                    <div class="timeComm">
-
-                        <p id="itemComm"><?= $_user[2]?></p>
-                        <a href="" id="<?= $_user[0]?>" class="removeAMessage">Удалить комментарий</a>
-                    </div>
-                </div>
-
-            <? } ?>
-
-        </div>
-
-
-
-    </div>
-</section>
-
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script src="/js/adminLog.js"></script>
+<?php endif; ?>
 </body>
 </html>

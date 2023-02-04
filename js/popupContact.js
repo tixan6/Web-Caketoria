@@ -360,8 +360,7 @@
     let counterClicks = 0;
     //Корзина
     $(".cartBasket").on("click", function () {
-      
-      
+
       counterClicks++;
 
       if (counterClicks > 1) 
@@ -420,7 +419,6 @@
                 </div>
               `;      
               document.querySelector(".scrollbasket").insertAdjacentHTML('beforeend',cartHTMLitem);
-            
           }
       
 
@@ -431,7 +429,8 @@
           {
             var id = $(this).prop('id');
             let phn = GetPhone();
-            let phone = phn();
+            
+            
     
     
               $.ajax({
@@ -452,7 +451,9 @@
                 }
               })  
               
-              
+              var log = new Promise((resolve, reject) => {
+                resolve(setTimeout(window.location.reload.bind(window.location), 6000));
+              });    
           });
 
 
@@ -572,6 +573,7 @@ function _successBuy()
     var btnOff = document.querySelector(".popup-bg-animLogin");
     fadeOut(btnOff, 600, 'flex');
   }, 6000);
+  
 }
 
 
@@ -587,6 +589,9 @@ function _success()
     var btnOff = document.querySelector(".popup-bg-animLogin");
     fadeOut(btnOff, 600, 'flex');
   }, 2000);
+  var log = new Promise((resolve, reject) => {
+    resolve(setTimeout(window.location.reload.bind(window.location), 2000));
+  }); 
 }
 
 function _OutIn() 

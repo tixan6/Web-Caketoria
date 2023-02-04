@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="/fonts/lato/lato.css">
     <link rel="stylesheet" href="/fonts/montserrat/montserrat.css">
     <link rel="stylesheet" href="/fonts/OpenSans/opensans.css">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caketoria</title>
 </head>
 <body>
@@ -24,8 +24,7 @@
             <div class="header">
                 <div class="header_titile">
                     <div class="LOGO">
-                        <a href="">Caketoria</a>
-                        
+                        <a href="">Caketoria</a>               
                         <img src="img/LOGO.svg"/>
                     </div> 
                                   
@@ -48,12 +47,12 @@
                             <a href="#" class="open-popup-reg" >Регистрация</a>
                         </div>
 
-
-
-
-
+                        
 
                     </div>
+                    <div class="menuAdaptiv">
+                            <a href="#" class="open-popup-reg">Меню</a>
+                        </div>
                     <?php else: ?>
                         <div class="BtnLogOrReg" id="BtnLogOrRegCheck">
                             <ul class="loginMenu">
@@ -95,7 +94,7 @@
                 <h1>Только лучшие ингредиенты</h1>
                 <hr>
                 <div class="BlocItemsBest">
-                    <div class="BlocItemsBest_One">
+                    <div class="BlocItemsBest_One" id="imgAdaptiv">
                         <img src="./img/Green.png">
                         <h3>Натуральные ингредиенты</h3>
                         <p>Собираем с плодородных земель
@@ -103,7 +102,7 @@
                            полях для ваших тортиков</p>
                     </div>
 
-                    <div class="BlocItemsBest_One">
+                    <div class="BlocItemsBest_One" id="imgAdaptiv">
                         <img src="./img/Wheat.png">
                         <h3>Лучшие крупы</h3>
                         <p>Собираем с плодородных земель
@@ -111,7 +110,7 @@
                            полях для ваших тортиков</p>
                     </div>
 
-                    <div class="BlocItemsBest_One">
+                    <div class="BlocItemsBest_One" id="imgAdaptiv">
                         <img src="./img/Mechanism.png">
                         <h3>Современные технологии 
                             приготовление</h3>
@@ -124,9 +123,9 @@
         </div>
     </section>
 
-    <section>
+    <section >
         <div class="containers"  id="KatalogTheBest">
-            <div class="KatalogTheBest" >
+            <div class="KatalogTheBest" id="sliderBlock" >
 
                 <div class="BloclForCentralize" id="PopularProducts">
                     <p>Популярная наша продукция</p>
@@ -138,7 +137,13 @@
             
 
                 <div class="container">
-                    <div class="centerItem">
+
+
+
+
+
+
+                    <div class="centerItem" id="sliderBlock">
 
                         <div class="ArrowToTheLeft">
                             <img src="./img/ArrowToTheLeft.png">
@@ -154,7 +159,7 @@
                                 ?>      
                                     <div class="SliderWithItems">
                                         <div class="ItemsSleder">
-                                            <img class="PhotoForItemsSlider" src="<?= $prod[3] ?>">
+                                            <img class="PhotoForItemsSlider" id="PhotoForItemsSliderId" src="<?= $prod[3] ?>">
                                             <div class="CenterItemHere">
                                                 <h1 class="itemTitileProd"><?= $prod[1]?></h1>
                                                 <p class="itemDescProd"><?= $prod[4]?></p>                   
@@ -180,9 +185,19 @@
                         <div class="ArrowToTheRigth">
                             <img src="./img/ArrowToTheRigth.png">
                         </div>   
-                                            
-                                            
+                                                       
                     </div> 
+
+
+
+        
+
+
+
+                   
+
+
+
                 </div>  
             </div>
         </div>
@@ -258,7 +273,7 @@
                             <h1>Лучшие сотрудники</h1>
                             <div class="The_best_employees">
                                 <?php
-                                    $products = mysqli_query($mysqli, "SELECT TheBestEmployees.FirstName, TheBestEmployees.Post, TheBestEmployees.photo FROM `TheBestEmployees`;");
+                                    $products = mysqli_query($mysqli, "SELECT TheBestEmployees.FirstName, TheBestEmployees.Post, TheBestEmployees.photo FROM `TheBestEmployees` ORDER BY TheBestEmployees.FirstName DESC;");
                                     $products = mysqli_fetch_all($products);
                                     foreach($products as $prod)
                                     {
@@ -417,7 +432,7 @@
 
 
                     <?php
-                        $userComment = mysqli_query($mysqli, "SELECT Comments.id_comment, users.name, Comments.data, Comments.message FROM Comments RIGHT JOIN users ON users.id = Comments.id_UserName WHERE Comments.id_comment IS NOT NULL;");
+                        $userComment = mysqli_query($mysqli, "SELECT Comments.id_comment, users.name, Comments.data, Comments.message FROM Comments RIGHT JOIN users ON users.id = Comments.id_UserName WHERE Comments.id_comment IS NOT NULL ORDER BY Comments.id_comment DESC;");
                         $userComment = mysqli_fetch_all($userComment);
                         foreach($userComment as $_user)
                         {

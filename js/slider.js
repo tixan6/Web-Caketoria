@@ -4,7 +4,7 @@
 
     document.querySelector('.ArrowToTheRigth').addEventListener('click', function(){
         offsetForMass++;
-        offset += 942;
+        offset += 900;
         if(offset > 1884) 
         {
             offset = 0;

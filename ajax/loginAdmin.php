@@ -9,6 +9,7 @@
     
     if (!empty($result)) 
     {
+        setcookie("admin", $log, time()+36000, "/");
         echo true;
     } else 
     {
