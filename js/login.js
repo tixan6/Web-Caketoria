@@ -17,10 +17,10 @@
     var result = document.getElementById("inNet");
     if(result)
     {
-        var results = document.cookie.match (/375\d+/);
+        var results = document.cookie.match(/375\d+/);
         var results = "+" + results;
         result.innerHTML = results;
-    }
+    } 
 })();
 
 
@@ -34,7 +34,7 @@ function GetPhone()
         var result = document.getElementById("inNet");
         if(result)
         {
-            var results = document.cookie.match (/375\d+/);
+            var results = document.cookie.match(/375\d+/);
             var results = "+" + results;
 
             result.innerHTML = results;

@@ -37,22 +37,19 @@
                             <li><a href="#" class="open-popup-Contacts">Контакты</a></li>
                         </ul>
                     </div>
+                    
                     <?php
                         if (empty($_COOKIE['user'])):
                     ?>
-                    <div id="HaveOrNoHave" class="BtnLogOrReg">
+                        <div id="HaveOrNoHave" class="BtnLogOrReg">
                             <a href="#" class="btnlog">Логин</a>           
                         <div class="void"></div>
+
                         <div class="btn_Register_header">
                             <a href="#" class="open-popup-reg" >Регистрация</a>
                         </div>
-
-                        
-
                     </div>
-                    <div class="menuAdaptiv">
-                            <a href="#" class="open-popup-reg">Меню</a>
-                        </div>
+                    
                     <?php else: ?>
                         <div class="BtnLogOrReg" id="BtnLogOrRegCheck">
                             <ul class="loginMenu">
@@ -61,13 +58,31 @@
                                 <ul class="menuItems">
                                     <li><a href="#" class="cartBasket">Корзина</a></li>
                                     <li><a href="#" class="options">Настройкий</a></li>
+                                    <li><a href="#Katalog">Каталог</a></li>
+                                    <li><a href="#WeAboutUs">О нас</a></li>
+                                    <li><a href="#cooperation">Сотрудничество</a></li>
+                                    <li><a href="#KatalogTheBest">Популярные</a></li>
+                                    <li><a href="#" class="open-popup-Contacts" id="mrgCont">Контакты</a></li>
                                     <li><a href="" class="ExitFromAccount">Выход</a></li>
                                 </ul>  
                             </ul>
                         
                         <div class="void"></div>
                     <?php endif; ?>
-                </div>              
+                </div>   
+
+                <div class="menuAdaptiv">
+                    <a href="" class="menuAdaptivBtn">МЕНЮ</a>
+                    <ul class="menuItemsAdaptiv">
+                        <li><a href="#" class="open-popup-reg">Регистрация</a></li>
+                        <li><a href="#" class="btnlog">Логин</a></li>
+                        <li><a href="#Katalog">Каталог</a></li>
+                        <li><a href="#WeAboutUs">О нас</a></li>
+                        <li><a href="#cooperation">Сотрудничество</a></li>
+                        <li><a href="#KatalogTheBest">Популярные</a></li>
+                        <li><a href="#" class="open-popup-Contacts" id="mrgCont">Контакты</a></li>
+                    </ul> 
+                </div>       
             </div>
         </div>
     </header>
@@ -187,16 +202,6 @@
                         </div>   
                                                        
                     </div> 
-
-
-
-        
-
-
-
-                   
-
-
 
                 </div>  
             </div>

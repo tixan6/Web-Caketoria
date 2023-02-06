@@ -1,5 +1,4 @@
 (function () {
-
     const fadeIn = (el, timeout, display) => {
         el.style.opacity = 0;
         el.style.display = display || 'block';
@@ -19,10 +18,36 @@
         }, timeout);
       };
 
-    document.querySelector(".open-popup-Contacts").addEventListener("click", function () {
+
+
+
+
+
+
+
+      var but = document.querySelectorAll(".open-popup-Contacts");
+      for (var b in but)
+      but[b].onclick = function(){
         var btnOn = document.querySelector(".popup-bg-contact");
         fadeIn(btnOn, 600, 'flex');
-    });
+      };
+
+
+
+
+
+
+
+
+
+
+
+
+      
+    // document.querySelectorAll(".open-popup-Contacts").addEventListener("click", function () {
+    //     var btnOn = document.querySelector(".popup-bg-contact");
+    //     fadeIn(btnOn, 600, 'flex');
+    // });
     
     document.querySelector(".closePopup-Contact").addEventListener("click", function () {
         var btnOff = document.querySelector(".popup-bg-contact");
@@ -32,10 +57,13 @@
 
     if (document.querySelector(".open-popup-reg")) 
     {
-      document.querySelector(".open-popup-reg").addEventListener("click", function () {
+      
+      var but = document.querySelectorAll(".open-popup-reg");
+      for (var b in but)
+      but[b].onclick = function(){
         var btnOn = document.querySelector(".popup-bg-reg");
         fadeIn(btnOn, 600, 'flex');
-      });
+      };
     } 
   
     document.querySelector(".closePopup-reg").addEventListener("click", function () {
@@ -45,19 +73,32 @@
 
 
 
-    document.querySelector(".btnlog").addEventListener("click", function () {
-      if (document.getElementById("BtnLogOrRegCheck") !== null) 
-      {        
-        return 0;
-      }
-      else {
-        var btnOn = document.querySelector(".popup-bg-log");
-        fadeIn(btnOn, 600, 'flex');
-      };
+
+
+
+
+    var but2 = document.querySelectorAll(".btnlog");
+    for (var b in but2)
+    but2[b].onclick = function(){
+      var btnOn2 = document.querySelector(".popup-bg-log");
+      fadeIn(btnOn2, 600, 'flex');
+    };
+
+    
+
+    // document.querySelector(".btnlog").addEventListener("click", function () {
+    //   if (document.getElementById("BtnLogOrRegCheck") !== null) 
+    //   {        
+    //     return 0;
+    //   }
+    //   else {
+    //     var btnOn = document.querySelector(".popup-bg-log");
+    //     fadeIn(btnOn, 600, 'flex');
+    //   };
 
 
       
-    });
+    // });
   
     document.querySelector(".closePopup-log").addEventListener("click", function () {
         var btnOff = document.querySelector(".popup-bg-log");
@@ -429,7 +470,7 @@
           {
             var id = $(this).prop('id');
             let phn = GetPhone();
-            
+            var phone = phn();
             
     
     
@@ -606,6 +647,25 @@ function _OutIn()
     fadeOut(btnOff, 600, 'flex');
   }, 2000);
 }
+
+
+
+
+
+let inNetValue = document.getElementById('inNet');
+if(inNetValue) 
+{
+  document.querySelector(".menuAdaptiv").style.visibility = "hidden";
+}//else 
+// {
+//   document.querySelector(".menuAdaptiv").style.visibility = "visible";
+// }
+
+
+
+
+
+
 
 })();
 

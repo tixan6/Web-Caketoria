@@ -1135,31 +1135,30 @@ footer
 
 
 .loginMenu > ul 
-{
+{ 
     position: absolute;
     visibility: hidden;
     opacity: 0;
-    transition: all 0.2s ease-out;
-    
+    transition: all 0.4s;
 }
 .loginMenu:hover > ul
 {
     opacity: 1;
     visibility: visible;
-    transition: all 0.2s ease-in;
+    transition: all 0.4s;
 }
+
 .menuItems 
 {
-
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     background: rgb(247, 247, 247);
     border-radius: 10px;
-    height: 160px;
+    height: 480%;
     min-width: 140px;
     border: 0.3px solid #4d4d4d;
     list-style: none;
     padding-left: 0;
-    
+    text-align-last: left;
 }
 
 .menuItems li
@@ -1174,7 +1173,77 @@ footer
     font-style:normal;
     font-weight: 500;
     font-size: 15px;
+    text-decoration: none;
+    color: #3C3C3C;
 }
+
+
+
+
+
+
+.menuItemsAdaptiv 
+{
+   
+    position: absolute;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    background: rgb(247, 247, 247);
+    border-radius: 10px;
+    height: 500%;
+    min-width: 140px;
+    border: 0.3px solid #4d4d4d;
+    list-style: none;
+    padding-left: 0;
+    
+}
+
+.menuAdaptiv 
+{
+    visibility: hidden;
+    align-self: center;
+}
+.menuAdaptivBtn 
+{
+    font-family: 'Montserrat';
+    font-style:normal;
+    font-weight: 500;
+    font-size: 15px;
+    text-decoration: none;
+    color: #3C3C3C;
+}
+
+.menuAdaptiv > ul 
+{ 
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.6s;
+}
+.menuAdaptiv:hover > ul
+{
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.6s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1330,22 +1399,7 @@ textarea::-webkit-scrollbar {
 {
     font-style: oblique;
 }
-.menuAdaptiv 
-{
-    visibility: hidden;
-    place-self: center;
-    
-}
-.menuAdaptiv a
-{
-    text-decoration: none;
-    transition: all 0.4s ease;
-    color: #292929;
-    font-family: 'Montserrat';
-    font-style:normal;
-    font-weight: 500;
-    font-size: 15px;
-}
+
 #sliderBlock 
 {
     visibility: visible;
@@ -1361,6 +1415,7 @@ textarea::-webkit-scrollbar {
     width: 1100px;
     margin: 0 auto;
 }
+
 .Header_Navigation a
 {
     font-size: 15px;
@@ -1407,12 +1462,24 @@ textarea::-webkit-scrollbar {
 {
     visibility: visible;
 }
-/* .container 
-{
-    width: 1000px;
-    margin: 0 auto;
-} */
 
+
+
+
+
+
+
+
+
+
+.header 
+{
+    display: flex;
+}
+.menuItemsAdaptiv 
+{
+    left: 75%;
+}
 .BtnLogOrReg 
 {
     visibility: hidden;
@@ -1420,6 +1487,10 @@ textarea::-webkit-scrollbar {
 .Header_Navigation 
 {
     visibility: hidden;
+}
+#inNet 
+{
+    visibility: visible;
 }
 
 .LOGO {
@@ -1469,7 +1540,10 @@ textarea::-webkit-scrollbar {
     width: 1000px;
     margin: 0 auto;
 }
-
+.menuItemsAdaptiv 
+{
+    left: 80%;
+}
 .ItemsSleder 
 {
     width: 270px;
@@ -1503,18 +1577,26 @@ textarea::-webkit-scrollbar {
 
 
 
-@media (max-width: 1050px) {
+@media (max-width: 1065px) {
 
+.header_titile #HaveOrNoHave 
+{
+    position: absolute;
+}
 .container {
     width: 900px;
     margin: 0 auto;
 }
+.menuItemsAdaptiv 
+{
+    left: 20%;
+}
 .Header_Navigation {
     position: absolute;
 }
-.BtnLogOrReg {
+/* .BtnLogOrReg {
     position: absolute;
-}
+} */
 .wraper .ItemsSleder {
     width: 259px;
     height: 473px;
@@ -1596,23 +1678,388 @@ textarea::-webkit-scrollbar {
     display: block;
     height: 800px;
 }
+.MainBlock {
+    display: block;
+}
+.LeftBlock 
+{
+    text-align: -webkit-center;
+}
+.spaceAddComments 
+{
+    width: auto;
+}
+.BtnComm 
+{
+    width: 70%;
+}
+.itemsLeft 
+{
+    text-align: -webkit-center;
+}
+
+.itemsLeft p
+{
+   text-align: center;
+   width: 500px;
+   height: 280px;
+}
+.MainHm 
+{
+    text-align: -webkit-center;
+}
+.itmLft 
+{
+    padding-bottom: 60px;
+}
+}
 
 
+@media (max-width: 825px) {
+.container {
+    width: 600px;
+    margin: 0 auto;
+}
+.menuItemsAdaptiv 
+{
+    left: 35%;
+}
+.cooperation 
+{
+    height: 50%;
+    justify-content: space-around;
+}
+.BloclForCentralize hr
+{
+    width: 70%;
+}
+.TopFoot 
+{
+    display: block;
+}
+.leftItemsTopFoot 
+{
+    display: block;
+}
+.firstList 
+{
+    padding: 0;
+}
+}
+
+
+
+@media (max-width: 660px) {
+.container {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.mainTxtOnWin .maintxt
+{
+    font-size: 17px;
+}
+.mainTxtOnWin .undertxt_of_maintxt 
+{
+    font-size: 14px;
+    width: 50%;
+}
+.mainTxtOnWin{
+    text-align: -webkit-center;
+}
+.Products 
+{
+    height: 30px;
+    width: 100px;
+}
+.Products a
+{
+    font-size: 12px;
+    padding: 7px 0 0 0;
+}
+.OnlyBest hr
+{
+    width: auto;
+}
+
+#imgAdaptiv img 
+{
+    width: 80px;
+    height: 80px;
+}
+#imgAdaptiv h3 
+{
+    font-size: 13px;
+}
+#imgAdaptiv p 
+{
+    font-size: 10px;
+}
+
+#PopularProducts p
+{
+    font-size: 30px;
+}
+.BlocItemsBest 
+{
+    display: block;
+    text-align: -webkit-center;
+}
+
+.wraper .ItemsSleder {
+    width: 160px;
+    height: 400px;
+}
+
+
+.ItemsSleder .PhotoForItemsSlider {
+    width: auto;
+    width: 160px;
+    height: 130px;
+}
+.CenterItemHere h1
+{
+    font-size: 14px;
+}
+.CenterItemHere p
+{
+    font-size: 10px;
+}
+.itemsLeft p {
+    text-align: center;
+    width: auto;
+    height: 280px;
+}
+
+.cooperation {
+    width: auto;
+}
+.MainBlock {
+    width: 100%;
+}
+.The_best_employees 
+{
+    display: block;
+    text-align: -webkit-center;
+}
+.itmLft p 
+{
+    width: auto;
+}
+.first p 
+{
+    width: auto;
+}
+.second p 
+{
+    width: auto;
+}
+
+
+textarea {
+    width: 80%
+}
+.BtnComm {
+    width: 85%;
+}
+.ForPadding_fast_desc {
+    padding-top: 80px;
+    padding-bottom: 30px;
+}
+.warning {
+    width: 85%;
+}
+
+.spaceShowComments .scrollComment {
+
+    width: auto;
+}
 }
 
 
 
 
+@media (max-width: 440px) {
+.container {
+    width: 200px;
+    margin: 0 auto;
+}
+#inNet 
+{
+    font-size: 13px;
+}
+.menuItemsAdaptiv 
+{
+    left: 10%;
+}
+.menuItems 
+{left: 55%;}
+/* header {
+   height: 240px;
+}
+.header_titile 
+{
+    display: block;
+} */
+.loginMenu 
+{
+    padding: 0;
+}
+.LOGO a
+{
+    font-size: 25px;
+}
+.mainTxtOnWin  .undertxt_of_maintxt {
+    width: 100%;
+}
+.OnlyBest h1 {
+    font-size: 24px;
+}
+
+.BlocItemsBest_One {
+    width: auto;
+}
+.itemsRight 
+{
+    margin-top: 300px;
+}
+.itemBest .bgEmpl 
+{
+    width: 140px;
+    height: 186px;
+}
+
+.itemBest {
+    width: 140px;
+    height: 186px;
+}
+
+.info p 
+{
+    font-size: 10px;
+}
+.itmLft h1 
+{
+    font-size: 20px;
+}
+
+.itmLft p
+{
+    font-size: 14px;
+}
+.MainPHm {
+    width: 160px;
+    height: 160px;
+}
+.infoPHm p {
+    font-size: 8px;
+}
+
+.MainHm {
+    height: auto;
+}
+
+.CircleBg {
+    background-size: cover;
+}
+.BloclForCentralize p 
+{
+    font-size: 18px;
+}
+.ForPadding_cooperation {
+    padding-top: 0;
+}
+.first h1 
+{
+    font-size: 16px;
+}
+.second h1 
+{
+    padding-top: 80px;
+    font-size: 16px;
+}
+.map {
+    width: 150px;
+    height: 150px;
+}
+.map iframe 
+{
+    width: 150px;
+    height: 150px;
+}
+.title {
+    padding-top: 50px;
+}
+.text-comment 
+{
+    height: 200px;
+}
+.subscribe .inputEmail 
+{
+    display: block;
+}
+.inputEmail .btnOk {
+    margin-left: 0;
+}
+.btnOk p 
+{
+    padding-top: 10px;
+}
+.firstList p 
+{
+    font-size: 15px;
+}
+.menu li a 
+{
+    font-size: 12px;
+}
+.subscribe h1 
+{
+    font-size: 12px;
+}
+.warning h1 {
+    font-size: 18px;
+}
+.warning p {
+    font-size: 13px;
+}
+.comment h1 
+{
+    font-size: 20px;
+}
+.first p 
+{
+    font-size: 13px;
+}
+.second p 
+{
+    font-size: 13px;
+}
+}
+@media (max-width: 275px) {
+header {
+    height: 120px;
+}
+.header_titile 
+{
+    display: block;
+}
+.header_titile 
+{
+    padding-left: 25%;
+}
+.menuItems 
+{
+    left: 15%;
+    height: 430px;
+}
+
+.menuAdaptivBtn 
+{
+    position: absolute;
+    right: 100px;
+}
 
 
-
-
-
-
-
-
-
-
-@media (max-width: 1280px) {
 
 }
