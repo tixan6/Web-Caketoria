@@ -461,19 +461,12 @@
               `;      
               document.querySelector(".scrollbasket").insertAdjacentHTML('beforeend',cartHTMLitem);
           }
-      
-
-
-
-
+          
           $(".buy").on("click", function() 
           {
             var id = $(this).prop('id');
             let phn = GetPhone();
             var phone = phn();
-            
-    
-    
               $.ajax({
                 url: '../ajax/addOrder.php',
                 type: 'POST',

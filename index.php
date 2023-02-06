@@ -645,13 +645,6 @@
                                 <input type="text" class="numberPhoneLog" name="LoginPhone" placeholder="Номер телефона"></br>
                                 <input type="password" class="passLog" name="LoginPass" placeholder="Пароль">
                             </div>
-                            <div class="underInput">
-                                <div class="lble">
-                                    <input id="Remember" type="checkbox" checked>
-                                    <p>Запомнить пароль</p>
-                                </div>                             
-                                <p class="Forgot">Забыли пароль?</p>
-                            </div>
                             <div class="btnForLog">
                                 <a href="#" class="loginForm">Войти</a>
                             </div>

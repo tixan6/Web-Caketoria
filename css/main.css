@@ -1605,6 +1605,25 @@ textarea::-webkit-scrollbar {
 {
     width: 259px;
 }
+.popup-bg-Cart .popup-Cart
+{
+    width: 80%;
+}
+.phoneNumberForRespond .scrollbasket 
+{
+    width: 97%;
+}
+
+
+
+
+
+
+
+
+
+
+
 }
 
 
@@ -1716,6 +1735,56 @@ textarea::-webkit-scrollbar {
 
 
 @media (max-width: 825px) {
+
+.scrollbasket .cartTovar 
+{
+    display: block;
+}
+
+.phoneNumberForRespond .scrollbasket {
+    text-align: left;
+}
+.scrollbasket .cartTovar 
+{
+    width: 200px;
+    height: 300px;
+}
+.cartTovar .title_tovar 
+{
+    width: 100%;
+    padding: auto;
+}
+.cartTovar .price_tovar 
+{
+    width: 100%;
+    padding: auto;
+}
+.cartTovar .btn-tovar 
+{
+    width: 100%;
+    padding: auto;
+}
+.scrollbasket .cartTovar #itemTovar 
+{
+    margin-left: 2px;
+}
+.btn-tovar 
+{
+    padding-top: 10px;
+}
+.scrollbasket .cartTovar {
+    width: 90%;
+    height: 220px;
+}
+.scrollbasket .cartTovar 
+{
+    text-align: -webkit-center;
+    opacity: 1;
+}
+.cartTovar .img_tovar {
+    width: auto;
+}
+
 .container {
     width: 600px;
     margin: 0 auto;
@@ -1750,11 +1819,103 @@ textarea::-webkit-scrollbar {
 
 
 @media (max-width: 660px) {
+.popup-bg-info .popup-info 
+{
+    width: 70%;
+}
+.log .infoAboutDesc 
+{
+    width: 95%;
+
+}
+
+.popup-bg-animLogin .popup-animLogin {
+    width: 200px;
+    /* height: 200px; */
+}
+
+
+
+
+
+
+    
+.popup-bg-options .popup-options 
+{
+    width: 49%;
+}
+
+.change .titleSet  
+{
+ font-size: 10px;
+}
+.change .titleSet  
+{
+ font-size: 10px;
+}
+
+.change p
+{
+ font-size: 10px;
+}
+
+.change p
+{
+ font-size: 10px;
+}
+.allItems .togetherItems 
+{
+    display: block;
+}
+.messageForSig .setCetner h1 
+{
+    font-size: 20px;
+}
+.messageForSig .setCetner img
+{
+    width: 15px;
+    height: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.popup-bg-contact .popup-сontacts 
+{
+    width: 300px;
+}
+.popup-bg-reg .popup-reg {
+    width: 50%;
+}
+.title-poput .main-title-reg
+{
+    padding: 0;
+}
+
+.title-poput .centerTitlePop h1 {
+    color: #686868;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.popup-reg 
+{
+    text-align: -webkit-center;
+}
+
 .container {
     width: 400px;
     margin: 0 auto;
 }
-
 .mainTxtOnWin .maintxt
 {
     font-size: 17px;
@@ -1880,6 +2041,146 @@ textarea {
 
 
 @media (max-width: 440px) {
+    .messageForSig .setCetner h1 
+{
+    font-size: 14px;
+}
+.messageForSig .setCetner img
+{
+    width: 10px;
+    height: 10px;
+}
+form .fs 
+{
+    display: block;
+    text-align: initial;
+}
+form .fs .FirstNameInput
+{
+    padding-left: 10px;
+    width: 100%;
+}
+form .fs .SurnameNameInput
+{
+    margin: 10px 10px 0px 0px;
+    padding-left: 10px;
+}
+.main-title-reg 
+{
+    float: left;
+}
+.title-poput .centerTitlePop h1 {
+    font-size: 17px;
+}
+
+form div 
+{
+    width: 100px;
+}
+
+.btnReg .btn-reg button{
+    width: 100px;
+    font-size: 11px;
+}
+.title-poput 
+{
+    padding-top: 16px;
+}
+.popup-bg-log .popup-log 
+{
+    width: 50%;
+    height: 35%;
+}
+.items input 
+{
+    width: 90%;
+}
+.itemCenterLog .items input::placeholder
+{
+    font-size: 0.7em;
+}
+
+
+.btnForLog 
+{
+    height: 20px;
+}
+.btnForLog a
+{
+    font-size: 14px;
+    padding: 0;
+    width: 80px;
+    height: 20px;
+}
+
+.items input 
+{
+    
+    height: 30px;
+}
+
+
+.popup-bg-contact .popup-сontacts 
+{
+    width: 300px;
+}
+
+.title-poput .main-title 
+{
+    display: block;
+}
+
+.popup-bg-contact .popup-сontacts 
+{
+    height: 400px;
+    width: 80%;
+}
+
+.title-poput .main-title .item-popup-left .email-popup h2
+{
+    font-size: 15px;
+    display: block;
+}
+
+.title-poput .main-title .item-popup-left .email-popup p
+{
+    font-size: 10px;
+}
+
+
+.title-poput .main-title .item-popup-left .messenger-popup h2
+{
+    font-size: 15px;
+}
+.title-poput .main-title .item-popup-left .messenger-popup p
+{
+    font-size: 10px;
+}
+
+
+.title-poput .main-title .item-popup-left .item-popup-rigth h2
+{
+    font-size: 15px;
+}
+.title-poput .main-title .item-popup-left .item-popup-rigth .colum-phone h2
+{
+    font-size: 10px;
+}
+.title-poput .main-title .item-popup-left .item-popup-rigth .colum-phone p
+{
+    font-size: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
 .container {
     width: 200px;
     margin: 0 auto;
@@ -2059,6 +2360,7 @@ header {
     position: absolute;
     right: 100px;
 }
+
 
 
 
