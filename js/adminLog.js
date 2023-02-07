@@ -30,13 +30,16 @@
     });
 
    
-    
-    document.querySelector(".accept").addEventListener("click", function() 
-    {
-        let accept = $(this).prop('id');
-        document.getElementById('productId' + accept).style.opacity = 0.5;
-        document.getElementById('productId' + accept).style.background = "#b7ff9c";
+    var acc = document.querySelectorAll(".accept");
+    acc.forEach(element => {
+        element.addEventListener("click", function() 
+        {
+            let accept = $(this).prop('id');
+            document.getElementById('productId' + accept).style.opacity = 0.5;
+            document.getElementById('productId' + accept).style.background = "#b7ff9c";
+        });
     });
+    
     
     $(".refuse").on("click", function() 
     {
